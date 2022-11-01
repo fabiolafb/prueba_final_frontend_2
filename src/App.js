@@ -13,6 +13,7 @@ import Favoritos from "./views/Favoritos";
 import Perfil from "./views/Perfil";
 import MisDatos from "./views/MisDatos";
 import EdicionDatos from "./views/EdicionDatos";
+import Publicaciones from "./views/Publicaciones";
 
 export default function App() {
   return (
@@ -26,10 +27,12 @@ export default function App() {
             <Route path="/homePrivado" element={<HomePrivado />} />
             <Route path="/tienda" element={<Tienda />} />
             <Route path="/perfil-usuario" element={<Perfil />} />
-            <Route path="/detalleProducto/:id" element={<DetalleProducto />} />
+            <Route path="/detalleproducto/:id" element={<DetalleProducto />} />
             <Route path="/favoritos" element={<Favoritos />} />
             <Route path="/mis-datos" element={<MisDatos />} />            
             <Route path="/edicion-datos" element={<EdicionDatos />} />
+            <Route path="/mis-publicaciones" element={<Publicaciones />} />
+            
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </BrowserRouter>

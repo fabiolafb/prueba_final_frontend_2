@@ -28,11 +28,11 @@ export default function MisDatos() {
                 <Link to="/favoritos">
                   <li>Mis favoritos</li>
                 </Link>
-                <Link to="/misPublicaciones">
+                <Link to="/mis-publicaciones">
                   <li>Mis publicaciones</li>
                 </Link>
                 <Link to="/agregarproducto">
-                  <li>Agregar publicación</li>
+                  <li>Crear publicación</li>
                 </Link>
               </ul>
             </nav>

@@ -28,11 +28,11 @@ const EdicionDatos = () => {
                 <Link to="/favoritos">
                   <li>Mis favoritos</li>
                 </Link>
-                <Link to="/misPublicaciones">
+                <Link to="/mis-publicaciones">
                   <li>Mis publicaciones</li>
                 </Link>
                 <Link to="/agregarproducto">
-                  <li>Agregar publicación</li>
+                  <li>Crear publicación</li>
                 </Link>
               </ul>
             </nav>
@@ -111,6 +111,7 @@ const EdicionDatos = () => {
               >
                 Guardar
               </button>
+              
               <button
                 variant="primary"
                 className="btn-no-guardar"

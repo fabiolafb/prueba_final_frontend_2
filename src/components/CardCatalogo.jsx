@@ -57,7 +57,7 @@ export default function CardCatalogo() {
                   <button
                     variant="primary"
                     className="btn-ver"
-                    onClick={() => navigate(`/detalleProducto/${prod.id}`)}
+                    onClick={() => navigate(`/detalleproducto/${prod.id}`)}
                     data-toggle="tooltip"
                     data-placement="top"
                     title="Ver detalle del producto"

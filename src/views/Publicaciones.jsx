@@ -1,13 +1,11 @@
 import React from "react";
-import "../assets/css/perfil.css";
+import "../assets/css/publicaciones.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import icon_edit from "../assets/img/icon_edit.jpg";
-import icon_form from "../assets/img/icon_form.png";
-import icon_heart from "../assets/img/icon_heart.png";
 
-export default function Perfil() {
+
+const Publicaciones = () => {
   return (
     <>
       <NavbarPrivado />
@@ -46,29 +44,12 @@ export default function Perfil() {
           </div>
         </header>
 
-        <main className="container-menu-perfil">
-          <div className="container-menu-perfil-ordenar">
-            <div className="container-imgs">
-              <img alt="" src={icon_edit} className="icon_edit" />
-              <img alt="" src={icon_form} className="icon_form" />{" "}
-              <img alt="" src={icon_heart} className="icon_heart" />
-            </div>
-
-            <div className="container-texto">
-              <h3 className="tittle-perfil">
-                Bienvenid@,
-                <br />
-              </h3>
-              <h5>
-                En esta sección encontrarás todo lo relacionado a tu perfil.
-                Podrás editar tus datos personales, revisar los productos
-                favoritos, revisar tus publicaciones o bien crear una nueva
-                publicación con el producto que quieras vender.{" "}
-              </h5>
-            </div>
-          </div>
+        <main className="container-menu-mispublicaciones">
+ 
         </main>
       </main>
     </>
   );
-}
+};
+
+export default Publicaciones;

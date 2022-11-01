@@ -37,7 +37,9 @@ export default function Favoritos() {
             </Link>
           </div>
         </div>
-        <hr width="90%"/>
+
+        <hr />
+
         <div className="div-card-prod-fav">
           {productos
             .filter((elem) => elem.favorito)

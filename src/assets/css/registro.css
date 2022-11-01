@@ -8,6 +8,7 @@
     margin:0px auto;
     border-radius: 8px;
     border: 0.5px;
+    box-shadow: 0px 10px 30px -10px;
 }
 .div-section h4 {
     padding-top: 2%;
