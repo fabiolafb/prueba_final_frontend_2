@@ -1,5 +1,4 @@
 import React from "react";
-//import Context from "../Context";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 

@@ -3,49 +3,42 @@ import "../assets/css/publicaciones.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import ajedrez from "../assets/img/products/ajedrez.jpg";
+import trush from "../assets/img/trush.png";
+import MenuPerfil from "../components/MenuPerfil";
 
 
 const Publicaciones = () => {
   return (
     <>
       <NavbarPrivado />
-      <main className="container-perfil">
-        <header>
-          <div className="barra-superior-perfil">
-            <div className="nav-name-seccion">
-              <Link to="/perfil-usuario" id="id-perfil-usuario">
-                <div class="card-superior-perfil">
-                  <h5 class="card-text">Mi PERFIL</h5>
-                </div>
-              </Link>
-            </div>
-            <nav id="id-nav-menu">
-              <ul>
-                <Link to="/mis-datos">
-                  <li>Mis datos</li>
-                </Link>
-
-                <Link to="/favoritos">
-                  <li>Mis favoritos</li>
-                </Link>
-                <Link to="/mis-publicaciones">
-                  <li>Mis publicaciones</li>
-                </Link>
-                <Link to="/agregarproducto">
-                  <li>Crear publicación</li>
-                </Link>
-              </ul>
-            </nav>
-            <div id="id-tienda-perfil">
-              <Link to="/tienda">
-                <Button variant="success">Ir a Tienda</Button>
-              </Link>
-            </div>
-          </div>
-        </header>
-
+      <MenuPerfil />
+      <main className="container-perfil">       
         <main className="container-menu-mispublicaciones">
- 
+          <div className="contain-mispublicaciones">
+            <h4>Mis publicaciones</h4>
+            <div id="menu-misprod">
+                <div>Imagen</div>
+                <div>Publicado por</div>
+                <div>Ir al detalle</div>
+                <div></div>
+            </div>
+
+            <hr />
+            <div className="contain-publicacion">
+                 <img alt="" src={ajedrez} className="img-lista" />
+                 <h5>Vanesa Segovia</h5>
+                 <button className="btn-ver-prod"
+                 data-toggle="tooltip"
+                 data-placement="top"
+                 title="Ver producto"> Ver producto</button>
+                 <img alt="" src={trush} className="img-trush"                  data-toggle="tooltip"
+                    data-placement="top"
+                    title="Eliminar publicación" />
+            </div>
+            <hr />
+            
+          </div>
         </main>
       </main>
     </>

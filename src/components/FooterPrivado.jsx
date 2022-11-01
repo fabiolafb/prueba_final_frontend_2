@@ -6,10 +6,10 @@ import logo from "../assets/img/logo_3.png";
 import instagram from "../assets/img/instagram.png";
 import facebook from "../assets/img/facebook.png";
 
-export default function Footer() {
+export default function FooterPrivado() {
   return (
     <>
-      <footer id="id-footer-public" className="footer navbar-expand-lg ps-5">
+      <footer id="id-footer-privado" className="footer navbar-expand-lg ps-5">
         <Navbar.Brand className="">
           <NavLink to="/">
             <img alt="" src={logo} width="150" className="logo ms-auto" />

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-evenly;
     padding: 3% 4%;
+    height: 150%;
 }
 .div-txt {
     display: flex;

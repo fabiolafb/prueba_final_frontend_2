@@ -1,0 +1,73 @@
+.container-perfil {
+    width: 100%;
+}
+
+.barra-superior-perfil {
+    background-color: #E7E5DF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav-name-seccion-perfil {
+    width: 15%;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.card-superior-perfil {
+    background-color: #E7BB41;
+    border-radius: 8px;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 1rem;
+
+}
+.card-superior-perfil h5 {
+    color: white;
+    text-align: center;
+    padding-top: 6%;
+    font-size: 1rem;
+}
+#id-perfil-usuario {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+#id-tienda-perfil {
+    width: 15%;
+}
+
+#id-nav-menu {
+    text-decoration:none;
+    color:inherit;
+    font-size:16px;
+    width: 70%;
+    
+    } 
+    #id-nav-menu ul{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    #id-nav-menu li{
+    display:inline-block;
+    padding:5px 10px;
+    background-color:white;
+    border:1px solid #afada9;
+    text-align:center;
+    color:#393E41;
+    width: 11rem;
+    height: 2.5rem;
+    box-shadow: 0px 10px 10px -10px;
+
+    background-image: linear-gradient(#E7BB41 0 0);
+    background-size: 200% .08em; /* .08em is our fixed height, use what you want  */
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-size .3s, background-position .3s .3s;
+    }
+    #id-nav-menu li:hover{
+        transition: background-size .3s .3s, background-position .3s;
+        background-size: 200% 100%;
+        background-position: 100% 100%;
+    }

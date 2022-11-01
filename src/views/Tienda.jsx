@@ -51,9 +51,10 @@ export default function Tienda() {
               >
                 <option value="">Categorías</option>
                 <option value="1">Alimentación</option>
-                <option value="2">Hogar</option>
-                <option value="3">Tecnología</option>
-                <option value="4">Vestuario</option>
+                <option value="2">Entretención</option>
+                <option value="3">Hogar</option>
+                <option value="4">Tecnología</option>
+                <option value="5">Vestuario</option>
               </Form.Select>
             </div>
             <hr />

@@ -1,6 +1,7 @@
 .container-card-detalle {
     width: 100%;
     background-color: #E7E5DF;
+    height:100vh;
 }
 .card-detalle-prod {
     text-align: center;
@@ -23,15 +24,12 @@
 .name-card-detalle {
     color: #727c81;
 }
-.zoom {
-    cursor:zoom-in;
-    transition: transform .2s; 
-    z-index: 1;
-    border: #dadcdd 1px solid;
-} 
-.zoom:hover {
-    transform: scale(1.5); 
-}
+.card-detalle-izq:hover .zoom  {  
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+    }
+    .img {
+    overflow:hidden;  
+    } 
 .categ-card-detalle {
     margin-top: 4.5%; 
     margin-left: 1.7rem;

@@ -1,15 +1,18 @@
 import React from "react";
 import "../assets/css/registro.css";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function Registro() {
   return (
     <>
-     <Navbar />
+      <Navbar />
       <div className="contenedor-registro">
         <section className="div-section">
           <h4>Registro de usuario</h4>
-          <h5>Los campos marcados con (<span id="ast">*</span>) son obligatorios.</h5>
+          <h5>
+            Los campos marcados con (<span id="ast">*</span>) son obligatorios.
+          </h5>
 
           <div className="columnas-form">
             <div className="label-imput">
@@ -107,20 +110,21 @@ export default function Registro() {
               />
             </div>
             <div className="label-imput">
-            <button
-              className="btn-registro"
-              // onClick={() => agregarCarrito(pizza)}
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Guardar registro"
-            >
-              Registrarse
-            </button>
-            </div> 
+              <button
+                className="btn-registro"
+                // onClick={() => agregarCarrito(pizza)}
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Guardar registro"
+              >
+                Registrarse
+              </button>
+            </div>
           </div>
           <br />
         </section>
       </div>
+      <Footer />
     </>
   );
 }

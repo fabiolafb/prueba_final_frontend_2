@@ -23,31 +23,32 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 1.5%;
-}
-.acceso-opcion .card-acceso {
-    width: 18%;
-    background-color: darkcyan;
-    color: aliceblue;
-    text-align: center;
-    padding: 2%;
-    border-radius: 8px;  
-}
-.acceso-opcion .card-img-top {
-    filter: invert();
-    position: relative;
-}
+    margin-bottom: 1.5%;
+    }
+    .acceso-opcion .card-acceso {
+        width: 18%;
+        background-color: darkcyan;
+        color: aliceblue;
+        text-align: center;
+        padding: 2%;
+        border-radius: 8px;  
+    }
+    .acceso-opcion .card-img-top {
+        filter: invert();
+        position: relative;
+    }
 .card-acceso {
     background-image: linear-gradient(#E7BB41 0 0);
     background-size: 200% .08em; /* .08em is our fixed height, use what you want  */
     background-position: 200% 100%;
     background-repeat: no-repeat;
     transition: background-size .3s, background-position .3s .3s;
-}
-.card-acceso:hover {
-    transition: background-size .3s .3s, background-position .3s;
-    background-size: 200% 100%;
-    background-position: 100% 100%;
-}
+    }
+    .card-acceso:hover {
+        transition: background-size .3s .3s, background-position .3s;
+        background-size: 200% 100%;
+        background-position: 100% 100%;
+    }
 
 .acceso-opcion .card-body {
 height: 2rem;

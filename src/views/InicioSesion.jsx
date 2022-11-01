@@ -2,11 +2,12 @@ import React from "react";
 import "../assets/css/iniciosesion.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function InicioSesion() {
   return (
     <>
-     <Navbar />
+      <Navbar />
       <div className="contenedor-iniciosesion">
         <section>
           <h4>Iniciar sesión</h4>
@@ -25,7 +26,7 @@ export default function InicioSesion() {
             className="form-control"
             placeholder="Ingresar contraseña"
           />
-          
+
           <br />
           <Link to="/homePrivado">
             <button
@@ -52,6 +53,7 @@ export default function InicioSesion() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }

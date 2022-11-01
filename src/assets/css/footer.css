@@ -1,0 +1,42 @@
+#id-footer-public {
+    background-color: #f7f4ee;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+#id-footer-privado {
+    background-color: #44bba39d;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.footer hr {
+    height: 4rem;
+    width:.1vw;
+    border-width:0;
+    color:r#393E41ed;
+    background-color:#393E41;
+    margin-left: 1rem;
+}
+.info-footer {
+    margin-left: 2rem;
+}
+.info-footer p {
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.logo_rrss {
+    width: 1.8rem;
+    margin-right: 0.5rem;
+    filter: invert(0.5);
+    cursor: pointer;
+    padding-top: -1%;
+}

@@ -1,4 +1,79 @@
 .container-menu-mispublicaciones {
-    padding-top: 1rem;
+    max-width: 100%;
     background-color: white;
+    height:100vh;
+    padding-top: 1rem;
 }
+.container-menu-mispublicaciones h4 {
+    text-align: center;
+    padding-top: 2%;
+    color: #6a6c6d;  
+    margin-bottom: 1rem;  
+}
+.contain-mispublicaciones {
+    color: #6a6c6d;
+    width: 50%;
+    margin: 0px auto;
+    background-color: white;
+    padding-bottom: 1%;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px -10px;
+}
+
+
+
+#menu-misprod {
+    display: flex;
+    width: 90%;
+    margin:0px auto;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.contain-publicacion {
+    display: flex;
+    width: 90%;
+    margin:0px auto;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    border: #6a6c6d ;
+}
+
+.img-lista {
+    width: 4rem;
+    border-radius: 5px;
+}
+.btn-ver-prod {
+    background-color: #44BBA4;
+    border-color: #D3D0CB;
+    border-radius: 5px;
+    height: 2rem;
+}
+.img-trush {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.contain-mispublicaciones hr {
+    height:.1vw;
+    width:90%;
+    border-width:0;
+    color: #6a6c6d;
+    background-color: #6a6c6d;
+    margin-left: 5%;
+    margin-top: 1% ;
+    margin-bottom: 1%;
+}
+
+
+/* --- media query  --- */
+@media (max-width : 1100px) {
+    .contain-mispublicaciones {
+        width: 70%;
+    }
+}
+
+
+
