@@ -1,0 +1,140 @@
+.container-card-detalle {
+    width: 100%;
+    background-color: #E7E5DF;
+}
+.card-detalle-prod {
+    text-align: center;
+
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    background-color: white;
+    border-radius: 20px;
+    border: #E7BB41 2px solid;
+    max-width: 50%;
+    margin: 1.5rem auto;
+    text-align: center;
+   
+}
+.card-detalle-izq {
+    padding: 3%;
+
+}
+.name-card-detalle {
+    color: #727c81;
+}
+.zoom {
+    cursor:zoom-in;
+    transition: transform .2s; 
+    z-index: 1;
+    border: #dadcdd 1px solid;
+} 
+.zoom:hover {
+    transform: scale(1.5); 
+}
+.categ-card-detalle {
+    margin-top: 4.5%; 
+    margin-left: 1.7rem;
+    color: #727c81;
+    font-size: 1.1;
+}
+.hover-2 {
+    cursor: pointer;
+    align-self: flex-end;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    margin-left: -7.5%;
+    margin-top: 0%;
+    position: absolute;
+    z-index: 5;
+    background-color: #898f92;
+}
+
+
+.card-detalle-der {
+    padding: 9% 2% 4% 3%;
+    text-align: left;
+}
+.card-detalle-der  p {
+    text-align: left;
+ 
+}
+.descr-card-detalle {
+    margin-left: 1rem;
+}
+.autor-card-detalle {
+    margin-left: 1rem;
+}
+.precio {
+    margin-top: 1rem;
+}
+.btn-agregar-2 {
+    background-color: #E7BB41;
+    border-color: #D3D0CB;
+    border-radius: 5px;
+    width: 6rem;
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+}
+.cerrar {
+    width: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    z-index: 5;
+}
+
+/* --- media query  --- */
+@media (max-width : 1200px) { 
+    .container-card-detalle {
+        width: 100%;
+    }
+    .card-detalle-prod {
+          max-width: 65%;      
+    }
+    .hover-2 {
+
+        margin-left: -12%;
+        margin-top: 0%;
+        position: absolute;
+        z-index: 5;
+        background-color: red;
+    }
+    .card-detalle-der {
+        padding: 9% 2% 4% 0%;
+  }
+}
+@media (max-width : 992px) {
+    .card-detalle-prod {
+          max-width: 85%;
+    }
+}
+
+@media (max-width : 768px) {
+    .card-detalle-prod {
+        flex-direction: column;
+    }
+    .zoom { 
+        max-width: 25rem;
+    }
+    .card-detalle-der {
+        padding: 0% 5% 2% 5%;
+    }
+    .cerrar {   
+        margin-top: -75rem;
+        margin-right: -32rem;
+        }
+}
+
+@media (max-width : 654px) {
+    .cerrar {   
+        margin-top: -73rem;
+        margin-right: -28rem;
+        }
+}
+
+@media (max-width : 576px) {
+    .cerrar {   
+        margin-top: -72rem;
+        margin-right: -25rem;
+        }
+}

@@ -1,0 +1,89 @@
+.container-menu-misdatos {
+    max-width: 100%;
+    background-color: #E7E5DF;
+    height:100vh;
+
+
+}
+.container-menu-misdatos h4 {
+    text-align: center;
+    padding-top: 1%;
+    color: #6a6c6d;
+    
+}
+
+.contain-misdatos {
+    color: #6a6c6d;
+    width: 40%;
+    margin: 0px auto;
+    background-color: white;
+    padding-bottom: 1%;
+    border-radius: 8px;
+}
+.form-datos-personales {
+    padding: 1% 0;
+    }
+    .form-datos-personales h6 {
+        margin-left: 8%;
+    }
+    .form-datos-personales input {
+        width: 90%;
+    }
+.to-edicion {
+    text-decoration: none;
+    text-decoration-line: none;
+}  
+ 
+
+.btn-edicion-datos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px auto;
+    width: 35%;
+    height: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px #9e9d9b solid;
+    background: linear-gradient(#44BBA4 0 0) left / var(--p,0) no-repeat;
+    transition: .4s,background-position 0s;
+}
+    .btn-edicion-datos:hover {
+        --p: 100%;
+        background-position: right;
+    }
+    .btn-edicion-datos h6 {
+        font-size: 1.1rem;
+        color: #6a6c6d;
+    
+    }
+    .icono-edit {
+        width: 1.5rem;
+        margin-left: 1rem;
+        padding-bottom: 2%;
+    }
+
+/* --- media query  --- */
+@media (max-width : 1150px) {
+    .contain-misdatos {
+        width: 55%;
+    }
+    .btn-edicion-datos {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width : 850px) {
+    .btn-edicion-datos {
+        width: 40%;
+        margin-bottom: 0.5rem;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .btn-edicion-datos {
+        margin-top: 1rem;
+        width: 42%;
+        margin-bottom: 1rem;
+
+    }
+}

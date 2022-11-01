@@ -1,0 +1,74 @@
+[
+  {
+    "desc": "Lindo clóset de madera de raulí. Está en muy buen estado. Se vende por renovación.",
+    "id": "P001",
+    "img": "https://tessahome.com/wp-content/uploads/2022/06/TessaHome-Markop-armario-madera-mango-marron-120x40x180_3.jpg",
+    "autor": "Claudio Román",
+    "name": "Clóset de madera",
+    "price": "$ 80.000",
+    "categ": "Hogar"
+  },
+  {
+    "desc": "Excelente cámara y calidad de imagen y videos. Graba video en Full HD. Se vende por renovación, muy bien cuidada.",
+    "id": "P002",
+    "img": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201910/07/00110114121188____3__640x640.jpg",
+    "autor": "Andrés Hutchings",
+    "name": "Camara Fotográfica",
+    "price": "$ 100.000",
+    "categ": "Tecnología"
+  },
+  {
+    "desc": "Vendo cómodas zapatillas urbanas nuevas, talla 42.",
+    "id": "P003",
+    "img": "https://i.linio.com/p/903a0d1d4ead7a8aa72e90f5c1fc1f7a-product.jpg",
+    "autor": "Luis Salinas",
+    "name": "Zapatillas urbanas",
+    "price": "$ 24.990",
+    "categ": "Vestuario"
+  },
+  {
+    "desc": "Excelente reloj smartwatch KEI A1 PRO Rosado. Mide ritmo cardíaco en todo momento, pantalla touch rápida, tiene podómetro, notifica llamadas, mensajes, clima y manejar la música desde su pantalla.  Correa de silicona.",
+    "id": "P004",
+    "img": "https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210097370_fotofondoblanco.jpg",
+    "autor": "Vanesa Segovia",
+    "name": "Reloj smartwach Mujer",
+    "price": "$ 25.990",   
+    "categ": "Tecnología"
+  },
+  {
+    "desc": "Excelente reloj smartwatch, compatible con cualquier celular Android o Iphone. Realiza y recibe llamadas, cámara de 1.0 Megapixeles, reproduce música, tiene podómetro, control de calorías, alarma, calendario. Correa de silicona.",
+    "id": "P005",
+    "img": "https://storage.googleapis.com/www-saludiario-com/wp-content/uploads/2020/08/2432cd3b-fitbit_sense_render_3qtr_core_carbon_graphite_clock_default_shadow.jpeg",
+    "autor": "Vanesa Segovia",
+    "name": "Reloj smartwach hombre",
+    "price": "$ 28.990",   
+    "categ": "Tecnología"
+  },
+  {
+    "desc": "Vendo juego de lámparas de velador. Controles táctiles con 4 ajustes (bajo, medio, alto, apagado). Material níquel cepillado",
+    "id": "P006",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_988754-MLM42106120861_062020-W.jpg",
+    "autor": "Deco-casa (Ingrid Benítez)",
+    "name": "Lámparas de velador",
+    "price": "$ 10.000",   
+    "categ": "Hogar"
+  },
+  {
+    "desc": "Set de 12 piezas para que uses en tu cocina. Al ser de silicona es una excelente opción para cuidar tus ollas, además viene en un cómodo contenedor para que los guardes.",
+    "id": "P007",
+    "img": "https://cdn.shopify.com/s/files/1/0104/4391/5319/products/IORe2r1bL0_700x.jpg?v=1661284854",
+    "autor": "Deco-casa (Ingrid Benítez)",
+    "name": "Set utensilios de cocina",
+    "price": "$ 18.000",   
+    "categ": "Hogar"
+  },
+  {
+    "desc": "Miel de abeja artesanal. Contiene 1 kilo.  ",
+    "id": "P008",
+    "img": "https://villaviciosahermosa.com/images/noticias/LNE_Miel_de_Teresa_Alonso.jpg",
+    "autor": "Catalina San Martín",
+    "name": "Miel",
+    "price": "$ 5.500",   
+    "categ": "Alimentación" 
+  }
+]

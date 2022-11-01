@@ -1,0 +1,90 @@
+.contenedor-registro {
+    background-color: #D3D0CB;
+    padding: 2%;
+}
+.div-section {
+    background-color: #E7BB41;
+    width: 50%;
+    margin:0px auto;
+    border-radius: 8px;
+    border: 0.5px;
+}
+.div-section h4 {
+    padding-top: 2%;
+    text-align: center;
+    color: white;
+}
+.div-section h5 {
+    padding-top: 1%;
+    text-align: left;
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 8%;
+}
+.columnas-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1%;
+    padding: 0 1%;
+}
+.label-imput {
+    width: 90%;
+    text-align: left;
+}
+.label-imput label{
+    margin-left: 5%;
+}
+.label-imput input {
+    width: 90%;
+    margin:0px auto;
+    font-style: italic;
+}
+.is-required:after {
+    content: '*';
+    margin-left: 3px;
+    color: red;
+    font-weight: bold;
+}
+.btn-registro {
+    background-color: #44BBA4 ;
+    margin-top: 10%;
+    margin-left: 30%;
+    border-radius: 5px;
+    border: 0.5px #44BBA4 solid;
+    width: 40%;
+    height: 2.3rem;
+    color: white;
+}
+#ast {
+    color: red;
+}
+
+/* --- media query  --- */
+@media (max-width : 997px) {
+    .div-section {
+        width: 70%;
+    }
+}
+
+@media (max-width : 768px) {
+    .div-section {
+        width: 70%;
+    }
+    .columnas-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .label-imput {
+        width: 100%;
+        margin-top: 1%;
+    }
+    .btn-registro {
+        margin-top: 4%;
+    }
+}
+@media (max-width : 528px) {
+    .div-section {
+        width: 80%;
+    }
+}

@@ -1,0 +1,88 @@
+.contenedor-home-privado {
+    width: 100%;
+    background-color: #f7f4ee;
+}
+
+.div-txt-privado {
+    color: #393E41;
+    padding-top: 1.5%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+.div-txt-privado span{
+    color: darkcyan;
+    font-style: italic;
+}
+.div-txt-privado h3 {
+    font-family: 'Shadows Into Light Two', cursive;
+    margin-top: 1rem;
+    color: #393E41;
+}
+
+.acceso-opcion {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5%;
+}
+.acceso-opcion .card-acceso {
+    width: 18%;
+    background-color: darkcyan;
+    color: aliceblue;
+    text-align: center;
+    padding: 2%;
+    border-radius: 8px;  
+}
+.acceso-opcion .card-img-top {
+    filter: invert();
+    position: relative;
+}
+.card-acceso {
+    background-image: linear-gradient(#E7BB41 0 0);
+    background-size: 200% .08em; /* .08em is our fixed height, use what you want  */
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-size .3s, background-position .3s .3s;
+}
+.card-acceso:hover {
+    transition: background-size .3s .3s, background-position .3s;
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+}
+
+.acceso-opcion .card-body {
+height: 2rem;
+}
+.acceso-opcion .card-text {
+    font-size: 1.3rem;
+    font-family: 'Anton', sans-serif;
+    margin-top: 1%;
+}
+.card hr {
+    background-color: white;
+    border: 5px;
+    height: 2.5px;
+    border: none;
+}
+
+@media (max-width : 768px) {
+    .div-txt-privado {
+        padding-top: 1.5%;
+        margin-left: 10%;
+        margin-bottom: 3%;        
+    }
+    .div-txt-privado h3 {
+        font-size: 1.3rem;
+    }
+    .acceso-opcion {
+        align-items: center;
+        margin-top: 1.5%;
+    }
+    .acceso-opcion .card {
+        width: 35%;
+        background-color: darkcyan;
+        color: aliceblue;
+        text-align: center;
+        padding: 2%;
+        border-radius: 8px;  
+    }
+}

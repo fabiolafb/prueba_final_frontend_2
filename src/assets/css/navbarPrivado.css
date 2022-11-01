@@ -1,0 +1,40 @@
+#id-nav-private {
+    background-color: #44bba39d;
+    width: 100%;
+
+}
+.nav-item {
+    margin-top: 0rem;
+}
+#nombre-login {
+    text-decoration: none;
+    color: #545454;
+    width: 8rem;
+    font-size: 1.2rem;
+}
+
+.sign_out {
+    width: 25%;
+}
+
+/* --- media query  --- */
+@media (max-width : 768px) {
+
+    #id-container-fluid {
+        align-items: flex-end;
+    }
+    #nav-link-signout {
+        text-align: center;
+    }
+    .nav-item {
+        margin-top: -3.5rem;
+    }
+    #nombre-login {
+        width: 8rem;
+        font-size: 1.1rem;
+        padding-top: 8%;
+    }
+}
+
+
+

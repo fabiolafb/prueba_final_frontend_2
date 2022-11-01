@@ -1,0 +1,29 @@
+.container-menu-misdatos {
+
+
+}
+.btns-guardar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    width: 50%;
+    margin:0px auto;
+    height: 6rem;
+}
+.btn-guardar {
+    background-color: #44BBA4;
+    border-color: #D3D0CB;
+    border-radius: 10px;
+}
+.btn-no-guardar {
+    background-color: white;
+    border: #44BBA4 1px solid;
+    border-radius: 10px;
+    background: linear-gradient(#44BBA4 0 0) left / var(--p,0) no-repeat;
+transition: .4s,background-position 0s;
+}
+    .btn-no-guardar:hover {
+        --p: 100%;
+        background-position: right;
+    }

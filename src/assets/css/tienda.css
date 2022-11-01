@@ -1,0 +1,159 @@
+.container-tienda {
+    width: 100%;
+}
+.barra-superior-tienda {
+    background-color: #E7E5DF;
+    display: flex;
+    width: 100%;
+}
+.nav-name-seccion {
+    width: 20%;
+}
+.card-superior {
+    background-color: #44BBA4;
+    border-radius: 8px;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 1rem;
+}
+.card-superior h5 {
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 1.1rem;
+}
+.nav-superior {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;   
+    margin-right: 2.5rem;
+}
+.buscador_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0.8% 3rem;
+}
+
+.buscador_input {
+    border-radius: 5px;
+    border: #D3D0CB solid 0.5px;
+    height: 2rem;
+    width: 14rem;
+    text-align: center;
+    margin: 0.8% 2rem;
+}
+#id-favoritos {
+    color: #393E41;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 2rem;
+}
+#id-favoritos:hover {
+    color:#E7BB41;
+}
+#id-favoritos Button {
+    width: 8rem;
+}
+
+/* Sección inferior */
+.contenedor-inferior {
+    width: 100%;
+    display: flex;
+}
+
+.barra-lateral {
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 1.5%;
+    width: 20%;
+    display: flex;
+}
+.select_input {
+    margin-top: 2rem;
+}
+.barra-lateral hr {
+    height:100vh;
+    width:.1vw;
+    border-width:0;
+    color:#D3D0CB;
+    background-color:#D3D0CB;
+    margin-left: 1rem;
+}
+
+/* --- media query  --- */
+@media (max-width : 997px) {
+    .barra-lateral {
+        width: 25%;
+    }
+    .nav-superior {
+        margin-right: 0;
+    }
+    .buscador_div {
+        margin: 0.8% 1rem;
+    }
+}
+
+@media (max-width : 768px) { 
+    .div-card-prod {
+          grid-template-columns: repeat(2, 1fr);
+    }
+    .barra-lateral {
+        width: 40%;
+    }
+    .nav-superior {
+
+        justify-content: center;
+    }
+    .buscador_input {
+        width: 10rem;
+        text-align: center;
+        margin: 0.8% 1rem;
+    }
+    .card-superior {
+        width: 8rem;
+        height: 2rem;
+        margin: 1rem;
+    }
+    .card-superior h5 {
+        padding-top: 4%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width : 576px) { 
+    .barra-lateral {
+        padding-right: 1.5%;
+        width: 40%;
+    }
+    .card-superior {
+        border-radius: 5px;
+        height: 2rem;
+        margin: 0.8rem;
+    }
+    .card-superior h5 {
+        color: white;
+        text-align: center;
+        padding-top: 10%;
+        font-size: 0.8rem;
+    }
+    #id-favoritos {
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    #id-favoritos Button {
+        width: 8rem;
+    }
+    .buscador_input {
+        width: 9.5rem;
+        text-align: center;
+        margin: 0.8% 1rem;
+    }
+    .card-superior {
+        width: 6rem;
+        height: 2rem;
+        margin: 1rem;
+    }
+}

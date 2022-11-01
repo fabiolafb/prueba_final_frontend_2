@@ -1,0 +1,124 @@
+
+.container-favoritos {
+    width: 100%;
+    height:100vh;
+}
+.container-superior {
+    display: flex;
+    justify-content: space-between;
+}
+.cont-tittle {
+    margin-top: 2rem;
+    text-align: center;
+    width: 80%;
+    color: #6a6c6d;
+}
+.cont-tittle h4 {
+    margin-left: 10rem;
+    font-size: 1.7rem;
+    
+}
+.cont-tittle p {
+    margin-left: 10rem;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.link-volver {
+    align-items: center;
+    margin-right: 2rem;
+}
+#id-perfil {
+    color: #393E41;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 2rem;
+}
+#id-perfil:hover {
+    color:#E7BB41;
+}
+#id-perfil Button {
+    width: 8rem;
+}
+#id-tienda {
+    color: #393E41;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 3rem;
+}
+#id-tienda:hover {
+    color:#44BBA4;
+}
+#id-tienda Button {
+    width: 8rem;
+}
+.div-card-prod-fav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    row-gap: 30px;
+    justify-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+/* --- media query  --- */
+@media (max-width : 1143px) {
+    .cont-tittle {
+        width: 90%;
+    }
+    .cont-tittle h4 {
+        margin-left: 5rem;
+    }
+    .cont-tittle p {
+        margin-left: 5rem;
+    }    
+    .link-volver {
+        align-items: center;
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width : 997px) { 
+    #NavbarPrivado {
+        width: 100%;
+    }
+    .div-card-prod-fav {
+          grid-template-columns: repeat(2, 1fr);
+    }
+    .cont-tittle {
+        margin-top: 1rem;
+    }
+    .cont-tittle h4 {
+        margin-left: 3rem;
+        font-size: 1.5rem;
+    }
+    .cont-tittle p {
+        margin-left: 3rem;
+        font-size: 1.1rem;
+    }
+    #id-perfil Button {
+        width: 7rem;
+    }
+    #id-tienda Button {
+        width: 7rem;
+    }
+}
+
+@media (max-width : 528px) { 
+    #NavbarPrivado {
+        width: 100%;
+    }
+    .div-card-prod-fav {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 15px;
+
+  }
+  .cont-tittle h4 {
+    margin-left: 0;
+}
+.cont-tittle p {
+    margin-left: 0;
+} 
+}

@@ -1,0 +1,170 @@
+.container-perfil {
+    width: 100%;
+}
+
+.barra-superior-perfil {
+    background-color: #E7E5DF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+.nav-name-seccion-perfil {
+    width: 15%;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.card-superior-perfil {
+    background-color: #E7BB41;
+    border-radius: 8px;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 1rem;
+
+}
+.card-superior-perfil h5 {
+    color: white;
+    text-align: center;
+    padding-top: 4.5%;
+    font-size: 1rem;
+}
+#id-perfil-usuario {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+#id-tienda-perfil {
+    width: 15%;
+}
+
+#id-nav-menu {
+    text-decoration:none;
+    color:inherit;
+    font-size:16px;
+    width: 70%;
+    } 
+    #id-nav-menu ul{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    #id-nav-menu li{
+    display:inline-block;
+    padding:5px 10px;
+    background-color:#D3D0CB;
+    border:1px solid #afada9;
+    text-align:center;
+    color:#393E41;
+    width: 11rem;
+    height: 2.5rem;
+    }
+    #id-nav-menu li:hover{
+    background-color:#E7BB41;
+    color:#000;
+    }
+
+
+
+
+/* seccion inferior */
+.container-menu-perfil{
+    max-width: 100%;
+    background-color: #f0d58c;
+    height:100vh;
+
+    }
+.container-menu-perfil-ordenar {
+    display: flex;
+    justify-content: space-between;
+    }
+.container-texto {
+    max-width: 60%;
+    margin: 4% 6% 5% 0;
+    color: #393E41;
+
+}
+.container-imgs img{
+    width: 8rem;  
+    }
+    .icon_edit {
+        border-radius: 75px;
+        margin-left: 12%;
+        margin-top: 2.5%;
+        position: absolute;
+    }
+    .icon_form {
+        border-radius: 75px;
+        margin-left: 18%;
+        margin-top: 7.5%;
+        position: absolute;
+    }
+    .icon_heart {
+        margin-left: 10%;
+        margin-top: 9%;
+        position: absolute;
+    }
+
+/* --- media query  --- */
+@media only screen and (max-width : 1100px) {
+    /* barra menu */
+    .card-superior-perfil {
+        width: 8rem;
+        height: 2.2rem;
+        margin: 1rem;
+    }
+   .card-superior-perfil h5 {
+         padding-top: 5.5%;
+        font-size: 1rem;
+    }
+    .id-tienda-perfil Button {
+        margin-right: 3rem;
+        max-width: 5rem;
+    }
+    .nav-name-seccion {
+        width: 12%;
+    }       
+
+    /* container inferior */
+    .container-imgs img{
+        width: 7rem;  
+    }
+    .icon_edit {
+        margin-left: 12%;
+        margin-top: 2.5%;
+    }
+    .icon_form {
+        margin-left: 19%;
+        margin-top: 8%;
+    }
+    .icon_heart {
+        margin-left: 8%;
+        margin-top: 11%;
+    }
+}
+
+@media only screen and (max-width : 850px) {
+     /* barra menu */
+    .nav-name-seccion {
+        width: 20%;
+    } 
+    #id-nav-menu {
+        width: 60%;
+    }    
+    #id-tienda-perfil {
+        width: 20%;
+    }
+
+    /* container inferior */
+    .container-texto {
+        max-width: 57%;
+    }
+    .container-menu-perfil-ordenar {
+        -ms-flex-direction: column;
+    }
+    .container-imgs img{
+        width: 6rem;  
+    }
+
+
+}

@@ -1,0 +1,66 @@
+#id-nav-public {
+    background-color: #f7f4ee;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.navbar-collapse {
+    margin-top: 0.5rem;   
+}
+.nav-link{
+    text-decoration: none;
+    text-align: center;
+    color: #545454;
+    width: 10rem;
+    font-size: 1.2rem;
+}
+#iniciosesion:hover {
+    background-color: #44bba39d;
+}
+#registro-nav:hover {
+    background-color: #e7bb419a;
+    height: 3rem;
+}
+
+/* --- media query  --- */
+@media (max-width : 768px) {
+
+    .Navbar.Brand {
+        margin-right: 0rem;
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+    }
+    .nav-link{
+        text-align: left;
+        font-size: 1.1rem;
+        width: 8rem;
+        
+    }
+    .nav-link:hover, #iniciosesion:hover  {
+        background-color: none;
+  
+    }
+    .Navbar.Toggle {
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        width: 1rem;
+        height: 3rem;
+        padding-top: 2rem;
+        margin-right: 1rem;
+    }
+    #id-navbar-toggle {
+        border-color: #E7E5DF;
+        border: none;
+    }
+}
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: flex;
+    justify-content:space-between;
+
+    /* flex-basis:; */
+}}
