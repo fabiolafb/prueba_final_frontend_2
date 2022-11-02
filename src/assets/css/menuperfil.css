@@ -21,7 +21,8 @@
     width: 10rem;
     height: 2.5rem;
     margin: 1rem;
-
+    box-shadow: 0px 15px 20px -15px;
+    text-decoration: none;
 }
 .card-superior-perfil h5 {
     color: white;
@@ -34,9 +35,6 @@
     text-decoration-line: none;
 }
 
-#id-tienda-perfil {
-    width: 15%;
-}
 
 #id-nav-menu {
     text-decoration:none;

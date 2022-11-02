@@ -1,20 +1,19 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "../assets/css/footer.css";
 import logo from "../assets/img/logo_3.png";
 import instagram from "../assets/img/instagram.png";
 import facebook from "../assets/img/facebook.png";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <>
-      <footer id="id-footer-public" className="footer navbar-expand-lg ps-5">
-        <Navbar.Brand className="">
+      <footer id="id-footer-public" className="footer fixed-bottom ">
+
           <NavLink to="/">
-            <img alt="" src={logo} width="150" className="logo ms-auto" />
+            <img alt="" src={logo} width="150" className="logo-footer ms-auto" />
           </NavLink>
-        </Navbar.Brand>
+ 
         <hr />
 
         <div className="info-footer">
@@ -40,3 +39,4 @@ export default function Footer() {
     </>
   );
 }
+export default Footer;

@@ -1,12 +1,11 @@
-
-.container-menu-perfil{
+.container-perfil {
     max-width: 100%;
-    background-color: #f5dd9c;
-    height:100vh;
+    background-color: white;
     }
-.container-menu-perfil-ordenar {
+.container-menu-perfil {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
     }
 .container-texto {
     max-width: 60%;

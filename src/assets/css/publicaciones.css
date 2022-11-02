@@ -21,7 +21,6 @@
 }
 
 
-
 #menu-misprod {
     display: flex;
     width: 90%;
@@ -50,6 +49,7 @@
     border-color: #D3D0CB;
     border-radius: 5px;
     height: 2rem;
+    width: 8rem;
 }
 .img-trush {
     width: 2rem;

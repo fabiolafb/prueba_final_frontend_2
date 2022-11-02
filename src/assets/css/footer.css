@@ -4,20 +4,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
-}
-#id-footer-privado {
-    background-color: #44bba39d;
-    padding: 0.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
+    height: 13.5%;
+
 }
 
 
+.logo-footer {
+    padding-top: 0.5rem;
+}
 .footer hr {
     height: 4rem;
     width:.1vw;
@@ -30,7 +24,7 @@
     margin-left: 2rem;
 }
 .info-footer p {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     margin-bottom: 0.5rem;
 }
 .logo_rrss {
@@ -38,5 +32,5 @@
     margin-right: 0.5rem;
     filter: invert(0.5);
     cursor: pointer;
-    padding-top: -1%;
+    padding-top: -1.5%;
 }

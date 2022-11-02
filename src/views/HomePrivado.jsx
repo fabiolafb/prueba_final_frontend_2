@@ -7,21 +7,19 @@ import in_perfil from "../assets/img/in_perfil.png";
 //import { Link } from "react-router-dom";
 import "../assets/css/homePrivado.css";
 import { Link } from "react-router-dom";
-import FooterPrivado from "../components/FooterPrivado";
+//import FooterPrivado from "../components/FooterPrivado";
 
 export default function HomePrivado() {
-
   return (
     <>
       <NavbarPrivado />
       <div className="contenedor-home-privado">
-      
-          <div className="div-txt-privado" >
-            <h2>
-              Bienvenid@ <span id="name-home">Name </span>
-            </h2>
-            <h3 id="slogan">¿Qué deseas hacer?</h3>
-          </div>
+        <div className="div-txt-privado">
+          <h2>
+            Bienvenid@ <span id="name-home">Name </span>
+          </h2>
+          <h3 id="slogan">¿Qué deseas hacer?</h3>
+        </div>
 
         <div className="acceso-opcion">
           <div class="card-acceso">
@@ -40,9 +38,8 @@ export default function HomePrivado() {
             <h5 class="card-text">Ir a tu PERFIL</h5>
           </div>
         </div>
-        <br /> 
+        <br />
       </div>
-      <FooterPrivado />
     </>
   );
 }

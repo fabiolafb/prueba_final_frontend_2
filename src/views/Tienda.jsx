@@ -1,9 +1,9 @@
-import React from "react";
 import "../assets/css/tienda.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import CardCatalogo from "../components/CardCatalogo";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 
 export default function Tienda() {
   return (
@@ -61,6 +61,7 @@ export default function Tienda() {
           </nav>
           <CardCatalogo />
         </div>
+        <br />        
       </main>
     </>
   );

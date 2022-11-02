@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import icon_edit_datos from "../assets/img/icon_edit_datos.png";
 import MenuPerfil from "../components/MenuPerfil";
+//import FooterPrivado from "../components/FooterPrivado";
 
 export default function MisDatos() {
   return (
@@ -64,9 +65,7 @@ export default function MisDatos() {
                 <img src={icon_edit_datos} alt="" className="icono-edit" />
               </button>
             </Link>
-            
           </div>
-
           <br />
         </main>
       </main>

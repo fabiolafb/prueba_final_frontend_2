@@ -1,10 +1,10 @@
 import Context from "../Context";
 import { useContext } from "react";
-import { useNavigate, Link  } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import NavbarPrivado from "../components/NavbarPrivado";
 import "../assets/css/favoritos.css";
-
+//import FooterPrivado from "../components/FooterPrivado";
 
 export default function Favoritos() {
   const { productos, setProductos } = useContext(Context);
@@ -20,27 +20,30 @@ export default function Favoritos() {
     <>
       <NavbarPrivado />
       <div className="container-favoritos">
-        <div className="container-superior">
+        <header className="barra-superior-tienda-fav">
+          <div className="link-volver d-flex">
+          <Link to="/perfil-usuario" id="id-perfil">
+                <Button variant="warning" >Mi perfil</Button>{" "}
+              </Link>
+            <Link to="/tienda" id="id-tienda">
+              <Button variant="success">Ir a Tienda</Button>
+            </Link>
+          </div>
+        </header>
+
+        <div className="container-tittle-fav d-flex">
           <div className="cont-tittle">
             <h4>Productos Favoritos</h4>
             <p>
-              Presiona sobre el corazón para <b>eliminar</b> el producto como favorito
+              Presiona sobre el corazón para <b>eliminar</b> el producto como
+              favorito
             </p>
-          </div>
-
-          <div className="link-volver d-flex">
-            <Link to="/perfil-usuario" id="id-perfil">
-            <Button variant="warning"> Mi perfil </Button>{' '}
-            </Link>
-            <Link to="/tienda" id="id-tienda">
-            <Button variant="success">Ir a Tienda</Button>
-            </Link>
           </div>
         </div>
 
         <hr />
 
-        <div className="div-card-prod-fav">
+        <div className="div-card-prod-fav sm">
           {productos
             .filter((elem) => elem.favorito)
             .map((elem, id) => (

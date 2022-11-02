@@ -1,7 +1,7 @@
 .container-menu-misdatos {
     padding-top: 1rem;
 }
-.btns-guardar {
+.btns-guardar  {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,6 +10,7 @@
     margin:0px auto;
     height: 6rem;
 }
+
 .btn-guardar {
     background-color: #44BBA4;
     border-color: #D3D0CB;

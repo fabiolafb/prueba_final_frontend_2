@@ -1,10 +1,7 @@
 import React from "react";
 import "../assets/css/editarDatos.css";
-import NavbarPrivado from "../components/NavbarPrivado";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import icon_edit_datos from "../assets/img/icon_edit_datos.png";
 import MenuPerfil from "../components/MenuPerfil";
+import NavbarPrivado from "../components/NavbarPrivado";
 
 const EdicionDatos = () => {
   return (

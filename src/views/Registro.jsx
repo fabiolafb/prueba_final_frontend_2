@@ -1,6 +1,4 @@
-import React from "react";
 import "../assets/css/registro.css";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function Registro() {
@@ -124,7 +122,6 @@ export default function Registro() {
           <br />
         </section>
       </div>
-      <Footer />
     </>
   );
 }

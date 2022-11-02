@@ -10,11 +10,11 @@ export default function MenuPerfil() {
         <header>
           <div className="barra-superior-perfil">
             <div className="nav-name-seccion">
-              <Link to="/perfil-usuario" id="id-perfil-usuario">
-                <div class="card-superior-perfil">
+              <div class="card-superior-perfil">
+                <Link to="/perfil-usuario" id="id-perfil-usuario">
                   <h5 class="card-text">Mi PERFIL</h5>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
             <nav id="id-nav-menu">
               <ul>
@@ -28,15 +28,15 @@ export default function MenuPerfil() {
                 <Link to="/mis-publicaciones">
                   <li>Mis publicaciones</li>
                 </Link>
-                <Link to="/agregarproducto">
+                <Link to="/agregar-producto">
                   <li>Crear publicación</li>
                 </Link>
               </ul>
             </nav>
             <div id="id-tienda-perfil">
-              <Link to="/tienda">
-                <Button variant="success">Ir a Tienda</Button>
-              </Link>
+            <Link to="/tienda" id="id-tienda">
+              <Button variant="success">Ir a Tienda</Button>
+            </Link>
             </div>
           </div>
         </header>

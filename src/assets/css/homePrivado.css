@@ -1,6 +1,7 @@
 .contenedor-home-privado {
     width: 100%;
     background-color: #f7f4ee;
+    height: 100vh;
 }
 
 .div-txt-privado {
@@ -23,7 +24,6 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 1.5%;
-    margin-bottom: 1.5%;
     }
     .acceso-opcion .card-acceso {
         width: 18%;

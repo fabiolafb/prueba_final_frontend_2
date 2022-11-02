@@ -15,6 +15,7 @@
     width: 10rem;
     height: 2.5rem;
     margin: 1rem;
+    box-shadow: 0px 15px 20px -15px;
 }
 .card-superior h5 {
     color: white;
@@ -28,6 +29,15 @@
     justify-content: flex-end;
     align-items: center;   
     margin-right: 2.5rem;
+    
+}
+.nav-superior-fav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;   
+    margin-right: 2.5rem;
+    height: 2.5rem;
 }
 .buscador_div {
     display: flex;
@@ -35,6 +45,7 @@
     align-items: center;
     align-content: center;
     margin: 0.8% 3rem;
+
 }
 
 .buscador_input {
@@ -44,6 +55,7 @@
     width: 14rem;
     text-align: center;
     margin: 0.8% 2rem;
+    
 }
 #id-favoritos {
     color: #393E41;
@@ -56,12 +68,15 @@
 }
 #id-favoritos Button {
     width: 8rem;
+    box-shadow: 0px 15px 20px -15px;
 }
 
 /* Sección inferior */
 .contenedor-inferior {
     width: 100%;
     display: flex;
+    padding-bottom: 6%;
+    height:61.5vh;
 }
 
 .barra-lateral {

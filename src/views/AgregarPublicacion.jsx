@@ -5,14 +5,14 @@ import trush from "../assets/img/trush.png";
 import MenuPerfil from "../components/MenuPerfil";
 
 
-const Publicaciones = () => {
+const AgregarPublicacion = () => {
   return (
     <>
       <NavbarPrivado />
       <MenuPerfil />
       <main className="container-perfil">       
-        <main className="container-menu-mispublicaciones">
-          <div className="contain-mispublicaciones">
+        <main className="container-menu-agregarpublicacion">
+          <div className="contain-agregarpublicacion">
             <h4>Mis publicaciones</h4>
             <div id="menu-misprod">
                 <div>Imagen</div>
@@ -42,4 +42,4 @@ const Publicaciones = () => {
   );
 };
 
-export default Publicaciones;
+export default AgregarPublicacion;

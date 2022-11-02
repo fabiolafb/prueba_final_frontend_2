@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/cardCatalogo.css";
 import { Card } from "react-bootstrap";
-
+//import FooterPrivado from "./FooterPrivado";
 
 export default function CardCatalogo() {
   const { productos, setProductos } = useContext(Context);
@@ -11,11 +11,10 @@ export default function CardCatalogo() {
 
   const productoFavorito = (id) => {
     const favoritoIndex = productos.findIndex((p) => p.id === id);
-    productos[favoritoIndex].favorito =
-      !productos[favoritoIndex].favorito;
+    productos[favoritoIndex].favorito = !productos[favoritoIndex].favorito;
     setProductos([...productos]);
-    console.log(productoFavorito)
-  }; 
+    console.log(productoFavorito);
+  };
 
   return (
     <>
@@ -77,8 +76,9 @@ export default function CardCatalogo() {
             </Card>
           ))}
         </div>
+        <br />
+        <br />
       </div>
-      
     </>
   );
 }

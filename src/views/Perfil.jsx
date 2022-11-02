@@ -5,6 +5,7 @@ import icon_edit from "../assets/img/icon_edit.jpg";
 import icon_form from "../assets/img/icon_form.png";
 import icon_heart from "../assets/img/icon_heart.png";
 import MenuPerfil from "../components/MenuPerfil";
+//import FooterPrivado from "../components/FooterPrivado";
 
 export default function Perfil() {
   return (
@@ -12,8 +13,7 @@ export default function Perfil() {
       <NavbarPrivado />
       <MenuPerfil />
       <main className="container-perfil">
-        <main className="container-menu-perfil">
-          <div className="container-menu-perfil-ordenar">
+          <div className="container-menu-perfil">
             <div className="container-imgs">
               <img alt="" src={icon_edit} className="icon_edit" />
               <img alt="" src={icon_form} className="icon_form" />{" "}
@@ -33,7 +33,7 @@ export default function Perfil() {
               </h5>
             </div>
           </div>
-        </main>
+
       </main>
     </>
   );

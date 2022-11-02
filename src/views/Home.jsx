@@ -1,9 +1,8 @@
-import React from "react";
 import "../assets/css/home.css";
 import img_home from "../assets/img/img_home.jpg";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export default function Home() {
   return (
@@ -25,7 +24,7 @@ export default function Home() {
           <img alt="" src={img_home} className="img_home" />
         </div>
       </div>
-      <Footer />
+
     </>
   );
 }

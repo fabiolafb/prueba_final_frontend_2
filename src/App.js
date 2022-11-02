@@ -2,6 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CondominioProvider } from "./Context";
 
+//componentes
+import Footer from "./components/Footer";
 // views
 import Home from "./views/Home";
 import InicioSesion from "./views/InicioSesion";
@@ -14,6 +16,8 @@ import Perfil from "./views/Perfil";
 import MisDatos from "./views/MisDatos";
 import EdicionDatos from "./views/EdicionDatos";
 import Publicaciones from "./views/Publicaciones";
+import AgregarPublicacion from "./views/AgregarPublicacion";
+
 
 export default function App() {
   return (
@@ -32,9 +36,12 @@ export default function App() {
             <Route path="/mis-datos" element={<MisDatos />} />            
             <Route path="/edicion-datos" element={<EdicionDatos />} />
             <Route path="/mis-publicaciones" element={<Publicaciones />} />
+            <Route path="/agregar-producto" element={<AgregarPublicacion />} />
+            
             
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CondominioProvider>
     </div>

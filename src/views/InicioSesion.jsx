@@ -2,7 +2,7 @@ import React from "react";
 import "../assets/css/iniciosesion.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export default function InicioSesion() {
   return (
@@ -53,7 +53,6 @@ export default function InicioSesion() {
           </div>
         </section>
       </div>
-      <Footer />
     </>
   );
 }
