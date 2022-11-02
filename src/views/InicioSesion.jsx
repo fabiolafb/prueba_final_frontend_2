@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/iniciosesion.css";
+import "../assets/css/inicioSesion.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 

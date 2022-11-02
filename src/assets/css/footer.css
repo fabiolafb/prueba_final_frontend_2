@@ -4,27 +4,26 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 13.5%;
-
+    height: 13%;
 }
-
 
 .logo-footer {
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
+    margin-right: 0.5rem;
 }
-.footer hr {
+#id-footer-public hr {
     height: 4rem;
     width:.1vw;
     border-width:0;
-    color:r#393E41ed;
+    color:r#393E41;
     background-color:#393E41;
-    margin-left: 1rem;
+
 }
 .info-footer {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .info-footer p {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 .logo_rrss {
@@ -33,4 +32,12 @@
     filter: invert(0.5);
     cursor: pointer;
     padding-top: -1.5%;
+}
+
+/* --- media query  --- */
+@media (max-width : 768px) {
+    #id-footer-public {
+        height: 12%;
+        padding: 0 ;
+}
 }

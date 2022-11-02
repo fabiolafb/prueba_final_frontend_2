@@ -1,25 +1,25 @@
-.contenedor-registro {
-    background-color: #D3D0CB;
+.container-add-publicacion {
+    background-color: #E7E5DF;
     padding: 2%;
-    height: 80vh;
+    height: 70vh;
 }
-.div-section {
-    background-color: #E7BB41;
+.div-main {
+    background-color: white;
     width: 50%;
     margin:0px auto;
     border-radius: 8px;
     border: 0.5px;
     box-shadow: 0px 10px 30px -10px;
 }
-.div-section h4 {
+.div-main h4 {
     padding-top: 2%;
     text-align: center;
-    color: white;
+    color: #6a6c6d;  
 }
-.div-section h5 {
+.div-main h5 {
     padding-top: 1%;
     text-align: left;
-    color: white;
+    color: #6a6c6d;  
     font-size: 1.1rem;
     margin-left: 8%;
 }
@@ -30,17 +30,22 @@
     margin-top: 1%;
     padding: 0 1%;
 }
-.label-imput {
+.label-imput-prod{
     width: 90%;
     text-align: left;
 }
-.label-imput label{
+.label-imput-prod label{
     margin-left: 5%;
 }
-.label-imput input {
+.label-imput-prod input {
     width: 90%;
     margin:0px auto;
-
+    font-style: italic;
+}
+.label-imput-prod .select_input_cat {
+    width: 90%;
+    margin:0px auto;
+    height: 2.5rem;
 }
 .is-required:after {
     content: '*';
@@ -48,49 +53,55 @@
     color: red;
     font-weight: bold;
 }
-.btn-registro {
+.btn-publicacion {
     background-color: #44BBA4 ;
     margin-top: 10%;
     margin-left: 30%;
     border-radius: 5px;
     border: 0.5px #44BBA4 solid;
-    width: 40%;
+    width: 50%;
     height: 2.3rem;
     color: white;
 }
-#ast {
+#asterisco {
     color: red;
+}
+#form-control-desc {
+    height: 5rem;
 }
 
 /* --- media query  --- */
 @media (max-width : 997px) {
-    .div-section {
+    .div-main {
         width: 70%;
+    }
+    .container-add-publicacion {
+        height: 100vh;
     }
 }
 
 @media (max-width : 768px) {
-
-    .contenedor-registro {
-        height: 130vh;
+    .container-add-publicacion {
+        height: 120vh;
     }
-    .div-section {
+    .div-main {
         width: 70%;
     }
     .columnas-form {
         display: flex;
         flex-direction: column;
     }
-    .label-imput {
+    .label-imput-prod {
         width: 100%;
         margin-top: 1%;
     }
-    .btn-registro {
+    .btn-publicacion {
         margin-top: 4%;
     }
 }
 @media (max-width : 528px) {
-    .div-section {
+    .div-main {
         width: 80%;
     }
+
 }

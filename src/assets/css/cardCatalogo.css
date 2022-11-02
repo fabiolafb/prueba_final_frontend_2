@@ -80,6 +80,7 @@
 
     .div-card-prod {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 1rem;
     }
 
 }
@@ -89,6 +90,7 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 5px;
         row-gap: 30px;
+        justify-items: center;
     }
     
 }

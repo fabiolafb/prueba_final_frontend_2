@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/misdatos.css";
+import "../assets/css/misDatos.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";

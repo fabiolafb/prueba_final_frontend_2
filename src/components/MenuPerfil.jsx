@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/menuperfil.css";
+import "../assets/css/menuPerfil.css";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 

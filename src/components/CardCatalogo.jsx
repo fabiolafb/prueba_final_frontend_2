@@ -76,8 +76,7 @@ export default function CardCatalogo() {
             </Card>
           ))}
         </div>
-        <br />
-        <br />
+
       </div>
     </>
   );

@@ -9,11 +9,10 @@ const Footer = () => {
   return (
     <>
       <footer id="id-footer-public" className="footer fixed-bottom ">
+        <NavLink to="/">
+          <img alt="" src={logo} width="150" className="logo-footer ms-auto" />
+        </NavLink>
 
-          <NavLink to="/">
-            <img alt="" src={logo} width="150" className="logo-footer ms-auto" />
-          </NavLink>
- 
         <hr />
 
         <div className="info-footer">
@@ -38,5 +37,5 @@ const Footer = () => {
       </footer>
     </>
   );
-}
+};
 export default Footer;
