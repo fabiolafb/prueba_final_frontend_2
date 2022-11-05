@@ -47,6 +47,7 @@ export default function Tienda() {
         <div className="contenedor-inferior">
           <nav className="barra-lateral">
             <div>
+              <h6>Filtrar por:</h6>
               <Form.Select
                 aria-label="Default select example"
                 className="select_input"
@@ -60,6 +61,7 @@ export default function Tienda() {
                 <option value="Tecnología">Tecnología</option>
                 <option value="Vestuario">Vestuario</option>
               </Form.Select>
+              
             </div>
             <hr />
           </nav>

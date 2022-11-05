@@ -15,6 +15,8 @@
     background-color: #44BBA4;
     border-color: #D3D0CB;
     border-radius: 10px;
+    color: white;
+    
 }
 .btn-no-guardar {
     background-color: white;
@@ -26,4 +28,5 @@
     .btn-no-guardar:hover {
         --p: 100%;
         background-position: right;
+        color: white;
     }

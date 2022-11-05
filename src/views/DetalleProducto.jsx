@@ -67,7 +67,7 @@ export default function DetalleProducto() {
                 data-placement="top"
                 title="Agregar para comprar"
               >
-                Añadir
+                Comprar
               </button>
             </div>
             <Link to="/tienda">

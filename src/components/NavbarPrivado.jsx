@@ -25,7 +25,7 @@ export default function NavbarPrivate() {
         <div id="id-container-fluid" className="container-select">
     
             <Form.Select aria-label="Default select example" id="nombre-login">
-              <option disabled>Hola name</option>
+              <option >Hola name</option>
               <option value="Mi perfil">Mi perfil</option>
               <option value="Datos personales"><Link to="/mis-datos">Datos personales</Link></option>
               <option value="Mis favoritos"><Link to="/favoritos">Mis favoritos</Link></option>
