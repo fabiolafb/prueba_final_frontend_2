@@ -69,3 +69,10 @@
         background-size: 200% 100%;
         background-position: 100% 100%;
     }
+
+/* --- media query  --- */
+@media (max-width : 1100px) {
+    #id-nav-menu {
+        margin-left: 3rem;
+    }
+}

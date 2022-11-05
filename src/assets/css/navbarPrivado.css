@@ -22,9 +22,9 @@
     background-color: transparent;
     border: transparent;
     color: #393E41;
-    width: 100%;
+    width: 30%;
     font-size: 1.2rem;
-    text-align: end;
+    text-align: left;
  }
 .nav-link {
     text-align: center;
@@ -35,11 +35,16 @@
 }
 
 /* --- media query  --- */
-@media (max-width : 800px) {
-
-
+@media (max-width : 1000px) {
+    #nombre-login {
+        width: 50%;
+        text-align: left;}
 
 }
+@media (max-width : 768px) {
+    #nombre-login {
+        text-align: left;}
 
+}
 
 

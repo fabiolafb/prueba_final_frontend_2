@@ -9,6 +9,7 @@ import sign_out from "../assets/img/sign_out.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function NavbarPrivate() {
+
   return (
     <>
       <Navbar
@@ -24,10 +25,10 @@ export default function NavbarPrivate() {
         <div id="id-container-fluid" className="container-select">
     
             <Form.Select aria-label="Default select example" id="nombre-login">
-              <option>Hola name</option>
+              <option disabled>Hola name</option>
               <option value="Mi perfil">Mi perfil</option>
-              <option value="Datos personales">Datos personales</option>
-              <option value="Mis favoritos">Mis publicaciones</option>
+              <option value="Datos personales"><Link to="/mis-datos">Datos personales</Link></option>
+              <option value="Mis favoritos"><Link to="/favoritos">Mis favoritos</Link></option>
               <option value="Mis publicaciones">Mis publicaciones</option>
               <option value="Cerrar sesión">Cerrar sesión</option>
             </Form.Select>

@@ -6,22 +6,30 @@ const Context = createContext();
 const CondominioProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
   //const [sumarCarrito, setSumarCarrito] = useState([]);
+  // Asignar estado para input de  búsqueda -- Tienda
+  const [buscando, setBuscando] = useState("");
+    // Asignar estado para filtro por categoria de productos -- Tienda
+  const [filtradoCategoria, setFiltradoCategoria] = useState("");
+
 
   const url = "/productos.json";
 
   //Función que llama a la API
   const obtenerProductos = async () => {
-  const res = await fetch(url);
-  const data = await res.json();
-  //console.log(data); 
-  setProductos(data);
+    const res = await fetch(url);
+    const data = await res.json();
+    //console.log(data);
+    setProductos(data);
   };
 
   useEffect(() => {
     obtenerProductos();
   }, []);
 
-    //Funcion que busca el índice del array que cambiará de false a true
+
+
+
+  //Funcion que busca el índice del array que cambiará de false a true
 
   // //Función llenar carrito
   // const agregarCarrito = ({ id, img, name, price }) => {
@@ -60,7 +68,11 @@ const CondominioProvider = ({ children }) => {
       value={{
         productos,
         setProductos,
-           // sumarCarrito,
+        buscando,
+        setBuscando,
+        filtradoCategoria, 
+        setFiltradoCategoria,
+        // sumarCarrito,
         // setSumarCarrito,
         // agregarCarrito,
         // agregar,

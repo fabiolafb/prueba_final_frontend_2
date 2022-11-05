@@ -1,4 +1,6 @@
 import "../assets/css/tienda.css";
+import Context from "../Context";
+import { useContext } from "react";
 import NavbarPrivado from "../components/NavbarPrivado";
 import CardCatalogo from "../components/CardCatalogo";
 import { Form, Button } from "react-bootstrap";
@@ -6,6 +8,8 @@ import { Link } from "react-router-dom";
 
 
 export default function Tienda() {
+  const { buscando, setBuscando, filtradoCategoria, setFiltradoCategoria  } = useContext(Context);
+
   return (
     <>
       <NavbarPrivado />
@@ -23,10 +27,10 @@ export default function Tienda() {
                 type="text"
                 className="buscador_input"
                 placeholder=" Ingresa búsqueda       🔍"
-                // value={buscando}
-                // onChange={(e) => {
-                //   setBuscando(e.target.value);
-                // }}
+                value={buscando}
+                onChange={(e) => {
+                  setBuscando(e.target.value);
+                }}
               />
               <Link to="/favoritos" id="id-favoritos">
                 {" "}
@@ -46,15 +50,15 @@ export default function Tienda() {
               <Form.Select
                 aria-label="Default select example"
                 className="select_input"
-                // onChange={(e) => setFiltradoFeriados(e.target.value)}
-                // value={filtradoFeriados}
+                onChange={(e) => setFiltradoCategoria(e.target.value)}
+                value={filtradoCategoria}
               >
                 <option value="">Categorías</option>
-                <option value="1">Alimentación</option>
-                <option value="2">Entretención</option>
-                <option value="3">Hogar</option>
-                <option value="4">Tecnología</option>
-                <option value="5">Vestuario</option>
+                <option value="Alimentación">Alimentación</option>
+                <option value="Entretención">Entretención</option>
+                <option value="Hogar">Hogar</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Vestuario">Vestuario</option>
               </Form.Select>
             </div>
             <hr />
