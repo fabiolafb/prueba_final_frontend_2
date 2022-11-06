@@ -87,8 +87,17 @@
     display: flex;
 }
 .select_input {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
+
+.barra-lateral-filtros {
+    display: flex;
+    flex-direction: column;
+}
+.barra-lateral-filtros h6 {
+    
+}
+
 .barra-lateral hr {
     height:100rem;
     width:.1vw;

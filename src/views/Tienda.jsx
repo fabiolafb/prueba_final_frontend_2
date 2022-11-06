@@ -46,7 +46,8 @@ export default function Tienda() {
 
         <div className="contenedor-inferior">
           <nav className="barra-lateral">
-            <div>
+            <div className="barra-lateral-filtros">
+            <br /> 
               <h6>Filtrar por:</h6>
               <Form.Select
                 aria-label="Default select example"
@@ -61,7 +62,19 @@ export default function Tienda() {
                 <option value="Tecnología">Tecnología</option>
                 <option value="Vestuario">Vestuario</option>
               </Form.Select>
-              
+
+
+              <h6>Ordenar por:</h6>              
+              <Form.Select
+                aria-label="Default select example"
+                className="select_input"
+                onChange={(e) => setFiltradoCategoria(e.target.value)}
+                value={filtradoCategoria}
+              >
+                <option value="">Ordenar por</option>
+                <option value="Precio">Precio</option>
+                <option value="Nombre">Nombre</option>
+                 </Form.Select>
             </div>
             <hr />
           </nav>

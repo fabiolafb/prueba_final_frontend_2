@@ -1,7 +1,16 @@
 import "../assets/css/registro.css";
 import Navbar from "../components/Navbar";
-
+import { useForm } from "react-hook-form";
 export default function Registro() {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <>
       <Navbar />
@@ -12,105 +21,101 @@ export default function Registro() {
             Los campos marcados con (<span id="ast">*</span>) son obligatorios.
           </h5>
 
-          <div className="columnas-form">
-            <div className="label-imput">
+          <form onSubmit={handleSubmit(onSubmit)} className="columnas-form">
+            <div className="label-input">
               <label className="is-required">Nombre</label>
               <input
                 type="text"
-                name="nombre"
                 className="form-control"
-                required
+                {...register("nombre", { required: true })}
+                // name="nombre"
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
+              {errors.nombre?.type === "required" && <p className="errors">Debes ingresar tu nombre</p>}
             </div>
-            <div className="label-imput">
+            <div className="label-input">
               <label className="is-required">Apellido</label>
               <input
                 type="text"
-                name="apellido"
                 className="form-control"
-                required
+                {...register("apellido", { required: true })}
+                // name="apellido"
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
-            </div>
-          </div>
+              {errors.apellido?.type === "required" && <p className="errors">Debes ingresar tu apellido</p>}
+            </div>           
+            
+          </form>
 
-          <div className="columnas-form">
-            <div className="label-imput">
+          <form onSubmit={handleSubmit(onSubmit)} className="columnas-form">
+            <div className="label-input">
               <label className="is-required">Correo electrónico</label>
               <input
                 type="email"
-                name="correo"
                 className="form-control"
-                required
+                {...register("email", { required: true, pattern: /\S+@\S+\.\S+/ })}
+                // name="correo"
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
+              {errors.email?.type === "required" && <p className="errors">Debes ingresar tu correo electrónico</p>}
+              {errors.email?.type === "pattern" && <p className="errors">El formato de correo no corresponde</p>}
             </div>
-            <div className="label-imput">
+            <div className="label-input">
               <label className="">
                 Teléfono de contacto <i>(opcional)</i>
               </label>
               <input
                 type="text"
+                {...register("nro")}
                 name="numero-contacto"
                 className="form-control"
                 placeholder="+569"
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
             </div>
-          </div>
-          <div className="columnas-form">
-            <div className="label-imput">
+          </form>
+          <form onSubmit={handleSubmit(onSubmit)} className="columnas-form">
+            <div className="label-input">
               <label className="is-required">Contraseña</label>
               <input
                 type="password"
-                name="pass"
                 className="form-control"
-                requiered
-                placeholder="*****"
-                // onChange={(e) => setPass(e.target.value)}
-                // value={pass}
+                {...register("pass", { required: true, maxLength: 4 })}
+                // name="pass"
               />
             </div>
-            <div className="label-imput">
+            <div className="label-input">
               <label className="is-required">Repetir Contraseña</label>
               <input
                 type="password"
-                name="pass"
                 className="form-control"
-                requiered
-                placeholder="*****"
-                // onChange={(e) => setPass(e.target.value)}
-                // value={pass}
+                {...register("pass", { required: true, maxLength: 4 })}
+                // name="pass"
+                placeholder="****"
               />
+              {errors.pass?.type === "maxLength" && <p className="errors">La contraseña debe ser de máximo 4 caracteres</p>}
             </div>
-          </div>
+          </form>
 
-          <div className="columnas-form" id="id-columnas-form">
-            <div className="label-imput">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="columnas-form"
+            id="id-columnas-form"
+          >
+            <div className="label-input">
               <label className="">
                 Nombre de negocio o tienda <i>(opcional)</i>
               </label>
               <input
                 type="text"
-                name="negocio"
                 className="form-control"
+                {...register("tienda")}
+                // name="tienda"
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
             </div>
-            <div className="label-imput">
+            <div className="label-input">
               <button
                 className="btn-registro"
-                // onClick={() => agregarCarrito(pizza)}
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar registro"
@@ -118,7 +123,7 @@ export default function Registro() {
                 Registrarse
               </button>
             </div>
-          </div>
+          </form>
           <br />
         </section>
       </div>
