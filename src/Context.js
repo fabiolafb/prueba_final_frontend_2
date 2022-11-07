@@ -8,13 +8,17 @@ const CondominioProvider = ({ children }) => {
   //const [sumarCarrito, setSumarCarrito] = useState([]);
   // Asignar estado para input de  búsqueda -- Tienda
   const [buscando, setBuscando] = useState("");
-    // Asignar estado para filtro por categoria de productos -- Tienda
+  // Asignar estado para filtro por categoria de productos -- Tienda
   const [filtradoCategoria, setFiltradoCategoria] = useState("");
+  // Asignar estado para ordenar por precio productos -- Tienda
+  const [ordenPrecio, setOrdenPrecio] = useState("");
+    // Asignar estado para ordenar por precio productos -- Tienda
+    const [nombresOrdenados, setNombresOrdenados] = useState("");
 
-
-  const url = "/productos.json";
 
   //Función que llama a la API
+  const url = "/productos.json";
+
   const obtenerProductos = async () => {
     const res = await fetch(url);
     const data = await res.json();
@@ -25,9 +29,6 @@ const CondominioProvider = ({ children }) => {
   useEffect(() => {
     obtenerProductos();
   }, []);
-
-
-
 
   //Funcion que busca el índice del array que cambiará de false a true
 
@@ -66,12 +67,11 @@ const CondominioProvider = ({ children }) => {
   return (
     <Context.Provider
       value={{
-        productos,
-        setProductos,
-        buscando,
-        setBuscando,
-        filtradoCategoria, 
-        setFiltradoCategoria,
+        productos, setProductos,
+        buscando, setBuscando,
+        filtradoCategoria, setFiltradoCategoria,
+        ordenPrecio, setOrdenPrecio,
+        nombresOrdenados, setNombresOrdenados,
         // sumarCarrito,
         // setSumarCarrito,
         // agregarCarrito,

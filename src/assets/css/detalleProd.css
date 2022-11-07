@@ -90,12 +90,11 @@
           max-width: 65%;      
     }
     .hover-2 {
-
         margin-left: -12%;
         margin-top: 0%;
         position: absolute;
         z-index: 5;
-        background-color: red;
+        background-color: #a9b0b4;
     }
     .card-detalle-der {
         padding: 9% 2% 4% 0%;

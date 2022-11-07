@@ -28,7 +28,7 @@ export default function DetalleProducto() {
           <div className="card-detalle-prod">
             <div className="card-detalle-izq">
               <h4 className="name-card-detalle">
-                <b>{productoId.name}</b>
+                <b>{productoId.prodName}</b>
               </h4>
               <img src={productoId.img} alt="" className="zoom" width="250" />
               <div className="categ-fav">
@@ -59,7 +59,10 @@ export default function DetalleProducto() {
                 <p><b>Vendido por:</b></p>
                 <p className="autor-card-detalle">{productoId.autor}</p>
               </div>
-              <h4 className="precio">Precio {productoId.price}</h4>
+              <h4 className="precio">Precio {productoId.price.toLocaleString("es-CL", {
+                      style: "currency",
+                      currency: "CLP",
+                    })}</h4>
               <button
                 // onClick={() => agregarCarrito(productoId)}
                 className="btn-agregar-2"

@@ -1,0 +1,82 @@
+[
+  {
+    "nombre": "Anibal",
+    "apellido": "Reyes",
+    "email": "anibal.reyes@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "973677515"
+  },
+  {
+    "nombre": "Leonardo",
+    "apellido": "Castillo",
+    "email": "ljcl79@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "991234567"
+  },
+  {
+    "nombre": "Fabiola",
+    "apellido": "Fuentes",
+    "email": "fabitafb@gmail.com",
+    "pass": "2107",
+    "tienda": " ",
+    "phone": "995414358"
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Gómez",
+    "email": "agomez.vg@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "982651109"
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Román",
+    "email": "claudio.r@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "993233823"
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Hutchings",
+    "email": "andres_hut@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "996572185"
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Salinas",
+    "email": "salinas.luis@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "995449195"
+  },
+  {
+    "nombre": "Vanesa",
+    "apellido": "Segovia",
+    "email": "vanesa.segovia@gmail.com",
+    "pass": "1234",
+    "tienda": " ",
+    "phone": "998877665"
+  },
+  {
+    "nombre": "Ingrid",
+    "apellido": "Benítez",
+    "email": "decocasa@gmail.com",
+    "pass": "1234",
+    "tienda": "Deco-casa",
+    "phone": "912345678"
+  },
+  {
+    "nombre": "Catalina",
+    "apellido": "San Martin",
+    "email": "cata.sm@gmail.com",
+    "pass": "1234",
+    "tienda": "",
+    "phone": "932165478"
+  }
+]

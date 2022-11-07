@@ -44,7 +44,6 @@ export default function Registro() {
               />
               {errors.apellido?.type === "required" && <p className="errors">Debes ingresar tu apellido</p>}
             </div>           
-            
           </form>
 
           <form onSubmit={handleSubmit(onSubmit)} className="columnas-form">
@@ -61,25 +60,29 @@ export default function Registro() {
               {errors.email?.type === "pattern" && <p className="errors">El formato de correo no corresponde</p>}
             </div>
             <div className="label-input">
-              <label className="">
-                Teléfono de contacto <i>(opcional)</i>
+              <label className="is-required">
+                Teléfono de contacto 
               </label>
               <input
-                type="text"
-                {...register("nro")}
+                type="txt"
+                {...register("nro", { required: true, minLength: 9, maxLength: 9 })}
                 name="numero-contacto"
                 className="form-control"
                 placeholder="+569"
               />
+              {errors.email?.type === "required" && <p className="errors">Debes ingresar un teléfono de contacto</p>}
+              {errors.nro?.type === "minLength" && <p className="errors">El número de teléfono debe contener 9 dígitos</p>}
+              {errors.nro?.type === "maxLength" && <p className="errors">El número de teléfono debe contener 9 dígitos</p>}
             </div>
           </form>
+
           <form onSubmit={handleSubmit(onSubmit)} className="columnas-form">
             <div className="label-input">
               <label className="is-required">Contraseña</label>
               <input
                 type="password"
                 className="form-control"
-                {...register("pass", { required: true, maxLength: 4 })}
+                {...register("pass", { required: true, minLength: 4, maxLength: 4 })}
                 // name="pass"
               />
             </div>

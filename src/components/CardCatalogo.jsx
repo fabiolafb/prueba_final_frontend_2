@@ -8,7 +8,6 @@ export default function CardCatalogo() {
   const { productos, setProductos, buscando, filtradoCategoria } =
     useContext(Context);
   const navigate = useNavigate(); //crear una ruta
-  // const { categ } = useParams();
 
   const productoFavorito = (id) => {
     const favoritoIndex = productos.findIndex((p) => p.id === id);
@@ -28,7 +27,7 @@ export default function CardCatalogo() {
                 return producto;
               } else if (
                 filtradoCategoria === "" &&
-                (producto.name
+                (producto.prodName
                   .toLocaleLowerCase()
                   .includes(buscando.toLocaleLowerCase()) ||
                   producto.autor
@@ -70,12 +69,18 @@ export default function CardCatalogo() {
                     />
                   </svg>
                   <Card.Text className="name-card">
-                    <b>{prod.name}</b>
+                    <b>{prod.prodName}</b>
                   </Card.Text>
                   <Card.Text className="categ-card">
                     Categoría: <i>{prod.categ}</i>
                   </Card.Text>
-                  <Card.Title className="price-card">{prod.price}</Card.Title>
+                  <Card.Title className="price-card">
+                    {" "}
+                    {prod.price.toLocaleString("es-CL", {
+                      style: "currency",
+                      currency: "CLP",
+                    })}
+                  </Card.Title>
 
                   <div className="btns-card">
                     <button
