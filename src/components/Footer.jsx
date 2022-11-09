@@ -5,6 +5,7 @@ import logo from "../assets/img/logo_3.png";
 import instagram from "../assets/img/instagram.png";
 import facebook from "../assets/img/facebook.png";
 
+
 const Footer = () => {
   return (
     <>
@@ -33,6 +34,7 @@ const Footer = () => {
             data-placement="top"
             title="Facebook Condominio Ventas"
           />
+          
         </div>
       </footer>
     </>

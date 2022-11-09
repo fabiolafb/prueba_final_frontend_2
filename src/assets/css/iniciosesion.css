@@ -3,7 +3,7 @@
     padding: 2%;
     height: 80vh;
 }
-section {
+form {
     background-color: #44BBA4;
     width: 40%;
     margin:0px auto;
@@ -11,12 +11,12 @@ section {
     border: 0.5px;
     box-shadow: 0px 10px 30px -10px;
 }
-section h4 {
+form h4 {
     padding-top: 2%;
     text-align: center;
     color: white;
 }
-section label {
+form label {
     margin-bottom: 0.5rem;
     margin-left: 21%;
     color: white;
@@ -60,12 +60,12 @@ section label {
 
 /* --- media query  --- */
 @media (max-width : 1185px) {
-    section {
+    form {
         width: 50%;
     }
 }
 @media (max-width : 945px) {
-    section {
+    form {
         width: 65%;
     }
     .btn-inicio-sesion {
@@ -75,10 +75,10 @@ section label {
 }
 
 @media (max-width : 768px) {
-    .section {
+    .form {
         width: 80%;
     }
-    section label {
+    form label {
         margin-left: 15%;
     }
     .form-control {
@@ -96,7 +96,7 @@ section label {
 }
 
 @media (max-width : 528px) {
-    section {
+    form {
     width: 70%;
 }
 .btn-inicio-sesion {

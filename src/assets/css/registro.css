@@ -65,6 +65,7 @@
     color: red;
     font-style: italic;
     margin-left: 5%;
+    margin-bottom: 0;
 }
 
 /* --- media query  --- */

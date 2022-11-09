@@ -57,7 +57,7 @@ export default function DetalleProducto() {
 
               <div className="div-autor d-flex">
                 <p><b>Vendido por:</b></p>
-                <p className="autor-card-detalle">{productoId.autor}</p>
+                <p className="autor-card-detalle">{productoId.nombre} <span></span>{productoId.apellido}</p>
               </div>
               <h4 className="precio">Precio {productoId.price.toLocaleString("es-CL", {
                       style: "currency",

@@ -12,8 +12,8 @@ const CondominioProvider = ({ children }) => {
   const [filtradoCategoria, setFiltradoCategoria] = useState("");
   // Asignar estado para ordenar por precio productos -- Tienda
   const [ordenPrecio, setOrdenPrecio] = useState("");
-    // Asignar estado para ordenar por precio productos -- Tienda
-    const [nombresOrdenados, setNombresOrdenados] = useState("");
+  // Asignar estado para ordenar por nombre productos -- Tienda
+  const [nombresOrdenados, setNombresOrdenados] = useState("");
 
 
   //Función que llama a la API
@@ -30,39 +30,7 @@ const CondominioProvider = ({ children }) => {
     obtenerProductos();
   }, []);
 
-  //Funcion que busca el índice del array que cambiará de false a true
-
-  // //Función llenar carrito
-  // const agregarCarrito = ({ id, img, name, price }) => {
-  //   const pizzaEncontradaIndex = sumarCarrito.findIndex((c) => c.id === id);
-  //   const pizzaEncontrada = { id, img, name, price, count: 1 };
-
-  //   if (pizzaEncontradaIndex >= 0) {
-  //     sumarCarrito[pizzaEncontradaIndex].count++;
-  //     setSumarCarrito([...sumarCarrito]);
-  //   } else {
-  //     setSumarCarrito([...sumarCarrito, pizzaEncontrada]);
-  //   }
-  // };
-
-  // //Función agregar o quitar pizzas
-  // const agregar = (i) => {
-  //   sumarCarrito[i].count++;
-  //   setSumarCarrito([...sumarCarrito]);
-  // };
-
-  // const quitar = (i) => {
-  //   const { count } = sumarCarrito[i];
-  //   if (count === 1) {
-  //     sumarCarrito.splice(i, 1);
-  //   } else {
-  //     sumarCarrito[i].count--;
-  //   }
-  //   setSumarCarrito([...sumarCarrito]);
-  // };
-
-  // //Función vaciar carrito
-  // const vaciarCarrito = () => setSumarCarrito([]);
+ 
 
   return (
     <Context.Provider

@@ -7,42 +7,24 @@ import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Tienda() {
-  const { productos, setProductos, buscando, setBuscando, filtradoCategoria, setFiltradoCategoria, nombresOrdenados,   
+  const {
+    productos,
+    setProductos,
+    buscando,
+    setBuscando,
+    filtradoCategoria,
+    setFiltradoCategoria,
+    nombresOrdenados
   } = useContext(Context);
 
   //Función para ordenar por nombre productos
-  const handlerNombresOrdenados = productos.sort((a, b) => {
-    if (a.prodName.toLowerCase() < b.prodName.toLowerCase()) return -1;
-    if (a.prodName.toLowerCase() > b.prodName.toLowerCase()) return 1;
-    return setProductos("");
-  });
-  console.log(nombresOrdenados);
-
-  // const handlerOrdenarPrecio = () => {
-  //   if (ordenPrecio === "") {
-  //     setOrdenPrecio(productos());
-  //   } else if (ordenPrecio !== "") {
-  //     setProductos(productos.sort((a, b) => a.price.localeCompare(b.price)));
-  //   }
-  // };
-
-  // const handlerNombresOrdenados = () => {
-  //   if (nombresOrdenados === "") {
-  //     setNombresOrdenados(productos());
-  //   } else if (nombresOrdenados !== "") {
-  //     setProductos(productos.sort((a, b) => a.prodName.localeCompare(b.prodName)));
-  //   }
-  // };
-
-  // console.log(handlerNombresOrdenados)
-  
-  // const nombresOrdenados = productos.sort((a, b) => a.name.localeCompare(b.name))
-  // if (a.prodName.toLowerCase() < b.prodName.toLowerCase())
-  // return -1;
-  // if (a.prodName.toLowerCase() > b.prodName.toLowerCase())
-  // return 1;
-  // return 0;
-  // console.log(nombresOrdenados);
+  // const handlerNombresOrdenados = productos.sort((a, b) => {
+  //   console.log("ordenando");
+  //   if (a.prodName.toLowerCase() < b.prodName.toLowerCase()) return -1;
+  //   if (a.prodName.toLowerCase() > b.prodName.toLowerCase()) return 1;
+  //   return setProductos("");
+  // });
+  // console.log(handlerNombresOrdenados);
 
   return (
     <>
@@ -55,17 +37,19 @@ export default function Tienda() {
             </div>
           </div>
 
+          {/* función buscador y links favoritos y Mi perfil */}
           <div class="nav-superior">
             <div className="buscador_div">
               <input
                 type="text"
                 className="buscador_input"
-                placeholder=" Ingresa búsqueda       🔍"
+                placeholder="Ingresa búsqueda         🔍"
                 value={buscando}
                 onChange={(e) => {
                   setBuscando(e.target.value);
                 }}
               />
+
               <Link to="/favoritos" id="id-favoritos">
                 {" "}
                 <Button variant="outline-secondary">Ir a favoritos</Button>{" "}
@@ -80,6 +64,7 @@ export default function Tienda() {
 
         <div className="contenedor-inferior">
           <nav className="barra-lateral">
+            {/* Funciones filtro por categoría y ordenar por: nombre o precio */}
             <div className="barra-lateral-filtros">
               <br />
               <h6>Filtrar por:</h6>
@@ -103,22 +88,17 @@ export default function Tienda() {
               <Form.Select
                 aria-label="Default select example"
                 className="select_input"
-                // onChange={}
-                // value={}
+                // onChange={() => handlerNombresOrdenados() }
+                // value={nombresOrdenados}
               >
                 <option value="">Ordenar por</option>
-                <option
-                  value="nombresOrdenados"
-                  onChange={handlerNombresOrdenados}
-                >
-                  Alfabéticamente
+                <option value="nombresOrdenados">Alfabéticamente</option>
+
+                <option value="">Precio <i>(menor a mayor)</i>
                 </option>
-                <option
-                  value="handlerOrdenarPrecio"
-                >
-                  Precio <i>(menor a mayor)</i>
+
+                <option value="">Precio <i>(mayor a menor)</i>
                 </option>
-                {/* <option value="Precio">Precio <i>(mayor a menor)</i></option> */}
               </Form.Select>
             </div>
             <hr />

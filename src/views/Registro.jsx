@@ -1,6 +1,7 @@
 import "../assets/css/registro.css";
 import Navbar from "../components/Navbar";
 import { useForm } from "react-hook-form";
+
 export default function Registro() {
   const {
     register,
@@ -11,6 +12,7 @@ export default function Registro() {
   const onSubmit = (data) => {
     console.log(data);
   };
+  
   return (
     <>
       <Navbar />
@@ -59,6 +61,7 @@ export default function Registro() {
               {errors.email?.type === "required" && <p className="errors">Debes ingresar tu correo electrónico</p>}
               {errors.email?.type === "pattern" && <p className="errors">El formato de correo no corresponde</p>}
             </div>
+
             <div className="label-input">
               <label className="is-required">
                 Teléfono de contacto 
@@ -71,8 +74,8 @@ export default function Registro() {
                 placeholder="+569"
               />
               {errors.email?.type === "required" && <p className="errors">Debes ingresar un teléfono de contacto</p>}
-              {errors.nro?.type === "minLength" && <p className="errors">El número de teléfono debe contener 9 dígitos</p>}
-              {errors.nro?.type === "maxLength" && <p className="errors">El número de teléfono debe contener 9 dígitos</p>}
+              {errors.nro?.type === "minLength" && <p className="errors">El número de teléfono debe contener 8 dígitos</p>}
+              {errors.nro?.type === "maxLength" && <p className="errors">El número de teléfono debe contener 8 dígitos</p>}
             </div>
           </form>
 
@@ -84,14 +87,17 @@ export default function Registro() {
                 className="form-control"
                 {...register("pass", { required: true, minLength: 4, maxLength: 4 })}
                 // name="pass"
+                placeholder="****"
               />
+              {errors.pass?.type === "maxLength" && <p className="errors">La contraseña debe ser de máximo 4 caracteres</p>}
             </div>
+
             <div className="label-input">
               <label className="is-required">Repetir Contraseña</label>
               <input
                 type="password"
                 className="form-control"
-                {...register("pass", { required: true, maxLength: 4 })}
+                {...register("pass", { required: true, maxLength: 4, })}
                 // name="pass"
                 placeholder="****"
               />
@@ -116,6 +122,7 @@ export default function Registro() {
                 placeholder=""
               />
             </div>
+
             <div className="label-input">
               <button
                 className="btn-registro"

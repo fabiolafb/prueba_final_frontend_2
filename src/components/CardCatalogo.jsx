@@ -28,11 +28,8 @@ export default function CardCatalogo() {
               } else if (
                 filtradoCategoria === "" &&
                 (producto.prodName
-                  .toLocaleLowerCase()
+                  .toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '')
                   .includes(buscando.toLocaleLowerCase()) ||
-                  producto.autor
-                    .toLocaleLowerCase()
-                    .includes(buscando.toLocaleLowerCase()) ||
                   producto.categ
                     .toLocaleLowerCase()
                     .includes(buscando.toLocaleLowerCase()))

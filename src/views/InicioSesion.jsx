@@ -3,18 +3,23 @@ import "../assets/css/inicioSesion.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-
 export default function InicioSesion() {
   return (
     <>
       <Navbar />
       <div className="contenedor-iniciosesion">
-        <section>
+        <form
+          // onSubmit={(ev) => {
+          //   ev.preventDefault();
+          //   const email = ev.target.email.value;
+          //   const password = ev.target.password.value;
+          // }}
+        >
           <h4>Iniciar sesión</h4>
           <label>Correo electrónico</label>
           <input
             type="email"
-            name="correo"
+            name="email"
             className="form-control"
             placeholder="Ingresar correo electrónico"
           />
@@ -22,7 +27,7 @@ export default function InicioSesion() {
           <label>Contraseña</label>
           <input
             type="password"
-            name="pass"
+            name="password"
             className="form-control"
             placeholder="Ingresar contraseña"
           />
@@ -51,7 +56,7 @@ export default function InicioSesion() {
               </Link>
             </div>
           </div>
-        </section>
+        </form>
       </div>
     </>
   );
