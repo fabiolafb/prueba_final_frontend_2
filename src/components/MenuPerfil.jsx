@@ -10,9 +10,9 @@ export default function MenuPerfil() {
         <header>
           <div className="barra-superior-perfil">
             <div className="nav-name-seccion">
-              <div class="card-superior-perfil">
+              <div className="card-superior-perfil">
                 <Link to="/perfil-usuario" id="id-perfil-usuario">
-                  <h5 class="card-text">Mi PERFIL</h5>
+                  <h5 className="card-text">Mi PERFIL</h5>
                 </Link>
               </div>
             </div>

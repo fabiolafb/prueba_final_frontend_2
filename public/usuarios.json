@@ -1,82 +1,92 @@
 [
   {
+    "userId": 1,
     "nombre": "Anibal",
     "apellido": "Reyes",
     "email": "anibal.reyes@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "973677515"
+    "nro": "973677515"
   },
   {
+    "userId": 2,
     "nombre": "Leonardo",
     "apellido": "Castillo",
     "email": "ljcl79@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "991234567"
+    "nro": "991234567"
   },
   {
+    "userId": 3,
     "nombre": "Fabiola",
     "apellido": "Fuentes",
     "email": "fabitafb@gmail.com",
-    "pass": "2107",
+    "password": 2107,
     "tienda": " ",
-    "phone": "995414358"
+    "nro": "995414358"
   },
   {
+    "userId": 4,
     "nombre": "Andrés",
     "apellido": "Gómez",
     "email": "agomez.vg@gmail.com",
-    "pass": "1234",
+    "password": 2608,
     "tienda": " ",
-    "phone": "982651109"
+    "nro": "982651109"
   },
   {
+    "userId": 5,
     "nombre": "Claudio",
     "apellido": "Román",
     "email": "claudio.r@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "993233823"
+    "nro": "993233823"
   },
   {
+    "userId": 6,
     "nombre": "Andrés",
     "apellido": "Hutchings",
     "email": "andres_hut@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "996572185"
+    "nro": "996572185"
   },
   {
+    "userId": 7,
     "nombre": "Luis",
     "apellido": "Salinas",
     "email": "salinas.luis@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "995449195"
+    "nro": "995449195"
   },
   {
+    "userId": 8,
     "nombre": "Vanesa",
     "apellido": "Segovia",
     "email": "vanesa.segovia@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": " ",
-    "phone": "998877665"
+    "nro": "998877665"
   },
   {
+    "userId": 9,
     "nombre": "Ingrid",
     "apellido": "Benítez",
     "email": "decocasa@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": "Deco-casa",
-    "phone": "912345678"
+    "nro": "912345678"
   },
   {
+    "userId": 10,
     "nombre": "Catalina",
     "apellido": "San Martin",
     "email": "cata.sm@gmail.com",
-    "pass": "1234",
+    "password": 1234,
     "tienda": "",
-    "phone": "932165478"
+    "nro": "932165478"
   }
 ]

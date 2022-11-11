@@ -8,7 +8,7 @@
 .navbar-collapse {
     margin-top: 0.5rem;   
 }
-.nav-link{
+.nav-link-public{
     text-decoration: none;
     text-align: center;
     color: #545454;
@@ -17,6 +17,8 @@
 }
 #iniciosesion:hover {
     background-color: #44bba39d;
+    height: 3rem;
+    
 }
 #registro-nav:hover {
     background-color: #e7bb419a;
@@ -32,13 +34,13 @@
         align-items: center;
         margin-right: 0;
     }
-    .nav-link{
+    .nav-link-public{
         text-align: left;
         font-size: 1.1rem;
         width: 8rem;
         
     }
-    .nav-link:hover, #iniciosesion:hover  {
+    .nav-link-public:hover, #iniciosesion:hover  {
         background-color: none;
   
     }

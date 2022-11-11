@@ -7,7 +7,8 @@
     "apellido": "Román",
     "prodName": "Clóset de madera",
     "price": 80000,
-    "categ": "Hogar"
+    "categ": "Hogar",
+    "userId": 5
   },
   {
     "desc": "Excelente cámara y calidad de imagen y videos. Graba video en Full HD. Se vende por renovación, muy bien cuidada.",
@@ -17,7 +18,8 @@
     "apellido": "Hutchings",
     "prodName": "Cámara Fotográfica",
     "price": 100000,
-    "categ": "Tecnología"
+    "categ": "Tecnología",
+    "userId": 6
   },
   {
     "desc": "Vendo cómodas zapatillas urbanas. Nuevas, talla 42.",
@@ -27,7 +29,8 @@
     "apellido": "Salinas",
     "prodName": "Zapatillas urbanas",
     "price": 24990,
-    "categ": "Vestuario"
+    "categ": "Vestuario",
+    "userId": 7
   },
   {
     "desc": "Excelente reloj smartwatch KEI A1 PRO Rosado. Mide ritmo cardíaco en todo momento, pantalla touch rápida, tiene podómetro, notifica llamadas, mensajes, clima y manejar la música desde su pantalla.  Correa de silicona.",
@@ -37,7 +40,8 @@
     "apellido": "Segovia",
     "prodName": "Reloj smartwach Mujer",
     "price": 25990,   
-    "categ": "Tecnología"
+    "categ": "Tecnología",
+    "userId": 8
   },
   {
     "desc": "Excelente reloj smartwatch, compatible con cualquier celular Android o Iphone. Realiza y recibe llamadas, cámara de 1.0 Megapixeles, reproduce música, tiene podómetro, control de calorías, alarma, calendario. Correa de silicona.",
@@ -47,7 +51,8 @@
     "apellido": "Segovia",
     "prodName": "Reloj smartwach hombre",
     "price": 28990,   
-    "categ": "Tecnología"
+    "categ": "Tecnología",
+    "userId": 8
   },
   {
     "desc": "Vendo juego de lámparas de velador. Controles táctiles con 4 ajustes (bajo, medio, alto, apagado). Material níquel cepillado",
@@ -57,7 +62,8 @@
     "apellido": "Benítez",
     "prodName": "Lámparas de velador",
     "price": 10000,   
-    "categ": "Hogar"
+    "categ": "Hogar",
+    "userId": 9
   },
   {
     "desc": "Set de 12 piezas para que uses en tu cocina. Al ser de silicona es una excelente opción para cuidar tus ollas, además viene en un cómodo contenedor para que los guardes.",
@@ -67,7 +73,8 @@
     "apellido": "Benítez",
     "prodName": "Set utensilios de cocina",
     "price": 18000,   
-    "categ": "Hogar"
+    "categ": "Hogar",
+    "userId": 9
   },
   {
     "desc": "Miel de abeja artesanal. Contiene 1 kilo. Si quiere más se pueden encargar.",
@@ -77,7 +84,8 @@
     "apellido": "San Martín",
     "prodName": "Miel",
     "price": 5500,   
-    "categ": "Alimentación" 
+    "categ": "Alimentación",
+    "userId": 10 
   },
   {
     "desc": "Ajedrez nuevo con todas sus piezas. Sin uso. ",
@@ -85,9 +93,10 @@
     "img": "https://i0.wp.com/xn--oo-yjab.cl/wp-content/uploads/2021/08/tablero-de-ajedrez-mediano.jpg?resize=358%2C358&ssl=1",
     "nombre": "Vanesa",
     "apellido": "Segovia",
-    "prodName": "Ajedrez",
+    "prodName": "Juego de ajedrez",
     "price": 5000,   
-    "categ": "Entretención" 
+    "categ": "Entretención",
+    "userId": 8 
   }
 
 ]

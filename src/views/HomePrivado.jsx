@@ -22,20 +22,20 @@ export default function HomePrivado() {
         </div>
 
         <div className="acceso-opcion">
-          <div class="card-acceso">
+          <div className="card-acceso">
             <Link to="/tienda">
-              <img src={in_tienda} class="card-img-top" width="2%" alt="..." />
+              <img src={in_tienda} className="card-img-top" width="2%" alt="..." />
             </Link>
             <hr />
-            <h5 class="card-text">Ir a TIENDA</h5>
+            <h5 className="card-text">Ir a TIENDA</h5>
           </div>
 
-          <div class="card-acceso">
+          <div className="card-acceso">
             <Link to="/perfil-usuario">
-              <img src={in_perfil} class="card-img-top" width="2%" alt="..." />
+              <img src={in_perfil} className="card-img-top" width="2%" alt="..." />
             </Link>
             <hr />
-            <h5 class="card-text">Ir a tu PERFIL</h5>
+            <h5 className="card-text">Ir a tu PERFIL</h5>
           </div>
         </div>
         <br />

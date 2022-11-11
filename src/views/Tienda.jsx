@@ -14,17 +14,22 @@ export default function Tienda() {
     setBuscando,
     filtradoCategoria,
     setFiltradoCategoria,
-    nombresOrdenados
   } = useContext(Context);
 
-  //Función para ordenar por nombre productos
-  // const handlerNombresOrdenados = productos.sort((a, b) => {
-  //   console.log("ordenando");
-  //   if (a.prodName.toLowerCase() < b.prodName.toLowerCase()) return -1;
-  //   if (a.prodName.toLowerCase() > b.prodName.toLowerCase()) return 1;
-  //   return setProductos("");
-  // });
-  // console.log(handlerNombresOrdenados);
+  //Función para ordenar productos (nombre, precio)
+  const handlerOrdenarProductos = (e) => {
+    let opcionOrdenar = e.target.value;
+    if (opcionOrdenar === "ordenarNombre") {
+      productos.sort((a, b) => a.prodName.localeCompare(b.prodName));
+      setProductos([...productos]);
+    } if (opcionOrdenar === "ordenarPrecio") {
+      productos.sort((a, b) => a.price - b.price);
+      setProductos([...productos]);
+    } else if (opcionOrdenar === "ordenarPrecioD") {
+      productos.sort((a, b) => b.price - a.price);
+      setProductos([...productos]);
+    }
+  };
 
   return (
     <>
@@ -32,13 +37,13 @@ export default function Tienda() {
       <main className="container-tienda">
         <header className="barra-superior-tienda">
           <div className="nav-name-seccion">
-            <div class="card-superior">
-              <h5 class="card-text">TIENDA</h5>
+            <div className="card-superior">
+              <h5 className="card-text">TIENDA</h5>
             </div>
           </div>
 
           {/* función buscador y links favoritos y Mi perfil */}
-          <div class="nav-superior">
+          <div className="nav-superior">
             <div className="buscador_div">
               <input
                 type="text"
@@ -88,16 +93,15 @@ export default function Tienda() {
               <Form.Select
                 aria-label="Default select example"
                 className="select_input"
-                // onChange={() => handlerNombresOrdenados() }
-                // value={nombresOrdenados}
+                onChange={handlerOrdenarProductos}
               >
-                <option value="">Ordenar por</option>
-                <option value="nombresOrdenados">Alfabéticamente</option>
-
-                <option value="">Precio <i>(menor a mayor)</i>
+                <option value="" ></option>
+                <option value="ordenarNombre">Nombre</option>
+                <option value="ordenarPrecio">
+                  Precio (menor a mayor)
                 </option>
-
-                <option value="">Precio <i>(mayor a menor)</i>
+                <option value="ordenarPrecioD">
+                  Precio (mayor a menor)
                 </option>
               </Form.Select>
             </div>

@@ -26,10 +26,10 @@ export default function NavbarPublic() {
 
         <Navbar.Collapse id="responsive-navbar-nav" className="navbar-collapse pe-5">
           <Nav className="ms-auto">
-            <Link to="/login" className="nav-link" id="iniciosesion">
+            <Link to="/login" className="nav-link-public" id="iniciosesion">
               Iniciar Sesión
             </Link>
-            <Link to="/registro" className="nav-link" id="registro-nav">
+            <Link to="/registro" className="nav-link-public" id="registro-nav">
               Regístrate
             </Link>
           </Nav>

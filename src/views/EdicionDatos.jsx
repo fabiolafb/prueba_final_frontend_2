@@ -4,6 +4,8 @@ import MenuPerfil from "../components/MenuPerfil";
 import NavbarPrivado from "../components/NavbarPrivado";
 
 const EdicionDatos = () => {
+
+  // usar defaultValues: de useForm https://www.youtube.com/watch?v=GEfOr56nBsc minuto 20
   return (
     <>
       <NavbarPrivado />

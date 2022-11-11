@@ -71,10 +71,12 @@
     border-radius: 5px;
     width: 40%;
 }
-
+.img_btn {
+    margin-bottom: 2%;
+}
 
 /* --- media query  --- */
-@media (max-width : 992px) { 
+@media (max-width : 1100px) { 
     .contenedor-catalogo {
         max-width: 100%;
     }

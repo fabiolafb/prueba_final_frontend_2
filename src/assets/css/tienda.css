@@ -45,7 +45,6 @@
     align-items: center;
     align-content: center;
     margin: 0.8% 3rem;
-
 }
 
 .buscador_input {
@@ -55,8 +54,7 @@
     width: 14rem;
     text-align: left;
     padding-left: 2%;
-    margin: 0.8% 2rem;
-    
+    margin: 0.8% 2rem;    
 }
 #id-favoritos {
     color: #393E41;
@@ -83,7 +81,7 @@
 .barra-lateral {
     background-color: white;
     padding-left: 2%;
-    padding-right: 1.5%;
+    padding-right: 1.2%;
     width: 20%; 
     display: flex;
 }

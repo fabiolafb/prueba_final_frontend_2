@@ -1,8 +1,9 @@
 import Context from "../Context";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../assets/css/cardCatalogo.css";
 import { Card } from "react-bootstrap";
+import carrito from "../assets/img/carrito.png";
 
 export default function CardCatalogo() {
   const { productos, setProductos, buscando, filtradoCategoria } =
@@ -28,7 +29,9 @@ export default function CardCatalogo() {
               } else if (
                 filtradoCategoria === "" &&
                 (producto.prodName
-                  .toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '')
+                  .toLocaleLowerCase()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
                   .includes(buscando.toLocaleLowerCase()) ||
                   producto.categ
                     .toLocaleLowerCase()
@@ -96,7 +99,17 @@ export default function CardCatalogo() {
                       data-placement="top"
                       title="Agregar para comprar"
                     >
-                      Comprar
+                      <Link to="/" className="nav-link-priv">
+                        <img
+                          src={carrito}
+                          className="img_btn"
+                          width="18"
+                          alt="..."
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Ir a Mi perfil"
+                        />
+                      </Link>
                     </button>
                   </div>
                 </Card.Body>

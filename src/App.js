@@ -1,4 +1,3 @@
-//import Context from "./Context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CondominioProvider } from "./Context";
 
@@ -28,7 +27,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<InicioSesion />} />
             <Route path="/registro" element={<Registro />} />
-            <Route path="/homePrivado" element={<HomePrivado />} />
+            <Route path="/home-perfil" element={<HomePrivado />} />
             <Route path="/tienda" element={<Tienda />} />
             <Route path="/perfil-usuario" element={<Perfil />} />
             <Route path="/detalleproducto/:id" element={<DetalleProducto />} />
