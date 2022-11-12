@@ -20,7 +20,6 @@
     box-shadow: 0px 10px 30px -10px;
 }
 
-
 #menu-misprod {
     display: flex;
     width: 90%;
@@ -52,7 +51,7 @@
     width: 8rem;
 }
 .img-trush {
-    width: 2rem;
+    width: 1.8rem;
     cursor: pointer;
 }
 

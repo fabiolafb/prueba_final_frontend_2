@@ -67,7 +67,7 @@
 
 .div-card-prod-fav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     row-gap: 30px;
     justify-items: center;
@@ -79,6 +79,13 @@
 
 
 /* --- media query  --- */
+@media (max-width : 1350px) { 
+    .div-card-prod-fav {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+    }
+
+}
 @media (max-width : 1143px) {
     .cont-tittle {
         width: 90%;

@@ -2,14 +2,16 @@
     background-color: #44bba39d;
     width: 100%;
     display: flex;
+    height: 4.2rem;
 }
 #id-container-fluid {
     width: 50%;
+    margin-right: 6rem;
 }
 .nav-item {
     padding: 0;
-    width: 4rem;
-    text-align: left;
+    width: 3.5rem;
+    text-align: center;
 }
 
 .container-select {
@@ -21,28 +23,60 @@
 #nombre-login {
     background-color: transparent;
     border: transparent;
-    color: #393E41;
+    color: #3f4447;
     width: 30%;
     font-size: 1.1rem;
     text-align: left;
  }
-/* .nav-link-priv{
+.nav-link-priv{
     text-align: center;
     width: 10rem;
-} */
-
-.sign_out {
-    filter: invert(0.3);
 }
+
+/* .sign_out {
+    filter: invert(0.45);
+    font-size: 1.7rem;
+    margin-top: 1rem;
+} */
 .img_nav {
-    filter: invert(0.3);
+    color: #7a7a7a;
+    font-size: 1.6rem;
+    margin-top: 1rem;
 }
 #nav-link-signout {
-    margin-right: 3rem;
+    margin-right: 0rem;
 }
 
+.badge-rounded-circle{
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    background: #E7BB41;
+    color: black;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 2px;
+    margin-top: 1.4rem;
+    margin-left: 2rem;   
+  }
+
+
+
 /* --- media query  --- */
+@media (max-width : 1150px) {
+    #id-container-fluid {        
+        margin-right: 5rem;
+    }
+}
 @media (max-width : 1000px) {
+    #id-container-fluid {        
+        margin-right: 4rem;
+    }
     #nombre-login {
         width: 50%;
         text-align: left;}
@@ -53,6 +87,9 @@
     }
 }
 @media (max-width : 768px) {
+    #id-container-fluid {        
+        margin-right: 2rem;
+    }
     #nombre-login {
         text-align: left;}
     #nav-link-signout {

@@ -8,11 +8,7 @@ import { useContext } from "react";
 export default function Registro() {
   const { setUsuarios, usuariosNuevos, setUsuariosNuevos } = useContext(Context);
   console.log(usuariosNuevos);
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const { register, formState: { errors }, handleSubmit, } = useForm();
 
   const onSubmit = (data, e) => {
     console.log(data);

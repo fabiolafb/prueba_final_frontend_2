@@ -3,6 +3,8 @@ import { CondominioProvider } from "./Context";
 
 //componentes
 import Footer from "./components/Footer";
+import Carrito from "./components/Carrito";
+
 // views
 import Home from "./views/Home";
 import InicioSesion from "./views/InicioSesion";
@@ -16,6 +18,8 @@ import MisDatos from "./views/MisDatos";
 import EdicionDatos from "./views/EdicionDatos";
 import Publicaciones from "./views/Publicaciones";
 import AgregarPublicacion from "./views/AgregarPublicacion";
+
+
 
 
 export default function App() {
@@ -36,7 +40,7 @@ export default function App() {
             <Route path="/edicion-datos" element={<EdicionDatos />} />
             <Route path="/mis-publicaciones" element={<Publicaciones />} />
             <Route path="/agregar-producto" element={<AgregarPublicacion />} />
-            
+            <Route path="/carrito" element={<Carrito />} />
             
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>

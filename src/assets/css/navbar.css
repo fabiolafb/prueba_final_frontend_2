@@ -6,7 +6,7 @@
     justify-content:space-between;
 }
 .navbar-collapse {
-    margin-top: 0.5rem;   
+    margin-top: 0.3rem;   
 }
 .nav-link-public{
     text-decoration: none;
@@ -17,12 +17,16 @@
 }
 #iniciosesion:hover {
     background-color: #44bba39d;
+    padding-top: 0.6rem;
     height: 3rem;
+    color: #545454;
     
 }
 #registro-nav:hover {
     background-color: #e7bb419a;
+    padding-top: 0.6rem;
     height: 3rem;
+    color: #545454;
 }
 
 /* --- media query  --- */

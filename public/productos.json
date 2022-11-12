@@ -1,14 +1,14 @@
 [
   {
-    "desc": "Lindo clóset de madera de raulí. Está en muy buen estado. Se vende por renovación.",
+    "desc": "Vendo juego de lámparas de velador. Controles táctiles con 4 ajustes (bajo, medio, alto, apagado). Material níquel cepillado",
     "id": "P001",
-    "img": "https://tessahome.com/wp-content/uploads/2022/06/TessaHome-Markop-armario-madera-mango-marron-120x40x180_3.jpg",
-    "nombre": "Claudio",
-    "apellido": "Román",
-    "prodName": "Clóset de madera",
-    "price": 80000,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_988754-MLM42106120861_062020-W.jpg",
+    "nombre": "Deco-casa (Ingrid)",
+    "apellido": "Benítez",
+    "prodName": "Lámparas de velador",
+    "price": 10000,   
     "categ": "Hogar",
-    "userId": 5
+    "userId": 9
   },
   {
     "desc": "Excelente cámara y calidad de imagen y videos. Graba video en Full HD. Se vende por renovación, muy bien cuidada.",
@@ -55,15 +55,15 @@
     "userId": 8
   },
   {
-    "desc": "Vendo juego de lámparas de velador. Controles táctiles con 4 ajustes (bajo, medio, alto, apagado). Material níquel cepillado",
+    "desc": "Lindo clóset de madera de raulí. Está en muy buen estado. Se vende por renovación.",
     "id": "P006",
-    "img": "https://http2.mlstatic.com/D_NQ_NP_988754-MLM42106120861_062020-W.jpg",
-    "nombre": "Deco-casa (Ingrid)",
-    "apellido": "Benítez",
-    "prodName": "Lámparas de velador",
-    "price": 10000,   
+    "img": "https://tessahome.com/wp-content/uploads/2022/06/TessaHome-Markop-armario-madera-mango-marron-120x40x180_3.jpg",
+    "nombre": "Claudio",
+    "apellido": "Román",
+    "prodName": "Clóset de madera",
+    "price": 80000,
     "categ": "Hogar",
-    "userId": 9
+    "userId": 5
   },
   {
     "desc": "Set de 12 piezas para que uses en tu cocina. Al ser de silicona es una excelente opción para cuidar tus ollas, además viene en un cómodo contenedor para que los guardes.",

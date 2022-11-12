@@ -4,10 +4,11 @@ import { useNavigate, Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import NavbarPrivado from "../components/NavbarPrivado";
 import "../assets/css/favoritos.css";
-//import FooterPrivado from "../components/FooterPrivado";
+import carrito from "../assets/img/carrito.png";
+
 
 export default function Favoritos() {
-  const { productos, setProductos } = useContext(Context);
+  const { productos, setProductos, agregarCarrito, } = useContext(Context);
   const navigate = useNavigate();
 
   const borrarFavorita = (id) => {
@@ -89,12 +90,21 @@ export default function Favoritos() {
                       Ver detalle
                     </button>
                     <button
+                      onClick={() => agregarCarrito(elem)}
                       variant="primary"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Agregar para comprar"
                     >
-                      Comprar
+                      <img
+                        src={carrito}
+                        className="img_btn"
+                        width="18"
+                        alt="..."
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Ir a Mi perfil"
+                      />
                     </button>
                   </div>
                 </Card.Body>

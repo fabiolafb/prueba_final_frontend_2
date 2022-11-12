@@ -4,20 +4,21 @@ const Context = createContext();
 
 // Provider con funciones de datos
 const CondominioProvider = ({ children }) => {
+  // Estado que trae json productos
   const [productos, setProductos] = useState([]);
-  // Estado con usuarios iniciales
+  // Estado que trae json usuarios iniciales
   const [usuarios, setUsuarios] = useState([]);
   // Estado con usuarios nuevos registrados
   const [usuariosNuevos, setUsuariosNuevos] = useState([]);
-  
-  // Asignar estado para input de  búsqueda -- Tienda
+
+  // Estado para input de  búsqueda -- Tienda
   const [buscando, setBuscando] = useState("");
-  // Asignar estado para filtro por categoria de productos -- Tienda
+  // Estado para filtro por categoria de productos -- Tienda
   const [filtradoCategoria, setFiltradoCategoria] = useState("");
 
-  const[email, setEmail] = useState("");
-  const[password, setPassword] = useState("");
-//const [sumarCarrito, setSumarCarrito] = useState([]);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [sumarCarrito, setSumarCarrito] = useState([]);
 
   //Función que llama a productos
   const url_p = "/productos.json";
@@ -42,20 +43,41 @@ const CondominioProvider = ({ children }) => {
     obtenerUsuarios();
   }, []);
 
- 
+
+
+  //Función llenar carrito
+  const agregarCarrito = ({ id, img, prodName, price }) => {
+    const productoEncontradoIndex = sumarCarrito.findIndex((c) => c.id === id);
+    const productoEncontrado = { id, img, prodName, price, count: 1 };
+
+    if (productoEncontradoIndex >= 0) {
+      sumarCarrito[productoEncontradoIndex].count++;
+      setSumarCarrito([...sumarCarrito]);
+    } else {
+      setSumarCarrito([...sumarCarrito, productoEncontrado]);
+    }
+  };
+
   return (
     <Context.Provider
       value={{
-        productos, setProductos,
-        usuarios, setUsuarios,
-        usuariosNuevos, setUsuariosNuevos,
-        email, setEmail,
-        password, setPassword,
-        buscando, setBuscando,
-        filtradoCategoria, setFiltradoCategoria
-        // sumarCarrito,
-        // setSumarCarrito,
-        // agregarCarrito,
+        productos,
+        setProductos,
+        usuarios,
+        setUsuarios,
+        usuariosNuevos,
+        setUsuariosNuevos,
+        email,
+        setEmail,
+        password,
+        setPassword,
+        buscando,
+        setBuscando,
+        filtradoCategoria,
+        setFiltradoCategoria,
+        sumarCarrito,
+        setSumarCarrito,
+        agregarCarrito
         // agregar,
         // quitar,
         // vaciarCarrito,

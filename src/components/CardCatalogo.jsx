@@ -1,13 +1,19 @@
 import Context from "../Context";
 import { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../assets/css/cardCatalogo.css";
 import { Card } from "react-bootstrap";
 import carrito from "../assets/img/carrito.png";
 
 export default function CardCatalogo() {
-  const { productos, setProductos, buscando, filtradoCategoria } =
-    useContext(Context);
+  const {
+    productos,
+    setProductos,
+    buscando,
+    filtradoCategoria,
+    agregarCarrito,
+  } = useContext(Context);
+
   const navigate = useNavigate(); //crear una ruta
 
   const productoFavorito = (id) => {
@@ -94,22 +100,21 @@ export default function CardCatalogo() {
                       Ver detalle
                     </button>
                     <button
+                      onClick={() => agregarCarrito(prod)}
                       variant="primary"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Agregar para comprar"
                     >
-                      <Link to="/" className="nav-link-priv">
-                        <img
-                          src={carrito}
-                          className="img_btn"
-                          width="18"
-                          alt="..."
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Ir a Mi perfil"
-                        />
-                      </Link>
+                      <img
+                        src={carrito}
+                        className="img_btn"
+                        width="18"
+                        alt="..."
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Ir a Mi perfil"
+                      />
                     </button>
                   </div>
                 </Card.Body>
