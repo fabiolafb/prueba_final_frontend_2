@@ -57,6 +57,17 @@ const CondominioProvider = ({ children }) => {
       setSumarCarrito([...sumarCarrito, productoEncontrado]);
     }
   };
+  
+  //Función eliminar un prducto de carrito
+  
+  const eliminarCarrito = ({id}) => {
+    const productoEncontradoIndex = sumarCarrito.find((el) => el.id === id);
+    console.log(productoEncontradoIndex)
+    sumarCarrito = sumarCarrito.filter((sumarCarritoID) =>     {
+      return sumarCarritoID !== productoEncontradoIndex;
+    })
+
+  };
 
   return (
     <Context.Provider
@@ -77,7 +88,8 @@ const CondominioProvider = ({ children }) => {
         setFiltradoCategoria,
         sumarCarrito,
         setSumarCarrito,
-        agregarCarrito
+        agregarCarrito,
+        eliminarCarrito
         // agregar,
         // quitar,
         // vaciarCarrito,

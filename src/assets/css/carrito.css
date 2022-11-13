@@ -6,13 +6,18 @@
     display: flex;
     justify-content: space-around;
 }
+.img-delete {
+    display: flex;
+    flex-direction: column;
+}
 .img-delete img {
     border: solid 1px #f3efef;
 }
-.img-delete p {
+.img-delete button {
     margin-left: 0.8rem;
-    margin-top: 0.5rem;
     margin-bottom: 0;
+    background-color: transparent;
+    border: none;
 }
 
 .name-price h6{

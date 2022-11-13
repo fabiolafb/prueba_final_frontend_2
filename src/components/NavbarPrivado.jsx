@@ -59,7 +59,7 @@ export default function NavbarPrivate() {
                 title="Ir a carrito"
               />
               {sumarCarrito.map((pe, i) => (
-                <span
+                <span key={i}
                   id="cart_menu_num"
                   data-action="cart-can"
                   className="badge-rounded-circle"

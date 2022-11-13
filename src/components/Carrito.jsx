@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../assets/css/carrito.css";
 
 const Carrito = () => {
-  const { usuarios, setUsuarios, productos, setProductos, sumarCarrito } =
+  const { sumarCarrito, eliminarCarrito } =
     useContext(Context);
 
   // Función que suma el precio de los productos agregados al carrito
@@ -14,6 +14,8 @@ const Carrito = () => {
     0
   );
   let sum = 0;
+
+
 
   return (
     <>
@@ -35,8 +37,8 @@ const Carrito = () => {
 
         <div className="offcanvas-body">
           <hr className="hr-carrito" />
-          {sumarCarrito.map((pe, i) => (
-            <div key={i}>
+          {sumarCarrito.map((pe, id) => (
+            <div key={id}>
               <div className="div-carrito-prod">
                 <div className="img-delete">
                   <img
@@ -45,7 +47,8 @@ const Carrito = () => {
                     style={{ width: "5.5rem", borderRadius: "5px" }}
                     className="img-prod-carr"
                   />
-                  <p>Eliminar</p>
+                  <button className="delete-carrito" onClick={() => eliminarCarrito(pe.id)}>Eliminar</button>
+                  
                 </div>
 
                 <div className="name-price">
@@ -70,7 +73,7 @@ const Carrito = () => {
         <div className="offcanvas-footer">
           <hr />
           <div className="resumen">
-            <div>Costo total productos</div>
+            <div>Costo total de productos</div>
             <div>
               {" "}
               <p className="total-txt">
