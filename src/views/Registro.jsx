@@ -72,7 +72,7 @@ export default function Registro() {
                   placeholder=""
                 />
                 {errors.email?.type === "required" && (
-                  <p className="errors">Debes ingresar tu correo electrónico</p>
+                  <p className="errors-reg">Debes ingresar tu correo electrónico</p>
                 )}
                 {errors.email?.type === "pattern" && (
                   <p className="errors">El formato de correo no corresponde</p>
@@ -92,7 +92,7 @@ export default function Registro() {
                   className="form-control"
                   placeholder="+569"
                 />
-                {/* {errors.email?.type === "required" && (
+                {/* {errors.nro?.type === "required" && (
                   <p className="errors">
                     Debes ingresar un teléfono de contacto
                   </p>

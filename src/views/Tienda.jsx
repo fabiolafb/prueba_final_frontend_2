@@ -80,7 +80,7 @@ export default function Tienda() {
                 value={filtradoCategoria}
               >
                 <option value="">
-                  <i>Categorías</i>
+                  Categorías
                 </option>
                 <option value="Alimentación">Alimentación</option>
                 <option value="Entretención">Entretención</option>

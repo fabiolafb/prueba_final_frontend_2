@@ -1,17 +1,19 @@
 import React from "react";
 import Context from "../Context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+import "../assets/css/carrito.css";
 
 const Carrito = () => {
-    const { usuarios, setUsuarios, productos, setProductos, sumarCarrito } =
-      useContext(Context);
+  const { usuarios, setUsuarios, productos, setProductos, sumarCarrito } =
+    useContext(Context);
 
   // Función que suma el precio de los productos agregados al carrito
-  //   const total = sumarCarrito.reduce(
-  //     (valorAnterior, { count, price }) => valorAnterior + price * count,
-  //     0
-  //   );
-  //   let sum = 0;
+  const total = sumarCarrito.reduce(
+    (valorAnterior, { count, price }) => valorAnterior + price * count,
+    0
+  );
+  let sum = 0;
 
   return (
     <>
@@ -22,7 +24,7 @@ const Carrito = () => {
         aria-labelledby="offcanvasRightLabel"
       >
         <div className="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Carrito </h5>
+          <h5 id="offcanvasRightLabel">Carro de compras</h5>
           <button
             type="button"
             className="btn-close text-reset"
@@ -30,11 +32,63 @@ const Carrito = () => {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">...</div>
+
+        <div className="offcanvas-body">
+          <hr className="hr-carrito" />
+          {sumarCarrito.map((pe, i) => (
+            <div key={i}>
+              <div className="div-carrito-prod">
+                <div className="img-delete">
+                  <img
+                    alt=""
+                    src={pe.img}
+                    style={{ width: "5.5rem", borderRadius: "5px" }}
+                    className="img-prod-carr"
+                  />
+                  <p>Eliminar</p>
+                </div>
+
+                <div className="name-price">
+                  <div>
+                    <h6 style={{ width: "12rem" }}>{pe.prodName}</h6>
+                  </div>
+                  <div className="price-prod-carr">
+                    <h5>
+                      {pe.price.toLocaleString("es-CL", {
+                        style: "currency",
+                        currency: "CLP",
+                      })}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <hr className="hr-carrito" />
+            </div>
+          ))}
+        </div>
+
+        <div className="offcanvas-footer">
+          <hr />
+          <div className="resumen">
+            <div>Costo total productos</div>
+            <div>
+              {" "}
+              <p className="total-txt">
+                <b>{total.toLocaleString("es-CL", {
+                  style: "currency",
+                  currency: "CLP",
+                })}</b>
+              </p>
+            </div>
+          </div>
+          <button className="btn-pagar"> Comprar ahora </button>
+          <Link to="/tienda" className="link-comprar">
+          <p id="comprar-mas"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close" >Seguir comprando</p></Link>
+        </div>
       </div>
     </>
   );
 };
 export default Carrito;
-
-

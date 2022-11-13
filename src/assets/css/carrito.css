@@ -1,0 +1,64 @@
+.render-prod {
+    flex-direction: column;
+}
+
+.div-carrito-prod {
+    display: flex;
+    justify-content: space-around;
+}
+.img-delete img {
+    border: solid 1px #f3efef;
+}
+.img-delete p {
+    margin-left: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.name-price h6{
+    margin-top: 0.5rem;
+    
+}
+.name-price h5{
+    font-size: 1.2rem;
+    color: #393E41;
+}
+.hr-carrito {
+    margin: 0;
+    width: 95%;
+    background-color: #a7a7a7;
+    height: 0.5px;
+    border: none;
+    margin: 0.5rem 0;
+}
+.offcanvas-footer {
+    margin-bottom: 0.5rem;
+}
+.resumen{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.btn-pagar {
+    background-color: #44BBA4 ;
+    border: transparent;
+    height: 2rem;
+    border-radius: 12px;
+    width: 15rem;
+    color: white;
+    margin-left: 5rem;
+    
+}
+.offcanvas-footer p {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+#comprar-mas {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #393E41;
+    text-decoration: none;
+    text-decoration-line: none;
+}

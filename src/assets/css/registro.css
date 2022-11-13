@@ -64,7 +64,7 @@
 #ast {
     color: red;
 }
-.errors {
+.errors-re {
     color: red;
     font-style: italic;
     margin-left: 5%;

@@ -53,7 +53,7 @@ export default function CardCatalogo() {
             })
             .map((prod, id) => (
               <Card
-                style={{ width: "18rem" }}
+                style={{ width: "16rem" }}
                 className="card-producto-container"
                 key={id}
               >

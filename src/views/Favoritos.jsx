@@ -49,7 +49,7 @@ export default function Favoritos() {
             .filter((elem) => elem.favorito)
             .map((elem, id) => (
               <Card
-                style={{ width: "18rem" }}
+                style={{ width: "16rem" }}
                 className="card-producto-container"
                 key={id}
               >
@@ -76,7 +76,10 @@ export default function Favoritos() {
                   <Card.Text className="categ-card">
                     Categoría: <i>{elem.categ}</i>
                   </Card.Text>
-                  <Card.Title className="price-card">{elem.price}</Card.Title>
+                  <Card.Title className="price-card">{elem.price.toLocaleString("es-CL", {
+                      style: "currency",
+                      currency: "CLP",
+                    })}</Card.Title>
 
                   <div className="btns-card">
                     <button

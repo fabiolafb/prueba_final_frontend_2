@@ -37,7 +37,7 @@ export default function NavbarPrivate() {
             <Link to="/perfil-usuario" className="nav-link-priv">
               <FontAwesomeIcon
                 icon={faUser}
-                className="img_nav"
+                id="img_nav"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Ir a Mi perfil"
@@ -53,7 +53,7 @@ export default function NavbarPrivate() {
             >
               <FontAwesomeIcon
                 icon={faCartShopping}
-                className="img_nav"
+                id="img_nav"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Ir a carrito"
@@ -75,7 +75,7 @@ export default function NavbarPrivate() {
             <Link id="nav-link-signout" className="nav-link-priv" to="/">
               <FontAwesomeIcon
                 icon={faArrowRightFromBracket}
-                className="img_nav"
+                id="img_nav"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Cerrar sesión"
@@ -84,7 +84,6 @@ export default function NavbarPrivate() {
           </div>
         </div>
       </Navbar>
-
       <Carrito />
     </>
   );

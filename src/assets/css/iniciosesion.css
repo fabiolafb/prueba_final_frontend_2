@@ -57,6 +57,14 @@
 #link-registro:hover {
     color: #E7BB41;
 }
+.errors-is {
+    color: red;
+    font-style: italic;
+    margin-left: 20%;
+    margin-bottom: 0;
+}
+
+
 
 /* --- media query  --- */
 @media (max-width : 1185px) {

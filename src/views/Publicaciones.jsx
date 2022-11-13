@@ -1,8 +1,10 @@
 import "../assets/css/publicaciones.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import ajedrez from "../assets/img/products/ajedrez.jpg";
-import trush from "../assets/img/trush.png";
+// import trash from "../assets/img/trush.png";
 import MenuPerfil from "../components/MenuPerfil";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 const Publicaciones = () => {
@@ -29,9 +31,15 @@ const Publicaciones = () => {
                  data-toggle="tooltip"
                  data-placement="top"
                  title="Ver producto"> Ver producto</button>
-                 <img alt="" src={trush} className="img-trush"                  data-toggle="tooltip"
+                 <FontAwesomeIcon
+                icon={faTrash}
+                className="img-trash"                  data-toggle="tooltip"
                     data-placement="top"
-                    title="Eliminar publicación" />
+                    title="Eliminar publicación" 
+              />
+                 {/* <img alt="" src={trash} className="img-trash"                  data-toggle="tooltip"
+                    data-placement="top"
+                    title="Eliminar publicación" /> */}
             </div>
             <hr />
             
