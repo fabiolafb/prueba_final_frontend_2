@@ -1,4 +1,6 @@
 import React from "react";
+import Context from "../Context";
+import { useContext } from "react";
 import "../assets/css/perfil.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import icon_edit from "../assets/img/icon_edit.jpg";
@@ -8,6 +10,7 @@ import MenuPerfil from "../components/MenuPerfil";
 //import FooterPrivado from "../components/FooterPrivado";
 
 export default function Perfil() {
+  const { userLogin } = useContext(Context);
   return (
     <>
       <NavbarPrivado />
@@ -22,7 +25,7 @@ export default function Perfil() {
 
             <div className="container-texto">
               <h3 className="tittle-perfil">
-                Bienvenid@,
+                Bienvenid@ <span style={{ color: "#E7BB41" }}><b>{userLogin.nombre}</b></span>,
                 <br />
               </h3>
               <h5>

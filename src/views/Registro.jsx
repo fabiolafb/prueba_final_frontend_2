@@ -1,20 +1,26 @@
-import "../assets/css/registro.css";
-import Navbar from "../components/Navbar";
-import { useForm } from "react-hook-form";
 import Context from "../Context";
 import { useContext } from "react";
+import { useForm } from "react-hook-form";
+//import { Link } from "react-router-dom";
+import "../assets/css/registro.css";
+import Navbar from "../components/Navbar";
 // import { nanoid } from 'nanoid'
 
 export default function Registro() {
-  const { setUsuarios, usuariosNuevos, setUsuariosNuevos } = useContext(Context);
-  console.log(usuariosNuevos);
-  const { register, formState: { errors }, handleSubmit, } = useForm();
+  const { setUsuarios, usuariosNuevos, setUsuariosNuevos } =
+    useContext(Context);
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const onSubmit = (data, e) => {
     console.log(data);
     e.target.reset();
     setUsuarios(...usuariosNuevos);
-    setUsuariosNuevos([...usuariosNuevos, data])
+    setUsuariosNuevos([...usuariosNuevos, data]);
     console.log(usuariosNuevos);
   };
 
@@ -32,7 +38,7 @@ export default function Registro() {
             <div className="columnas-form">
               <div className="label-input">
                 <label className="is-required">Nombre</label>
-                <input  
+                <input
                   type="text"
                   className="form-control"
                   {...register("nombre", { required: true })}
@@ -40,7 +46,7 @@ export default function Registro() {
                   placeholder=""
                 />
                 {errors.nombre?.type === "required" && (
-                  <p className="errors">Debes ingresar tu nombre</p>
+                  <p className="errors-re">Debes ingresar tu nombre</p>
                 )}
               </div>
               <div className="label-input">
@@ -53,7 +59,7 @@ export default function Registro() {
                   placeholder=""
                 />
                 {errors.apellido?.type === "required" && (
-                  <p className="errors">Debes ingresar tu apellido</p>
+                  <p className="errors-re">Debes ingresar tu apellido</p>
                 )}
               </div>
             </div>
@@ -72,15 +78,21 @@ export default function Registro() {
                   placeholder=""
                 />
                 {errors.email?.type === "required" && (
-                  <p className="errors-reg">Debes ingresar tu correo electrónico</p>
+                  <p className="errors-re">
+                    Debes ingresar tu correo electrónico
+                  </p>
                 )}
                 {errors.email?.type === "pattern" && (
-                  <p className="errors">El formato de correo no corresponde</p>
+                  <p className="errors-re">
+                    El formato de correo no corresponde
+                  </p>
                 )}
               </div>
 
               <div className="label-input">
-                <label className="">Teléfono de contacto <i>(opcional)</i></label>
+                <label className="">
+                  Teléfono de contacto <i>(opcional)</i>
+                </label>
                 <input
                   type="txt"
                   {...register("nro", {
@@ -98,12 +110,12 @@ export default function Registro() {
                   </p>
                 )} */}
                 {errors.nro?.type === "minLength" && (
-                  <p className="errors">
+                  <p className="errors-re">
                     El número de teléfono debe contener 8 dígitos
                   </p>
                 )}
                 {errors.nro?.type === "maxLength" && (
-                  <p className="errors">
+                  <p className="errors-re">
                     El número de teléfono debe contener 8 dígitos
                   </p>
                 )}
@@ -116,15 +128,16 @@ export default function Registro() {
                 <input
                   type="password"
                   className="form-control"
-                  {...register("password", { required: true,
+                  {...register("password", {
+                    required: true,
                     minLength: 4,
                     maxLength: 4,
                   })}
-                  // name="pass"
-                  placeholder="Contraseña"                  
+                  // name="password1"
+                  placeholder="Contraseña"
                 />
                 {errors.password?.type === "maxLength" && (
-                  <p className="errors">
+                  <p className="errors-re">
                     La contraseña debe ser de máximo 4 caracteres
                   </p>
                 )}
@@ -135,14 +148,16 @@ export default function Registro() {
                 <input
                   type="password"
                   className="form-control"
-                  {...register("password-repeat", { required: true,     minLength: 4,
-                    maxLength: 4, })}
-                  // name="password-repeat"
+                  {...register("password-repeat", {
+                    required: true,
+                    minLength: 4,
+                    maxLength: 4,
+                  })}
+                  // name="password2"
                   placeholder="Repetir contraseña"
-                  
                 />
                 {errors.password?.type === "maxLength" && (
-                  <p className="errors">
+                  <p className="errors-re">
                     La contraseña debe ser de máximo 4 caracteres
                   </p>
                 )}
@@ -160,7 +175,6 @@ export default function Registro() {
                   {...register("tienda", { required: false })}
                   // name="tienda"
                   placeholder=""
-                  
                 />
               </div>
 
@@ -177,6 +191,8 @@ export default function Registro() {
               </div>
             </div>
           </form>
+
+          
           <br />
         </section>
       </div>

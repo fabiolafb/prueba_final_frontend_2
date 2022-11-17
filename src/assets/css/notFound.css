@@ -1,0 +1,22 @@
+.notfound {
+    max-width: 100%;
+    background-color: #D3D0CB;
+    margin: 0 ;
+    padding: 0;
+    text-align: center;
+    height: 80vh;
+}
+.notfound h3 {
+    color: #393E41;
+    padding-top: 4rem;
+}
+.notfound h4 {
+    margin-top: 2rem;
+}
+.notfound img {
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+.notfound img:hover {
+    filter: grayscale(1);
+}

@@ -9,14 +9,14 @@ const AgregarPublicacion = () => {
       <NavbarPrivado />
       <MenuPerfil />
       <div className="container-add-publicacion">       
-      <main className="div-main">
+      <form className="div-main" >
           <h4>Agregar publicación</h4>
           <h5>
             Los campos marcados con (<span id="asterisco">*</span>) son obligatorios.
           </h5>
 
           <div className="columnas-form">
-            <div className="label-imput-prod">
+            <div className="label-input-prod">
               <label className="is-required">Nombre del producto</label>
               <input
                 type="text"
@@ -28,29 +28,25 @@ const AgregarPublicacion = () => {
                 // value={emailColaborador}
               />
             </div>
-            <div className="label-imput-prod">
+            <div className="label-input-prod">
               <label className="is-required">Precio</label>
               <input
-                type="text"
+                type="number"
                 name="price"
                 className="form-control"
                 required
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
             </div>
           </div>
 
           <div className="columnas-form">
-            <div className="label-imput-prod">
+            <div className="label-input-prod">
               <label className="is-required">Seleccione una categoría</label>
               <Form.Select
                 aria-label="Default select example"
                 className="select_input_cat"
-                // onChange={(e) => setFiltradoFeriados(e.target.value)}
-                // value={filtradoFeriados}
-              >
+                     >
                 <option value="">Categorías</option>
                 <option value="1">Alimentación</option>
                 <option value="2">Entretención</option>
@@ -59,40 +55,38 @@ const AgregarPublicacion = () => {
                 <option value="5">Vestuario</option>
               </Form.Select>
             </div>
-            <div className="label-imput-prod">
-              <label className="is-required">Imagen del prorducto</label>
+            <div className="label-input-prod">
+              <label className="is-required">Imagen del producto</label>
               <input
-                type="img"
-                name="img"
+                type="file"
+                name="adjunto"
                 className="form-control"
+                accept=".jpg,.png"
                 required
-                placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
-              />
+                placeholder="Seleccionar archivo9"
+                   />
             </div>
           </div>
 
 
           <div className="columnas-form" id="id-columnas-form">
-            <div className="label-imput-prod">
+            <div className="label-input-prod">
               <label className="is-required">
                 Descripción del producto
               </label>
-              <input
+              <textarea
                 type="text"
                 name="desc"
                 className="form-control"
-                id="form-control-desc"
+                id="form-control-descr"
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
+                required      
               />
             </div>
-            <div className="label-imput-prod">
+            <div className="label-input-prod">
               <button
                 className="btn-publicacion"
-                // onClick={() => agregarCarrito(pizza)}
+                // onClick={() => alert("Se ha creado exitosamente su pubkicación")}
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar publicación"
@@ -102,7 +96,7 @@ const AgregarPublicacion = () => {
             </div>
           </div>
           <br />
-        </main>
+        </form>
       </div>
     </>
   );

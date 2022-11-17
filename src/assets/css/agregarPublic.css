@@ -5,7 +5,7 @@
 }
 .div-main {
     background-color: white;
-    width: 50%;
+    width: 60%;
     margin:0px auto;
     border-radius: 8px;
     border: 0.5px;
@@ -30,19 +30,19 @@
     margin-top: 1%;
     padding: 0 1%;
 }
-.label-imput-prod{
+.label-input-prod{
     width: 90%;
     text-align: left;
 }
-.label-imput-prod label{
+.label-input-prod label{
     margin-left: 5%;
 }
-.label-imput-prod input {
+.label-input-prod input {
     width: 90%;
     margin:0px auto;
     font-style: italic;
 }
-.label-imput-prod .select_input_cat {
+.label-input-prod .select_input_cat {
     width: 90%;
     margin:0px auto;
     height: 2.5rem;
@@ -53,10 +53,14 @@
     color: red;
     font-weight: bold;
 }
+
+#form-control-descr {
+    width: 90%;
+}
 .btn-publicacion {
     background-color: #44BBA4 ;
-    margin-top: 10%;
-    margin-left: 30%;
+    margin-top: 8%;
+    margin-left: 20%;
     border-radius: 5px;
     border: 0.5px #44BBA4 solid;
     width: 50%;
@@ -69,6 +73,19 @@
 #form-control-desc {
     height: 5rem;
 }
+input[type="file"]::file-selector-button {
+    background-image: linear-gradient(
+        to right,
+        #44BBA4 ,
+        #44BBA4,
+        #44BBA4 100%,
+        #44BBA4 200%
+      );
+    width: 40%;
+    color: #fff;
+    border-radius: 8px;
+    padding-left: 0.5rem;
+  }
 
 /* --- media query  --- */
 @media (max-width : 997px) {

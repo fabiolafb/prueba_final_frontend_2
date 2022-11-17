@@ -47,7 +47,10 @@ const Carrito = () => {
                     style={{ width: "5.5rem", borderRadius: "5px" }}
                     className="img-prod-carr"
                   />
-                  <button className="delete-carrito" onClick={() => eliminarCarrito(pe.id)}>Eliminar</button>
+                  <button className="delete-carrito" 
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Eliminar producto de carrito"onClick={() => eliminarCarrito(id)}>Eliminar</button>
                   
                 </div>
 
@@ -88,7 +91,10 @@ const Carrito = () => {
           <Link to="/tienda" className="link-comprar">
           <p id="comprar-mas"
             data-bs-dismiss="offcanvas"
-            aria-label="Close" >Seguir comprando</p></Link>
+            aria-label="Close"
+            data-toggle="tooltip"
+                      data-placement="top"
+                      title="Volver a la tienda" >Seguir comprando</p></Link>
         </div>
       </div>
     </>

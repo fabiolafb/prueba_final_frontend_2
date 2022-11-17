@@ -1,12 +1,12 @@
 .container-menu-misdatos {
     max-width: 100%;
     background-color: #E7E5DF;
-    height: 100vh;
+    height: 80vh;
     padding-top: 1rem;
 }
-.container-menu-misdatos h4 {
+#h4-misdatos{
     text-align: center;
-    padding-top: 1%;
+    padding-top: 2%;
     color: #6a6c6d;    
 }
 .contain-misdatos {
@@ -22,11 +22,18 @@
     padding: 1% 0;
     }
     .form-datos-personales h6 {
-        margin-left: 8%;
+        margin-left: 8%;        
     }
     .form-datos-personales input {
         width: 90%;
+        font-style: inherit;
+        font-weight: 600;
     }
+    input[type="text"]:disabled {
+        background: white;
+        color: #44BBA4;
+        
+      }
 .to-edicion {
     text-decoration: none;
     text-decoration-line: none;
@@ -61,6 +68,8 @@
         padding-bottom: 2%;
     }
 
+
+    
 /* --- media query  --- */
 @media (max-width : 1150px) {
     .contain-misdatos {

@@ -95,7 +95,7 @@ export default function Tienda() {
                 className="select_input"
                 onChange={handlerOrdenarProductos}
               >
-                <option value="">Criterio de</option>
+                <option value="">Seleccione</option>
                 <option value="ordenarNombre">Nombre</option>
                 <option value="ordenarPrecio">
                   Precio (menor a mayor)

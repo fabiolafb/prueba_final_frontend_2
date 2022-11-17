@@ -1,4 +1,4 @@
-.contenedor-iniciosesion {
+.contenedor-inicio-sesion {
     background-color: #D3D0CB;
     padding: 2%;
     height: 80vh;
@@ -44,7 +44,7 @@
     color: white;
 }
 .div-pregunta p {
-    margin-top: 2%;
+    margin-top: 1%;
 }
 #link-registro {
     margin-left: 15%; 
@@ -53,6 +53,9 @@
     font-size: 1.1rem;
     text-decoration: none;
     color: white;
+    text-align: left;
+    border: transparent;
+    background-color: transparent;
 }
 #link-registro:hover {
     color: #E7BB41;

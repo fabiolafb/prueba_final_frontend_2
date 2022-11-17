@@ -2,22 +2,26 @@ import { createContext, useState, useEffect } from "react";
 
 const Context = createContext();
 
-// Provider con funciones de datos
 const CondominioProvider = ({ children }) => {
+
   // Estado que trae json productos
   const [productos, setProductos] = useState([]);
   // Estado que trae json usuarios iniciales
   const [usuarios, setUsuarios] = useState([]);
-  // Estado con usuarios nuevos registrados
-  const [usuariosNuevos, setUsuariosNuevos] = useState([]);
 
-  // Estado para input de  búsqueda -- Tienda
-  const [buscando, setBuscando] = useState("");
-  // Estado para filtro por categoria de productos -- Tienda
-  const [filtradoCategoria, setFiltradoCategoria] = useState("");
-
+  // Estados para validar inicio de sesión
+  const [userLogin, setUserLogin] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [autenticado, setAutenticado] = useState(false); 
+  const [newUser, setNewUser] = useState(false);
+  const [usuariosNuevos, setUsuariosNuevos ] = useState([]);
+
+  // Estados para filtros y búsqueda -- Tienda
+  const [buscando, setBuscando] = useState("");
+  const [filtradoCategoria, setFiltradoCategoria] = useState("");
+
+  // Estado para agregar productos a carrito
   const [sumarCarrito, setSumarCarrito] = useState([]);
 
   //Función que llama a productos
@@ -33,15 +37,16 @@ const CondominioProvider = ({ children }) => {
   const url_u = "/usuarios.json";
   const obtenerUsuarios = async () => {
     const res = await fetch(url_u);
-    const data = await res.json();
+    const usuarios = await res.json();
     //console.log(data);
-    setUsuarios(data);
+    setUsuarios(usuarios);
   };
 
   useEffect(() => {
     obtenerProductos();
     obtenerUsuarios();
   }, []);
+//  --------------------------------------------
 
 
 
@@ -49,7 +54,7 @@ const CondominioProvider = ({ children }) => {
   const agregarCarrito = ({ id, img, prodName, price }) => {
     const productoEncontradoIndex = sumarCarrito.findIndex((c) => c.id === id);
     const productoEncontrado = { id, img, prodName, price, count: 1 };
-
+    console.log(productoEncontradoIndex)
     if (productoEncontradoIndex >= 0) {
       sumarCarrito[productoEncontradoIndex].count++;
       setSumarCarrito([...sumarCarrito]);
@@ -58,15 +63,15 @@ const CondominioProvider = ({ children }) => {
     }
   };
   
-  //Función eliminar un prducto de carrito
-  
-  const eliminarCarrito = ({id}) => {
-    const productoEncontradoIndex = sumarCarrito.find((el) => el.id === id);
-    console.log(productoEncontradoIndex)
-    sumarCarrito = sumarCarrito.filter((sumarCarritoID) =>     {
-      return sumarCarritoID !== productoEncontradoIndex;
-    })
-
+  //Función eliminar un prducto de carrito  
+  const eliminarCarrito = (i) => {
+    const { count } = sumarCarrito[i];
+    if (count === 1) {
+      sumarCarrito.splice(i, 1);
+    } else {
+      sumarCarrito[i].count--;
+    }
+    setSumarCarrito([...sumarCarrito]);
   };
 
   return (
@@ -76,8 +81,8 @@ const CondominioProvider = ({ children }) => {
         setProductos,
         usuarios,
         setUsuarios,
-        usuariosNuevos,
-        setUsuariosNuevos,
+        userLogin, 
+        setUserLogin,
         email,
         setEmail,
         password,
@@ -89,10 +94,10 @@ const CondominioProvider = ({ children }) => {
         sumarCarrito,
         setSumarCarrito,
         agregarCarrito,
-        eliminarCarrito
-        // agregar,
-        // quitar,
-        // vaciarCarrito,
+        eliminarCarrito,
+        autenticado, setAutenticado,
+        newUser, setNewUser,
+        usuariosNuevos, setUsuariosNuevos
       }}
     >
       {children}

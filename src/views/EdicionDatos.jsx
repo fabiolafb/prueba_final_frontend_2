@@ -1,18 +1,23 @@
 import React from "react";
+import Context from "../Context";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/css/editarDatos.css";
 import MenuPerfil from "../components/MenuPerfil";
 import NavbarPrivado from "../components/NavbarPrivado";
 
 const EdicionDatos = () => {
-
+  const { userLogin } = useContext(Context);
+  const navigate = useNavigate();
   // usar defaultValues: de useForm https://www.youtube.com/watch?v=GEfOr56nBsc minuto 20
+
   return (
     <>
       <NavbarPrivado />
       <MenuPerfil />
       <main className="container-perfil">
-        <main className="container-menu-misdatos">
-          <div className="contain-misdatos">
+        <main className="container-menu-editdatos">
+          <div className="contain-misdatos" id="edicion-datos">
             <h4>Actualiza tus datos personales</h4>
             <div className="form-datos-personales">
               <h6>Nombre</h6>
@@ -21,7 +26,8 @@ const EdicionDatos = () => {
                 name="nombre"
                 className="form-control sm"
                 required
-                placeholder="Nombre y Apellido"
+                placeholder="Nombre"
+                defaultValue={userLogin.nombre}
               />
             </div>
 
@@ -32,7 +38,8 @@ const EdicionDatos = () => {
                 name="apellido"
                 className="form-control sm"
                 required
-                placeholder="Nombre y Apellido"
+                placeholder="Apellido"
+                defaultValue={userLogin.apellido}
               />
             </div>
 
@@ -42,30 +49,32 @@ const EdicionDatos = () => {
                 type="mail"
                 name="mail"
                 className="form-control sm"
-                required
                 placeholder="email"
+                defaultValue={userLogin.email}
               />
             </div>
 
             <div className="form-datos-personales">
               <h6>Teléfono de contacto</h6>
               <input
-                type="txt"
+                type="text"
                 name="phone"
                 className="form-control sm"
                 required
                 placeholder="Nro contacto"
+                defaultValue={userLogin.nro}
               />
             </div>
 
             <div className="form-datos-personales">
               <h6>Nombre de negocio o tienda</h6>
               <input
-                type="txt"
+                type="text"
                 name="tienda"
                 className="form-control sm"
                 required
                 placeholder="Negocio o Tienda"
+                defaultValue={userLogin.tienda}
               />
             </div>
             <div className="btns-guardar">
@@ -75,16 +84,18 @@ const EdicionDatos = () => {
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar cambios"
+                // onClick={() => alert("Sus datos han sido guardados exitosamente")}
               >
                 Guardar
               </button>
-              
+
               <button
                 variant="primary"
                 className="btn-no-guardar"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar cambios"
+                onClick={() => navigate(`/mis-datos`)}
               >
                 Editar después
               </button>

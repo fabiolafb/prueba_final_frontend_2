@@ -1,12 +1,31 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { Navbar } from "react-bootstrap";
+import "../assets/css/notFound.css";
+import logo from "../assets/img/logo_3.png";
 export default function NotFound() {
   return (
-    <Container className="error">
-      <h2 className="mb-4">⛔ Error, esa ruta no existe ⛔</h2>
+    <>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        id="id-nav-public"
+        style={{ height: 90 }}
+        className="navbar navbar-expand-lg ps-5"
+      >
 
-      <Link to="/"  style={{ color: "black", fontSize: "1.1rem"  }}><h2>Volver al inicio</h2></Link>
-    </Container>
+      </Navbar>
+
+      <Container className="notfound">
+        <h3 className="mb-4"> Lo sentimos, esta ruta no existe </h3>
+
+        <div to="/" style={{ color: "black", fontSize: "1.1rem" }}>
+          <h4>Regresa a </h4>
+        </div>
+        <Link to="/">
+            <img alt="" src={logo} width="300" className="img ms-auto"  />
+          </Link>
+      </Container>
+    </>
   );
 }

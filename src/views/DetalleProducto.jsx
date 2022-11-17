@@ -8,7 +8,7 @@ import "../assets/css/detalleProd.css";
 import cerrar from "../assets/img/cerrar.png";
 
 export default function DetalleProducto() {
-  const { productos, setProductos } = useContext(Context);
+  const { productos, setProductos, agregarCarrito } = useContext(Context);
   const { id } = useParams();
 
   const productoId = productos.find((prod) => prod.id === id);
@@ -64,7 +64,7 @@ export default function DetalleProducto() {
                       currency: "CLP",
                     })}</h4>
               <button
-                // onClick={() => agregarCarrito(productoId)}
+                onClick={() => agregarCarrito(productoId)}
                 className="btn-agregar-2"
                 data-toggle="tooltip"
                 data-placement="top"

@@ -70,8 +70,28 @@
     margin-left: 5%;
     margin-bottom: 0;
 }
-
-
+/* .div-pregunta-reg {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.div-pregunta-reg p {
+    
+}
+#link-login {
+    margin-left: 0; 
+    width: 50%;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    margin-left: 5%;
+}
+#link-login:hover {
+    
+    color: #44BBA4;
+    width: 50%rem;
+} */
 
 /* --- media query  --- */
 @media (max-width : 997px) {

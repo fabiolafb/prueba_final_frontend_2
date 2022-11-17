@@ -1,60 +1,48 @@
 import React from "react";
 import Context from "../Context";
+// import AuthContexProvider from "../AuthContext";
 import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/css/inicioSesion.css";
-import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-
-import { useForm } from "react-hook-form";
+//import { useForm } from "react-hook-form";
 
 export default function InicioSesion() {
   const {
-    usuarios, setUsuarios,
-    // email,
-    // setEmail,
-    // password,
-    // setPassword,
+    usuarios,
+    setUserLogin,
+    email,
+    setEmail,
+    password,
+    setPassword,
+    setAutenticado, 
+    setNewUser
   } = useContext(Context);
 
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const navigate = useNavigate();
 
-  // const login = (email, password) => {
-  //   if (email === "fabitafb@gmail.com" && password === 'test'); {
-  //     alert('Login correcto');
-  //  } else {alert('Login incorrecto');}
-  // };
+  /* Función Inicio Sesión */ 
+  const handleLogin = () => {
+    const usuarioEncontrado = usuarios.find((usuario) => usuario.email === email && usuario.password == password);
+  
+    if (usuarioEncontrado) {
+      setUserLogin(usuarioEncontrado);
+      setAutenticado(true) 
+      setNewUser(true)
+      navigate("/home-perfil")
+   } else {
+      window.alert("Datos de acceso incorrectos") 
+   }
 
-  //  const handleLogin = (ev) => {
-  //     ev.preventDefault()
-  //   console.log('submit sesion')
-  //  }
-
-
-
-  // const iniciarSesion = (email, password) => {
-  //   console.log(data);
-  //   e.target.reset()
-  //   const usuarioEncontrado = usuarios.find((e) e.email === email && e.password === password)
-  // };
+  }; 
 
   return (
     <>
       <Navbar />
-      <div className="contenedor-iniciosesion">
-        <form
-          // onSubmit={handleSubmit(iniciarSesion)}
-          id="form-inicio-sesion"
-          // onChange={handleLogin}
-
-          // onSubmit={(ev) => {
-          //   ev.preventDefault();
-          //   login(email, password);
-          // }}
-        >
+      <div className="contenedor-inicio-sesion">
+        <form 
+        // onSubmit={handleLogin} 
+        id="form-inicio-sesion">
           <h4>Iniciar Sesión</h4>
           <div>
             <label>Correo electrónico</label>
@@ -63,21 +51,14 @@ export default function InicioSesion() {
               name="email"
               className="form-control"
               placeholder="correo@example.com"
-              {...register("email", {
-                required: true,
-                pattern: /^\S+@\S+$/i,
-              })}
-              // value={email}
-              // onChange={(ev) => setEmail(ev.target.value)}
+              required
+              value={email}
+              onChange={(ev) => setEmail(ev.target.value)}
             />
-            {errors.email?.type === "required" && (
-              <p className="errors-is">Debes ingresar tu correo electrónico</p>
-            )}
-            {errors.email?.type === "pattern" && (
-              <p className="errors-is">El formato de correo no corresponde</p>
-            )}
           </div>
+
           <br />
+
           <div>
             <label>Contraseña</label>
             <input
@@ -85,40 +66,27 @@ export default function InicioSesion() {
               name="password"
               className="form-control"
               placeholder="Ingresar contraseña"
-              {...register("password", {
-                required: true,
-                maxLength: 4,                
-              })}
-              // value={password}
-              // onChange={(ev) => setPassword(ev.target.value)}
+              required
+              value={password}
+              onChange={(ev) => setPassword(ev.target.value)}
             />
-            {errors.password?.type === "required" && (
-              <p className="errors-is">Debes ingresar tu contraseña</p>
-            )}
-            {errors.password?.type === "maxLength" && (
-              <p className="errors-is">
-                La contraseña debe ser de 4 caracteres
-              </p>
-            )}
           </div>
           <br />
-          <Link to="/home-perfil">
           <button
+            type="submit"
             className="btn-inicio-sesion"
-            // onClick={() => agregarCarrito(producto)}
             data-toggle="tooltip"
             data-placement="top"
             title="Iniciar Sesión"
-            // onClick={onSubmit}
+            onClick={handleLogin}
           >
             Iniciar sesión
           </button>
-          </Link>
           <br />
 
           <div className="div-pregunta">
             <div>
-              <p>¿No tienes cuenta?</p>{" "}
+              <p>¿No tienes cuenta aún?</p>{" "}
             </div>
             <div>
               <Link to="/registro" href="#pricing" id="link-registro">
@@ -131,3 +99,20 @@ export default function InicioSesion() {
     </>
   );
 }
+
+
+  // const handleLogin = async (ev) => {
+  //   ev.preventDefault();
+
+  //   const usuarioEncontrado = usuarios.find(
+  //     (usuario) => usuario.email === email && usuario.password == password
+  //   );
+
+  //   if (Object.entries(usuarioEncontrado).length > 0) {
+  //     setUserLogin(usuarioEncontrado);
+  //     setAutenticado(true);
+  //     navigate("/home-perfil");
+  //   } else  { 
+  //     window.alert("Datos de acceso incorrectos");
+  //   }
+  // };
