@@ -11,6 +11,8 @@ const EdicionDatos = () => {
   const navigate = useNavigate();
   // usar defaultValues: de useForm https://www.youtube.com/watch?v=GEfOr56nBsc minuto 20
 
+
+
   return (
     <>
       <NavbarPrivado />
@@ -73,18 +75,19 @@ const EdicionDatos = () => {
                 name="tienda"
                 className="form-control sm"
                 required
-                placeholder="Negocio o Tienda"
+                placeholder=""
                 defaultValue={userLogin.tienda}
               />
             </div>
             <div className="btns-guardar">
               <button
+                // onclick="alert("Se han guardado los cambios");"
                 variant="primary"
                 className="btn-guardar"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar cambios"
-                // onClick={() => alert("Sus datos han sido guardados exitosamente")}
+                id="alerta" onclick="alert('Se han guardado los cambios')"
               >
                 Guardar
               </button>

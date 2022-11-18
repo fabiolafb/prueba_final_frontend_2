@@ -24,46 +24,48 @@ import NotRegister from "./views/NotRegister";
 
 
 export default function App() {
-  const { newUser, autenticado, userLogin } = useContext(Context);
+  const { autenticado } = useContext(Context);
 
-  /* Componente ruta privada */
+ 
   const PrivateRoute = useCallback(
-    ({ children }) => {
-      return newUser ? children : <Navigate to="/notregister" />;
+    ({ auten: { autenticado }, children }) => {
+      return autenticado ? children : <Navigate to="/notregister" />;
     },
-    [newUser]
+    [autenticado]
   );
 
+  console.log(autenticado)
     /* Componente ruta privada */
-    const PublicRoute = useCallback(
-      ({ children }) => {
-        return !newUser ? children : <Navigate to="/home-perfil "/>;
-      },
-      [newUser]
-    );
+    // const PublicRoute = useCallback(
+    //   ({ children }) => {
+    //     return !newUser ? children : <Navigate to="/home-perfil "/>;
+    //   },
+    //   [newUser]
+    // );
   
 
   return (
     <div className="App">
-      {/* <AuthContexProvider> */}
       <BrowserRouter>
         <Routes>
+
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<PublicRoute><InicioSesion /></PublicRoute>} />
-          <Route path="/registro" element={<PublicRoute><Registro /></PublicRoute>} />
+          <Route path="/login" element={<InicioSesion />} />
+          <Route path="/registro" element={<Registro />} />
 
           <Route
             path="/home-perfil"
             element={
-              <PrivateRoute>
-                <HomePrivado />
+              <PrivateRoute auten={{ autenticado }}>
+                {" "}
+                <HomePrivado />{" "}
               </PrivateRoute>
             }
           />
           <Route
             path="/tienda"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <Tienda />
               </PrivateRoute>
             }
@@ -71,7 +73,7 @@ export default function App() {
           <Route
             path="/perfil-usuario"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <Perfil />
               </PrivateRoute>
             }
@@ -79,7 +81,7 @@ export default function App() {
           <Route
             path="/detalleproducto/:id"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <DetalleProducto />
               </PrivateRoute>
             }
@@ -87,7 +89,7 @@ export default function App() {
           <Route
             path="/favoritos"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <Favoritos />
               </PrivateRoute>
             }
@@ -95,7 +97,7 @@ export default function App() {
           <Route
             path="/mis-datos"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <MisDatos />
               </PrivateRoute>
             }
@@ -103,7 +105,7 @@ export default function App() {
           <Route
             path="/edicion-datos"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <EdicionDatos />
               </PrivateRoute>
             }
@@ -111,7 +113,7 @@ export default function App() {
           <Route
             path="/mis-publicaciones"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <Publicaciones />
               </PrivateRoute>
             }
@@ -119,20 +121,16 @@ export default function App() {
           <Route
             path="/agregar-producto"
             element={
-              <PrivateRoute>
+              <PrivateRoute auten={{ autenticado }}>
                 <AgregarPublicacion />
               </PrivateRoute>
             }
           />
-          {/* <Route path="/carrito" element={<Carrito />} /> */}
-
           <Route path="*" element={<NotFound />} />
           <Route path="/notregister" element={<NotRegister />} />
         </Routes>
         <Footer />
       </BrowserRouter>
-
-      {/* </AuthContexProvider> */}
     </div>
   );
 }

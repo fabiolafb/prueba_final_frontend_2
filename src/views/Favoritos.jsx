@@ -8,7 +8,7 @@ import carrito from "../assets/img/carrito.png";
 
 
 export default function Favoritos() {
-  const { productos, setProductos, agregarCarrito, } = useContext(Context);
+  const { setUsuarios, productos, setProductos, agregarCarrito, } = useContext(Context);
   const navigate = useNavigate();
 
   const borrarFavorita = (id) => {
@@ -16,6 +16,9 @@ export default function Favoritos() {
     productos[productoIndex].favorito = !productos[productoIndex].favorito;
     setProductos([...productos]);
   };
+
+
+
 
   return (
     <>

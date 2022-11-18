@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 //import FooterPrivado from "../components/FooterPrivado";
 
 export default function HomePrivado() {
-  const { userLogin } = useContext(Context);
+  const { autenticado, userLogin } = useContext(Context);
 
   return (
     <>

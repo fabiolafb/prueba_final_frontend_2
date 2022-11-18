@@ -6,7 +6,8 @@
     "email": "anibal.reyes@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "973677515"
+    "nro": 973677515,
+    "favoritos": []
   },
   {
     "userId": 2,
@@ -15,7 +16,8 @@
     "email": "ljcl79@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "991234567"
+    "nro": 991234567,
+    "favoritos": []
   },
   {
     "userId": 3,
@@ -24,7 +26,8 @@
     "email": "fabitafb@gmail.com",
     "password": 2107,
     "tienda": " ",
-    "nro": "995414358"
+    "nro": 995414358,
+    "favoritos": []
   },
   {
     "userId": 4,
@@ -33,7 +36,8 @@
     "email": "agomez.vg@gmail.com",
     "password": 2608,
     "tienda": " ",
-    "nro": "982651109"
+    "nro": 982651109,
+    "favoritos": []
   },
   {
     "userId": 5,
@@ -42,7 +46,8 @@
     "email": "claudio.r@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "993233823"
+    "nro": 993233823,
+    "favoritos": []
   },
   {
     "userId": 6,
@@ -51,7 +56,8 @@
     "email": "andres_hut@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "996572185"
+    "nro": 996572185,
+    "favoritos": []
   },
   {
     "userId": 7,
@@ -60,7 +66,8 @@
     "email": "salinas.luis@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "995449195"
+    "nro": 995449195,
+    "favoritos": []
   },
   {
     "userId": 8,
@@ -69,7 +76,8 @@
     "email": "vanesa.segovia@gmail.com",
     "password": 1234,
     "tienda": " ",
-    "nro": "998877665"
+    "nro": 998877665,
+    "favoritos": []
   },
   {
     "userId": 9,
@@ -78,7 +86,8 @@
     "email": "decocasa@gmail.com",
     "password": 1234,
     "tienda": "Deco-casa",
-    "nro": "912345678"
+    "nro": 912345678,
+    "favoritos": []
   },
   {
     "userId": 10,
@@ -87,6 +96,7 @@
     "email": "cata.sm@gmail.com",
     "password": 1234,
     "tienda": "",
-    "nro": "932165478"
+    "nro": 932165478,
+    "favoritos": []
   }
 ]

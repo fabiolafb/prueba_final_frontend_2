@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 
 const Context = createContext();
 
@@ -15,7 +16,7 @@ const CondominioProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false); 
   const [newUser, setNewUser] = useState(false);
-  const [usuariosNuevos, setUsuariosNuevos ] = useState([]);
+  // const [usuariosNuevos, setUsuariosNuevos] = useState([]);
 
   // Estados para filtros y búsqueda -- Tienda
   const [buscando, setBuscando] = useState("");
@@ -46,9 +47,17 @@ const CondominioProvider = ({ children }) => {
     obtenerProductos();
     obtenerUsuarios();
   }, []);
+
+  // const cambiarForm = (bool) => {
+  //   setIntro(bool);
+  // };
+
 //  --------------------------------------------
 
-
+ /* Componente ruta privada */
+//  const PrivateRoute = ({ auten: { autenticado }, children }) => {
+//   return autenticado ? children : <Navigate to="/notregister" />;
+// };
 
   //Función llenar carrito
   const agregarCarrito = ({ id, img, prodName, price }) => {
@@ -87,6 +96,8 @@ const CondominioProvider = ({ children }) => {
         setEmail,
         password,
         setPassword,
+        // cambiarForm,
+        // PrivateRoute,
         buscando,
         setBuscando,
         filtradoCategoria,
@@ -97,7 +108,7 @@ const CondominioProvider = ({ children }) => {
         eliminarCarrito,
         autenticado, setAutenticado,
         newUser, setNewUser,
-        usuariosNuevos, setUsuariosNuevos
+        // usuariosNuevos, setUsuariosNuevos
       }}
     >
       {children}

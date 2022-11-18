@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Context from "../Context";
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "../assets/css/navbarPrivado.css";
 import Carrito from "./Carrito";
 import logo from "../assets/img/logo_3.png";
@@ -10,10 +10,18 @@ import { faUser, faCartShopping, faArrowRightFromBracket } from "@fortawesome/fr
 
 
 export default function NavbarPrivate() {
-  const { sumarCarrito, setUserLogin } = useContext(Context);
+  const { sumarCarrito, setUserLogin, setNewUser} = useContext(Context);
 
   // Función para cerrar sesión Logout
-  const handleLogout = () => setUserLogin(null);
+  const navigate = useNavigate();
+
+  const handleLogout = (usuarioEncontrado) => {
+    //console.log(found);
+    if (usuarioEncontrado) {
+      setNewUser(false) 
+      navigate("/")
+   };
+  };
 
 
   // Función que suma el precio de los productos agregados al carrito

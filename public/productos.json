@@ -8,7 +8,8 @@
     "prodName": "Lámparas de velador",
     "price": 10000,   
     "categ": "Hogar",
-    "userId": 9
+    "userId": 9,
+    "fav": false
   },
   {
     "desc": "Excelente cámara y calidad de imagen y videos. Graba video en Full HD. Se vende por renovación, muy bien cuidada.",
@@ -19,7 +20,8 @@
     "prodName": "Cámara Fotográfica",
     "price": 100000,
     "categ": "Tecnología",
-    "userId": 6
+    "userId": 6,
+    "fav": false
   },
   {
     "desc": "Vendo cómodas zapatillas urbanas. Nuevas, talla 42.",
@@ -30,7 +32,8 @@
     "prodName": "Zapatillas urbanas",
     "price": 24990,
     "categ": "Vestuario",
-    "userId": 7
+    "userId": 7,
+    "fav": false
   },
   {
     "desc": "Excelente reloj smartwatch KEI A1 PRO Rosado. Mide ritmo cardíaco en todo momento, pantalla touch rápida, tiene podómetro, notifica llamadas, mensajes, clima y manejar la música desde su pantalla.  Correa de silicona.",
@@ -41,7 +44,8 @@
     "prodName": "Reloj smartwach Mujer",
     "price": 25990,   
     "categ": "Tecnología",
-    "userId": 8
+    "userId": 8,
+    "fav": false
   },
   {
     "desc": "Excelente reloj smartwatch, compatible con cualquier celular Android o Iphone. Realiza y recibe llamadas, cámara de 1.0 Megapixeles, reproduce música, tiene podómetro, control de calorías, alarma, calendario. Correa de silicona.",
@@ -52,7 +56,8 @@
     "prodName": "Reloj smartwach hombre",
     "price": 28990,   
     "categ": "Tecnología",
-    "userId": 8
+    "userId": 8,
+    "fav": false
   },
   {
     "desc": "Lindo clóset de madera de raulí. Está en muy buen estado. Se vende por renovación.",
@@ -63,7 +68,8 @@
     "prodName": "Clóset de madera",
     "price": 80000,
     "categ": "Hogar",
-    "userId": 5
+    "userId": 5,
+    "fav": false
   },
   {
     "desc": "Set de 12 piezas para que uses en tu cocina. Al ser de silicona es una excelente opción para cuidar tus ollas, además viene en un cómodo contenedor para que los guardes.",
@@ -74,7 +80,8 @@
     "prodName": "Set utensilios de cocina",
     "price": 18000,   
     "categ": "Hogar",
-    "userId": 9
+    "userId": 9,
+    "fav": false
   },
   {
     "desc": "Miel de abeja artesanal. Contiene 1 kilo. Si quiere más se pueden encargar.",
@@ -85,7 +92,8 @@
     "prodName": "Miel",
     "price": 5500,   
     "categ": "Alimentación",
-    "userId": 10 
+    "userId": 10,
+    "fav": false
   },
   {
     "desc": "Ajedrez nuevo con todas sus piezas. Sin uso. ",
@@ -96,7 +104,8 @@
     "prodName": "Juego de ajedrez",
     "price": 5000,   
     "categ": "Entretención",
-    "userId": 8 
+    "userId": 8,
+    "fav": false 
   }
 
 ]

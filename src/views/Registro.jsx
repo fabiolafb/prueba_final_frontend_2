@@ -4,25 +4,42 @@ import { useForm } from "react-hook-form";
 //import { Link } from "react-router-dom";
 import "../assets/css/registro.css";
 import Navbar from "../components/Navbar";
-// import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid'
 
 export default function Registro() {
-  const { setUsuarios, usuariosNuevos, setUsuariosNuevos } =
+  const { usuarios, setUsuarios,  usuariosNuevos, setUsuariosNuevos } =
     useContext(Context);
 
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+const sendRegistro = () => {
+  let reNombre = document.getElementById("reNombre").value;
+  let reApellido = document.getElementById("reApellido").value;
+  let reEmail = document.getElementById("reEmail").value;
+  let reNro = document.getElementById("reNro").value;
+  let rePass1 = document.getElementById("rePass1").value;
+  let rePass2 = document.getElementById("rePass2").value;
+  let reTienda = document.getElementById("reTienda").value;
 
-  const onSubmit = (data, e) => {
-    console.log(data);
-    e.target.reset();
-    setUsuarios(...usuariosNuevos);
-    setUsuariosNuevos([...usuariosNuevos, data]);
-    console.log(usuariosNuevos);
-  };
+  if (reNombre !== "" && reApellido !== "" && reEmail !== "" && reNro !== "" && rePass1 !== "" && rePass2 !== "" && reTienda !== "") {
+    if (rePass1 === rePass2) {
+      let existeMail = usuarios.filter((ex) => ex.email === reEmail);
+      if (existeMail.length === 0) {
+        setUsuarios([...usuarios, {id: nanoid(), nombre: reNombre, apellido: reApellido, email: reEmail, nro: reNro, password: rePass1, tienda: reTienda, favorito: [] }
+        ]);
+
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -34,33 +51,39 @@ export default function Registro() {
             Los campos marcados con (<span id="ast">*</span>) son obligatorios.
           </h5>
 
-          <form onSubmit={handleSubmit(onSubmit)} id="container-form">
+          <form 
+          // onSubmit={handleSubmit(sendRegistro)} 
+          id="container-form">
             <div className="columnas-form">
               <div className="label-input">
                 <label className="is-required">Nombre</label>
                 <input
                   type="text"
                   className="form-control"
-                  {...register("nombre", { required: true })}
-                  // name="nombre"
+                  id="reNombre"
+                  // {...register("nombre", { required: true })}
+                  name="nombre"
                   placeholder=""
+                  required
                 />
-                {errors.nombre?.type === "required" && (
+                {/* {errors.nombre?.type === "required" && (
                   <p className="errors-re">Debes ingresar tu nombre</p>
-                )}
+                )} */}
               </div>
               <div className="label-input">
                 <label className="is-required">Apellido</label>
                 <input
                   type="text"
                   className="form-control"
-                  {...register("apellido", { required: true })}
-                  // name="apellido"
+                  id="reApellido"
+                  // {...register("apellido", { required: true })}
+                  name="apellido"
                   placeholder=""
+                  required
                 />
-                {errors.apellido?.type === "required" && (
+                {/* {errors.apellido?.type === "required" && (
                   <p className="errors-re">Debes ingresar tu apellido</p>
-                )}
+                )} */}
               </div>
             </div>
 
@@ -70,14 +93,16 @@ export default function Registro() {
                 <input
                   type="email"
                   className="form-control"
-                  {...register("email", {
-                    required: true,
-                    pattern: /\S+@\S+\.\S+/,
-                  })}
-                  // name="correo"
+                  id="reEmail"
+                  // {...register("email", {
+                  //   required: true,
+                  //   pattern: /\S+@\S+\.\S+/,
+                  // })}
+                  name="correo"
                   placeholder=""
+                  required
                 />
-                {errors.email?.type === "required" && (
+                {/* {errors.email?.type === "required" && (
                   <p className="errors-re">
                     Debes ingresar tu correo electrónico
                   </p>
@@ -86,7 +111,7 @@ export default function Registro() {
                   <p className="errors-re">
                     El formato de correo no corresponde
                   </p>
-                )}
+                )} */}
               </div>
 
               <div className="label-input">
@@ -94,73 +119,81 @@ export default function Registro() {
                   Teléfono de contacto <i>(opcional)</i>
                 </label>
                 <input
-                  type="txt"
-                  {...register("nro", {
-                    required: false,
-                    minLength: 9,
-                    maxLength: 9,
-                  })}
-                  name="numero-contacto"
+                  type="number"
+                  name="nro"
                   className="form-control"
+                  id="reNro"
+                  // {...register("nro", {
+                  //   required: false,
+                  //   minLength: 9,
+                  //   maxLength: 9,
+                  // })}
                   placeholder="+569"
+                  
                 />
-                {/* {errors.nro?.type === "required" && (
-                  <p className="errors">
-                    Debes ingresar un teléfono de contacto
-                  </p>
-                )} */}
-                {errors.nro?.type === "minLength" && (
+                {/* {errors.nro?.type === "minLength" && (
                   <p className="errors-re">
-                    El número de teléfono debe contener 8 dígitos
+                    El número de teléfono debe contener 9 dígitos
                   </p>
                 )}
                 {errors.nro?.type === "maxLength" && (
                   <p className="errors-re">
-                    El número de teléfono debe contener 8 dígitos
+                    El número de teléfono debe contener 9 dígitos
                   </p>
-                )}
+                )} */}
               </div>
             </div>
 
+                  {/* Password */}
             <div className="columnas-form">
               <div className="label-input">
-                <label className="is-required">Contraseña</label>
+                <label for="rePass1" className="is-required">Contraseña</label>
                 <input
                   type="password"
                   className="form-control"
-                  {...register("password", {
-                    required: true,
-                    minLength: 4,
-                    maxLength: 4,
-                  })}
-                  // name="password1"
+                  id="rePass1"
+                  // {...register("password", {
+                  //   required: true,
+                  //   minLength: 4,
+                  //   maxLength: 4,
+                  // })}
+                  name="rePass1"
                   placeholder="Contraseña"
+                  required
                 />
+                {/* {errors.password?.type === "required" && (
+                  <p className="errors-re">Debes ingresar una constraseña</p>
+                )}
                 {errors.password?.type === "maxLength" && (
                   <p className="errors-re">
                     La contraseña debe ser de máximo 4 caracteres
                   </p>
-                )}
+                )} */}
               </div>
 
               <div className="label-input">
-                <label className="is-required">Repetir Contraseña</label>
+                <label for="rePass2" className="is-required">Repetir contraseña</label>
                 <input
                   type="password"
                   className="form-control"
-                  {...register("password-repeat", {
-                    required: true,
-                    minLength: 4,
-                    maxLength: 4,
-                  })}
-                  // name="password2"
+                  id="rePass2"
+                  // {...register("pass", {
+                  //   required: true,
+                  //   minLength: 4,
+                  //   maxLength: 4,
+                  // })}
+                  name="rePass2"
                   placeholder="Repetir contraseña"
+                  required
                 />
+                {/* {errors.password?.type === "required" && (
+                  <p className="errors-re">Debes repetir la contraseña</p>
+                )}
                 {errors.password?.type === "maxLength" && (
                   <p className="errors-re">
                     La contraseña debe ser de máximo 4 caracteres
                   </p>
-                )}
+                )} */}
               </div>
             </div>
 
@@ -172,8 +205,10 @@ export default function Registro() {
                 <input
                   type="text"
                   className="form-control"
-                  {...register("tienda", { required: false })}
+                  id="reTienda"
+                  // {...register("tienda", { required: false })}
                   // name="tienda"
+                  name="tienda"
                   placeholder=""
                 />
               </div>
@@ -186,7 +221,7 @@ export default function Registro() {
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Guardar registro"
-                  onClick={onSubmit}
+                  onClick={sendRegistro}
                 />
               </div>
             </div>
@@ -199,3 +234,29 @@ export default function Registro() {
     </>
   );
 }
+
+
+ /*------FUNCION USEFORM----- */ 
+
+//   const { register, formState: { errors }, handleSubmit, } = useForm();
+
+
+//   const sendRegistro = (data, e) => {
+//     e.preventDefault();
+//     e.target.reset();
+//     setUsuariosNuevos(...usuarios);
+
+//     setUsuarios([...usuarios, data, { id: nanoid()}]);
+//     console.log(setUsuariosNuevos);
+
+//   };
+
+//   for (let i = 0; i < usuarios.length; i++) {
+//     const element = usuarios[i]
+//     element.id = i
+// }
+// console.log(usuarios)
+
+// for (var i = 0; i < usuarios; i++) {
+//   usuarios[i].nuevobooleano = true;
+// }

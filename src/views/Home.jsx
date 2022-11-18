@@ -12,7 +12,7 @@ export default function Home() {
         <div className="div-txt">
           <h1>¿Qué es Condominio Ventas?</h1>
           <p>
-            Es una plataforma online disponible para que cada uno de quienes integran esta comunidad puedan comprar o vender productos de una manera confiable y fácil.
+            Es una plataforma online disponible para que cada uno de los integrantes de esta comunidad puedan comprar o vender productos de una manera confiable, fácil y segura.
           </p>
           <p><span ><b><Link to="/registro" id="id-registro">Regístrate</Link></b></span> si entras por primera vez y disfruta de este útil espacio.
           </p>

@@ -43,7 +43,7 @@ export default function NotFound() {
       <Container className="notfound" id="notregister">
         <h3 className="mb-4">
           {" "}
-          Para acceder a esa ruta debes <span style={{ color: "#44BBA4" }}>Iniciar Sesión</span>  o <span style={{ color: "#E7BB41" }}>Registrarte{" "}</span> 
+          Para acceder a esa ruta debes <span style={{ color: "#44BBA4" }}>Iniciar Sesión</span>  o <span style={{ color: "#E7BB41" }}>Registrarte{" "}</span>
         </h3>
 
         <div to="/" style={{ color: "black", fontSize: "1.1rem" }}>
