@@ -1,45 +1,60 @@
 import Context from "../Context";
 import { useContext } from "react";
-import { useForm } from "react-hook-form";
-//import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../assets/css/registro.css";
 import Navbar from "../components/Navbar";
-import { nanoid } from 'nanoid'
+import { nanoid } from "nanoid";
 
 export default function Registro() {
-  const { usuarios, setUsuarios,  usuariosNuevos, setUsuariosNuevos } =
+  const { usuarios, setUsuarios } =
     useContext(Context);
+    const navigate = useNavigate();
+  const sendRegistro = () => {
+    let reNombre = document.getElementById("reNombre").value;
+    let reApellido = document.getElementById("reApellido").value;
+    let reEmail = document.getElementById("reEmail").value;
+    let reNro = document.getElementById("reNro").value;
+    let rePass1 = document.getElementById("rePass1").value;
+    let rePass2 = document.getElementById("rePass2").value;
+    let reTienda = document.getElementById("reTienda").value;
 
-const sendRegistro = () => {
-  let reNombre = document.getElementById("reNombre").value;
-  let reApellido = document.getElementById("reApellido").value;
-  let reEmail = document.getElementById("reEmail").value;
-  let reNro = document.getElementById("reNro").value;
-  let rePass1 = document.getElementById("rePass1").value;
-  let rePass2 = document.getElementById("rePass2").value;
-  let reTienda = document.getElementById("reTienda").value;
-
-  if (reNombre !== "" && reApellido !== "" && reEmail !== "" && reNro !== "" && rePass1 !== "" && rePass2 !== "" && reTienda !== "") {
-    if (rePass1 === rePass2) {
-      let existeMail = usuarios.filter((ex) => ex.email === reEmail);
-      if (existeMail.length === 0) {
-        setUsuarios([...usuarios, {id: nanoid(), nombre: reNombre, apellido: reApellido, email: reEmail, nro: reNro, password: rePass1, tienda: reTienda, favorito: [] }
-        ]);
-
+    if (
+      reNombre !== "" &&
+      reApellido !== "" &&
+      reEmail !== "" &&
+      rePass1 !== "" &&
+      rePass2 !== "" 
+    ) {
+      if (rePass1 === rePass2) {
+        let existeMail = usuarios.filter((ex) => ex.email === reEmail);
+        if (existeMail.length === 0) {
+          setUsuarios([
+            ...usuarios,
+            {
+              id: nanoid(),
+              nombre: reNombre,
+              apellido: reApellido,
+              email: reEmail,
+              nro: reNro,
+              password: rePass1,
+              tienda: reTienda,
+              favorito: [],
+            },
+          ]);
+          alert("Registrado con éxito");
+          navigate("/login");
+        } else {
+          alert("Este correo ya está registrado");
+        }
+      } else {
+        alert("Las contraseñas no coinciden");
       }
+    } else {
+      alert(
+        "Debes completar al menos los campos obligatorios para registrarte"
+      );
     }
-  }
-
-}
-
-
-
-
-
-
-
-
-
+  };
 
   return (
     <>
@@ -51,9 +66,10 @@ const sendRegistro = () => {
             Los campos marcados con (<span id="ast">*</span>) son obligatorios.
           </h5>
 
-          <form 
-          // onSubmit={handleSubmit(sendRegistro)} 
-          id="container-form">
+          <form
+            // onSubmit={handleSubmit(sendRegistro)}
+            id="container-form"
+          >
             <div className="columnas-form">
               <div className="label-input">
                 <label className="is-required">Nombre</label>
@@ -129,7 +145,6 @@ const sendRegistro = () => {
                   //   maxLength: 9,
                   // })}
                   placeholder="+569"
-                  
                 />
                 {/* {errors.nro?.type === "minLength" && (
                   <p className="errors-re">
@@ -144,10 +159,10 @@ const sendRegistro = () => {
               </div>
             </div>
 
-                  {/* Password */}
+            {/* Password */}
             <div className="columnas-form">
               <div className="label-input">
-                <label for="rePass1" className="is-required">Contraseña</label>
+                <label className="is-required">Contraseña</label>
                 <input
                   type="password"
                   className="form-control"
@@ -172,7 +187,7 @@ const sendRegistro = () => {
               </div>
 
               <div className="label-input">
-                <label for="rePass2" className="is-required">Repetir contraseña</label>
+                <label className="is-required">Repetir contraseña</label>
                 <input
                   type="password"
                   className="form-control"
@@ -227,7 +242,6 @@ const sendRegistro = () => {
             </div>
           </form>
 
-          
           <br />
         </section>
       </div>
@@ -235,11 +249,9 @@ const sendRegistro = () => {
   );
 }
 
-
- /*------FUNCION USEFORM----- */ 
+/*------FUNCION USEFORM----- */
 
 //   const { register, formState: { errors }, handleSubmit, } = useForm();
-
 
 //   const sendRegistro = (data, e) => {
 //     e.preventDefault();

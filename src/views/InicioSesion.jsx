@@ -11,21 +11,12 @@ export default function InicioSesion() {
   const {
     usuarios,
     setUserLogin,
-    // email,
-    // setEmail,
-    // password,
-    // setPassword,
-    autenticado,
     setAutenticado,
-    // newUser,
-    // setNewUser,
-    // cambiarForm,
   } = useContext(Context);
 
   const navigate = useNavigate();
 
   /* Función Inicio Sesión */
-
   const handleLogin = () => {
     let email = document.getElementById("email").value;
     let password = document.getElementById("pass").value;
@@ -46,7 +37,7 @@ export default function InicioSesion() {
       }
     }
   };
-  console.log(setUserLogin)
+
 
   
   // const handleLogin = () => {
@@ -56,12 +47,10 @@ export default function InicioSesion() {
   //   }
   //   if (usuarioEncontrado) {
   //     setAutenticado(true);
-  //     setNewUser(true);
   //     navigate("/home-perfil");
   //  } else {
   //     window.alert("Datos de acceso incorrectos")
   //  }
-  //  console.log(newUser)
   // };
 
   return (

@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useContext, useCallback, useState } from "react";
+import { useContext, useCallback } from "react";
 import Context from "./Context";
 
 /* Componentes */
 import Footer from "./components/Footer";
-import Carrito from "./components/Carrito";
 
 /* Views */
 import Home from "./views/Home";
@@ -26,7 +25,7 @@ import NotRegister from "./views/NotRegister";
 export default function App() {
   const { autenticado } = useContext(Context);
 
- 
+ /* Views */
   const PrivateRoute = useCallback(
     ({ auten: { autenticado }, children }) => {
       return autenticado ? children : <Navigate to="/notregister" />;
@@ -34,13 +33,13 @@ export default function App() {
     [autenticado]
   );
 
-  console.log(autenticado)
+
     /* Componente ruta privada */
     // const PublicRoute = useCallback(
     //   ({ children }) => {
-    //     return !newUser ? children : <Navigate to="/home-perfil "/>;
+    //     return !autenticado ? children : <Navigate to="/home-perfil "/>;
     //   },
-    //   [newUser]
+    //   [autenticado]
     // );
   
 

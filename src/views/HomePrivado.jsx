@@ -1,16 +1,14 @@
-import React from "react";
 import Context from "../Context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+import "../assets/css/homePrivado.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import in_tienda from "../assets/img/in_tienda.png";
 import in_perfil from "../assets/img/in_perfil.png";
-//import { Link } from "react-router-dom";
-import "../assets/css/homePrivado.css";
-import { Link } from "react-router-dom";
-//import FooterPrivado from "../components/FooterPrivado";
+
 
 export default function HomePrivado() {
-  const { autenticado, userLogin } = useContext(Context);
+  const { userLogin } = useContext(Context);
 
   return (
     <>
@@ -18,7 +16,7 @@ export default function HomePrivado() {
       <div className="contenedor-home-privado">
         <div className="div-txt-privado">
           <h2>
-            Bienvenid@ <span id="name-home">{userLogin.name} </span>
+            Bienvenid@ <span id="name-home" >{userLogin.nombre} </span>
           </h2>
           <h3 id="slogan">¿Qué deseas hacer?</h3>
         </div>

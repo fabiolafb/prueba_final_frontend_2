@@ -10,7 +10,7 @@ import { faUser, faCartShopping, faArrowRightFromBracket } from "@fortawesome/fr
 
 
 export default function NavbarPrivate() {
-  const { sumarCarrito, setUserLogin, setNewUser} = useContext(Context);
+  const { sumarCarrito, setAutenticado} = useContext(Context);
 
   // Función para cerrar sesión Logout
   const navigate = useNavigate();
@@ -18,17 +18,11 @@ export default function NavbarPrivate() {
   const handleLogout = (usuarioEncontrado) => {
     //console.log(found);
     if (usuarioEncontrado) {
-      setNewUser(false) 
+      setAutenticado(false) 
       navigate("/")
    };
   };
 
-
-  // Función que suma el precio de los productos agregados al carrito
-  const total = sumarCarrito.reduce(
-    (valorAnterior, { count, price }) => valorAnterior + price * count,
-    0
-  );
   let sum = 0;
 
   return (

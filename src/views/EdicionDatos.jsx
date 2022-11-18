@@ -9,9 +9,6 @@ import NavbarPrivado from "../components/NavbarPrivado";
 const EdicionDatos = () => {
   const { userLogin } = useContext(Context);
   const navigate = useNavigate();
-  // usar defaultValues: de useForm https://www.youtube.com/watch?v=GEfOr56nBsc minuto 20
-
-
 
   return (
     <>
@@ -63,7 +60,7 @@ const EdicionDatos = () => {
                 name="phone"
                 className="form-control sm"
                 required
-                placeholder="Nro contacto"
+                placeholder="+56"
                 defaultValue={userLogin.nro}
               />
             </div>

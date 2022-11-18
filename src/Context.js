@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
 
 const Context = createContext();
 
@@ -10,13 +9,11 @@ const CondominioProvider = ({ children }) => {
   // Estado que trae json usuarios iniciales
   const [usuarios, setUsuarios] = useState([]);
 
-  // Estados para validar inicio de sesión
+  // Estados para validar inicio de sesión y registro
   const [userLogin, setUserLogin] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false); 
-  const [newUser, setNewUser] = useState(false);
-  // const [usuariosNuevos, setUsuariosNuevos] = useState([]);
 
   // Estados para filtros y búsqueda -- Tienda
   const [buscando, setBuscando] = useState("");
@@ -48,9 +45,7 @@ const CondominioProvider = ({ children }) => {
     obtenerUsuarios();
   }, []);
 
-  // const cambiarForm = (bool) => {
-  //   setIntro(bool);
-  // };
+
 
 //  --------------------------------------------
 
@@ -96,8 +91,6 @@ const CondominioProvider = ({ children }) => {
         setEmail,
         password,
         setPassword,
-        // cambiarForm,
-        // PrivateRoute,
         buscando,
         setBuscando,
         filtradoCategoria,
@@ -107,8 +100,6 @@ const CondominioProvider = ({ children }) => {
         agregarCarrito,
         eliminarCarrito,
         autenticado, setAutenticado,
-        newUser, setNewUser,
-        // usuariosNuevos, setUsuariosNuevos
       }}
     >
       {children}
