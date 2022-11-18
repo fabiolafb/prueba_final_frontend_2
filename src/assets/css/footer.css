@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 13%;
+    height: 10%;
 }
 
 .logo-footer {
@@ -23,15 +23,15 @@
     margin-left: 1rem;
 }
 .info-footer p {
-    padding-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding-top: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 .logo_rrss {
-    width: 1.8rem;
+    width: 1.5rem;
     margin-right: 0.5rem;
     filter: invert(0.5);
     cursor: pointer;
-    padding-top: -1.5%;
+    padding-top: 0%;
 }
 
 /* --- media query  --- */

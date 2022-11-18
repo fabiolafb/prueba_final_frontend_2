@@ -1,0 +1,16 @@
+#title-modal {
+    color: #44BBA4;
+}
+
+#footer-modal {
+    align-content: center;
+    align-items:center;
+}
+.img-modal {
+    text-align: center;
+    margin:5px auto;
+}
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}

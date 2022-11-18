@@ -1,16 +1,17 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Context from "../Context";
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
+
 import "../assets/css/navbarPrivado.css";
-import Carrito from "./Carrito";
+// import Carrito from "./Carrito";
 import logo from "../assets/img/logo_3.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCartShopping, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faUser,faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function NavbarPrivate() {
-  const { sumarCarrito, setAutenticado} = useContext(Context);
+  const { userLogin, setAutenticado} = useContext(Context);
 
   // Función para cerrar sesión Logout
   const navigate = useNavigate();
@@ -38,7 +39,11 @@ export default function NavbarPrivate() {
           </Link>
         </div>
         
+
         <div id="id-container-fluid" className="container-select">
+          <div className="mt-3" style={{ color: "#707070" }}>
+            <h6>Hola {userLogin.nombre}</h6>
+          </div>
           <div className="nav-item">
             <Link to="/perfil-usuario" className="nav-link-priv">
               <FontAwesomeIcon
@@ -51,7 +56,7 @@ export default function NavbarPrivate() {
             </Link>
           </div>
 
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <Link 
               className="nav-link-priv" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
@@ -75,7 +80,7 @@ export default function NavbarPrivate() {
               ))}
             
             </Link> 
-          </div>
+          </div> */}
 
           <div className="nav-item">
             <Link id="nav-link-signout" className="nav-link-priv" to="/">
@@ -91,7 +96,7 @@ export default function NavbarPrivate() {
           </div>
         </div>
       </Navbar>
-      <Carrito />
+      {/* <Carrito /> */}
     </>
   );
 }

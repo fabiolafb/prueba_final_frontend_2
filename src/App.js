@@ -21,11 +21,10 @@ import AgregarPublicacion from "./views/AgregarPublicacion";
 import NotFound from "./views/NotFound";
 import NotRegister from "./views/NotRegister";
 
-
 export default function App() {
   const { autenticado } = useContext(Context);
 
- /* Views */
+  /* Componente vistas privada */
   const PrivateRoute = useCallback(
     ({ auten: { autenticado }, children }) => {
       return autenticado ? children : <Navigate to="/notregister" />;
@@ -33,21 +32,10 @@ export default function App() {
     [autenticado]
   );
 
-
-    /* Componente ruta privada */
-    // const PublicRoute = useCallback(
-    //   ({ children }) => {
-    //     return !autenticado ? children : <Navigate to="/home-perfil "/>;
-    //   },
-    //   [autenticado]
-    // );
-  
-
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<InicioSesion />} />
           <Route path="/registro" element={<Registro />} />

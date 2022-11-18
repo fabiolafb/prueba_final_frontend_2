@@ -9,7 +9,7 @@
     text-align: center;
 }
 .card-producto-container {
-    border-radius: 15px;
+    border-radius: 10px;
    }
 .div-card-prod {
     display: grid;
@@ -62,19 +62,57 @@
 }
 .btns-card {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 .btns-card button {
     background-color: #E7BB41;
     border-color: #D3D0CB;
     border-radius: 5px;
-    width: 40%;
+    width: 60%;
+    height: 2rem;
 }
-.img_btn {
-    margin-bottom: 2%;
+.div-btn-modal {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    width: 80%;
+    text-align: center;
+}
+.div-btn-modal:hover {
+    color: #ffffff;
 }
 
+.div-btn-modal button::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    border-radius: 25px;
+    background-color: #E7BB41;
+    bottom: 0px;
+    left: 2;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .div-btn-modal button:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    color: #ffffff;
+  }
+
+#btn-modal {
+    background-color: transparent;
+    border: none;   
+    width: 70%;
+    color: #44BBA4;
+    font-size: 1rem;
+}
 
 /* --- media query  --- */
 @media (max-width : 1350px) { 

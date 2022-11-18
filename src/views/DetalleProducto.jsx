@@ -8,7 +8,7 @@ import "../assets/css/detalleProd.css";
 import cerrar from "../assets/img/cerrar.png";
 
 export default function DetalleProducto() {
-  const { productos, setProductos, agregarCarrito } = useContext(Context);
+  const { productos, setProductos} = useContext(Context);
   const { id } = useParams();
 
   const productoId = productos.find((prod) => prod.id === id);
@@ -27,10 +27,10 @@ export default function DetalleProducto() {
         <Card className="container-card-detalle sm">
           <div className="card-detalle-prod">
             <div className="card-detalle-izq">
-              <h4 className="name-card-detalle">
+              <h5 className="name-card-detalle">
                 <b>{productoId.prodName}</b>
-              </h4>
-              <img src={productoId.img} alt="" className="zoom" width="250" />
+              </h5>
+              <img src={productoId.img} alt="" className="zoom" width="200" />
               <div className="categ-fav">
                 <svg
                   onClick={() => productoFavorito(productoId.id)}
@@ -63,7 +63,8 @@ export default function DetalleProducto() {
                       style: "currency",
                       currency: "CLP",
                     })}</h4>
-              <button
+                    
+              {/* <button
                 onClick={() => agregarCarrito(productoId)}
                 className="btn-agregar-2"
                 data-toggle="tooltip"
@@ -71,7 +72,7 @@ export default function DetalleProducto() {
                 title="Agregar para comprar"
               >
                 Comprar
-              </button>
+              </button> */}
             </div>
             <Link to="/tienda">
               <img

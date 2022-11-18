@@ -11,7 +11,7 @@ const Footer = () => {
     <>
       <footer id="id-footer-public" className="footer fixed-bottom ">
         <NavLink to="/">
-          <img alt="" src={logo} width="150" className="logo-footer ms-auto" />
+          <img alt="" src={logo} width="110" className="logo-footer ms-auto" />
         </NavLink>
 
         <hr />

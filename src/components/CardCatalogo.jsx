@@ -1,18 +1,18 @@
 import Context from "../Context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/cardCatalogo.css";
 import { Card } from "react-bootstrap";
-import carrito from "../assets/img/carrito.png";
+import ContactoVendedorModal from "./ContactoVendedorModal";
+// import carrito from "../assets/img/carrito.png";
 
 export default function CardCatalogo() {
-  const {
-    productos,
-    setProductos,
-    buscando,
-    filtradoCategoria,
-    agregarCarrito,
-  } = useContext(Context);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const { productos, setProductos, buscando, filtradoCategoria } =
+    useContext(Context);
 
   const navigate = useNavigate(); //crear una ruta
 
@@ -53,7 +53,7 @@ export default function CardCatalogo() {
             })
             .map((prod, id) => (
               <Card
-                style={{ width: "16rem" }}
+                style={{ width: "17rem" }}
                 className="card-producto-container"
                 key={id}
               >
@@ -99,29 +99,25 @@ export default function CardCatalogo() {
                     >
                       Ver detalle
                     </button>
-                    <button
-                      onClick={() => agregarCarrito(prod)}
-                      variant="primary"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Agregar para comprar"
-                    >
-                      <img
-                        src={carrito}
-                        className="img_btn"
-                        width="18"
-                        alt="..."
+                    <div className="div-btn-modal">
+                      <button
+                        onClick={handleShow}
+                        id="btn-modal"
+                        variant="primary"
                         data-toggle="tooltip"
                         data-placement="top"
-                        title="Ir a Mi perfil"
-                      />
-                    </button>
+                        title="Ver datos vendedor"
+                      >
+                        <strong>¡Quiero comprar!</strong>
+                      </button>
+                    </div>
                   </div>
                 </Card.Body>
               </Card>
             ))}
         </div>
       </div>
+      <ContactoVendedorModal show={show} handleClose={handleClose} />
     </>
   );
 }
