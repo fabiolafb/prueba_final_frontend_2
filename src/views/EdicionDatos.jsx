@@ -78,13 +78,11 @@ const EdicionDatos = () => {
             </div>
             <div className="btns-guardar">
               <button
-                // onclick="alert("Se han guardado los cambios");"
                 variant="primary"
                 className="btn-guardar"
                 data-toggle="tooltip"
                 data-placement="top"
-                title="Guardar cambios"
-                id="alerta" onclick="alert('Se han guardado los cambios')"
+                title="Guardar cambios"                
               >
                 Guardar
               </button>

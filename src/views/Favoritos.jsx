@@ -1,14 +1,15 @@
 import Context from "../Context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
+import ContactoVendedorModal from "../components/ContactoVendedorModal";
 import NavbarPrivado from "../components/NavbarPrivado";
 import "../assets/css/favoritos.css";
-import carrito from "../assets/img/carrito.png";
 
 
 export default function Favoritos() {
-  const { setUsuarios, productos, setProductos, agregarCarrito, } = useContext(Context);
+  const { productos, setProductos } = useContext(Context);
+
   const navigate = useNavigate();
 
   const borrarFavorita = (id) => {
@@ -17,7 +18,10 @@ export default function Favoritos() {
     setProductos([...productos]);
   };
 
-
+  /* Modal */
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   return (
@@ -37,7 +41,7 @@ export default function Favoritos() {
 
         <div className="container-tittle-fav d-flex">
           <div className="cont-tittle">
-            <h4>Productos Favoritos</h4>
+            <h5>Productos Favoritos</h5>
             <p>
               Presiona sobre el corazón para <b>eliminar</b> el producto como
               favorito
@@ -95,29 +99,25 @@ export default function Favoritos() {
                     >
                       Ver detalle
                     </button>
-                    <button
-                      onClick={() => agregarCarrito(elem)}
-                      variant="primary"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Agregar para comprar"
-                    >
-                      <img
-                        src={carrito}
-                        className="img_btn"
-                        width="18"
-                        alt="..."
+                    <div className="div-btn-modal-fav">
+                      <button
+                        onClick={handleShow}
+                        id="btn-modal-fav"
+                        variant="primary"
                         data-toggle="tooltip"
                         data-placement="top"
-                        title="Ir a Mi perfil"
-                      />
-                    </button>
+                        title="Ver datos vendedor"
+                      >
+                        <strong>¡Quiero comprar!</strong>
+                      </button>
+                    </div>
                   </div>
                 </Card.Body>
               </Card>
             ))}
         </div>
       </div>
+      <ContactoVendedorModal show={show} handleClose={handleClose} />
     </>
   );
 }

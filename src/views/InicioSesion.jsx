@@ -17,7 +17,8 @@ export default function InicioSesion() {
   const navigate = useNavigate();
 
   /* Función Inicio Sesión */
-  const handleLogin = () => {
+  const handleLogin = (ev) => {
+    ev.preventDefault();
     let email = document.getElementById("email").value;
     let password = document.getElementById("pass").value;
     if (!email && !password) {
@@ -30,14 +31,14 @@ export default function InicioSesion() {
           setUserLogin(usuarioEncontrado);
           navigate('/home-perfil')
         } else {
-          alert('Datos de acceso incorrectos');
+          alert('Datos de acceso incorrectos'); 
         }
       } else {
         alert('Esa dirección de correo no está registrada');
       }
     }
   };
-
+  let error = document.getElementById("error");
 
   
   // const handleLogin = () => {
@@ -87,7 +88,7 @@ export default function InicioSesion() {
               // onChange={(ev) => setPassword(ev.target.value)}
             />
           </div>
-          {/* {error ? <p className="error" class="alerta" > <i>Debes llenar ambos campos</i></p> : null}  */}
+          {error ? <p id="error" class="alerta" > <i>Debes llenar ambos campos</i></p> : null} 
           <br />
           <button
             type="submit"

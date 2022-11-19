@@ -1,10 +1,26 @@
-//STYLES
-import Button from "react-bootstrap/Button";
+import Context from "../Context";
+import { useContext, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import logo from "../assets/img/logo_3.png";
 import "../assets/css/contactoVendedorModal.css";
-import { text } from "@fortawesome/fontawesome-svg-core";
-function ContactoVendedorModal({ show, handleClose }) {
+
+
+function ContactoVendedorModal({ show, handleClose, escogido}) {
+
+
+  // const [nuevoArray, setNuevoArray] = useState([]);
+  // const nuevoArrayUser = () => {
+  //   if (productos.userId == usuarios.userId) {
+  //     nuevoArrayUser = [].concat(productos, usuarios);
+  //   }
+  //   setNuevoArray(nuevoArrayUser);
+
+  //   console.log(nuevoArray);
+  // };
+  // let { id } = useParams();
+  // const productoUserId = productos.find((id) => id.contacto === id);
+  // console.log(productoId);
+
   return (
     <>
       <Modal
@@ -14,19 +30,29 @@ function ContactoVendedorModal({ show, handleClose }) {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title id="title-modal">Datos de Vendedor</Modal.Title>
+          <Modal.Title id="title-modal">Datos del Vendedor</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <h5 className="text-center" >
             ¡Gracias por interesarte en mi producto!
           </h5>
-          <p className="text-center">Estos son mis datos, te responderé a la brevedad.</p>
+          <p className="text-center">
+            Estos son mis datos, te responderé a la brevedad.
+          </p>
 
-          <div className="d-flex flex-column card-block mx-auto">
+          <div className="d-flex flex-column card-block mx-auto" key={escogido?.id}>
+            <h6>Nombre: <span>{escogido?.prodName}</span></h6>
+
             <ul>
-              <li>Nombre: <strong>fabiola</strong></li> 
-              <li>Correo electrónico: <strong>fabiola</strong></li>
-              <li>Número de contacto electrónico: <strong>fabiola</strong></li>
+              <li>
+                Nombre: <b>{escogido?.prodName}</b>
+              </li>
+              <li>
+                Correo electrónico: <b>decocasa@gmail.com</b>
+              </li>
+              <li>
+                Número de contacto electrónico: <b>912345678</b>
+              </li>
             </ul>
           </div>
         </Modal.Body>
@@ -40,46 +66,3 @@ function ContactoVendedorModal({ show, handleClose }) {
 
 export default ContactoVendedorModal;
 
-{
-  /* <Modal show={show} onHide={handleClose} animation={false}>
-  <Modal.Header closeButton>
-    <Modal.Title>Datos de contacto </Modal.Title>
-  </Modal.Header>
-  <Modal.Body>
-    <div className="card-block text-center mt-2 mb-3">
-      <h5 className="card-title text-center">
-        <strong>Nombre:</strong>{" "}
-      </h5>
-      <h6 className="card-subtitle text-muted">
-        <strong>Nombre común:</strong>
-      </h6>
-    </div>
-
-    <div className="d-flex flex-column card-block mx-1">
-      <p className="card-text">
-        <strong>Origen:</strong>{" "}
-      </p>
-      <p className="card-text">
-        <strong>Descripción:</strong>{" "}
-      </p>
-      <p className="card-text">
-        <strong>Exposición:</strong>{" "}
-      </p>
-      <p className="card-text">
-        <strong>Suelo:</strong>{" "}
-      </p>
-      <p className="card-text">
-        <strong>Esparcimiento:</strong>{" "}
-      </p>
-      <p className="card-text">
-        <strong>Usos:</strong>{" "}
-      </p>
-    </div>
-  </Modal.Body>
-  {/* <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>
-          Close
-        </Button>
-      </Modal.Footer> */
-}
-// </Modal>; */}

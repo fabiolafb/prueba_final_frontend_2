@@ -43,16 +43,17 @@
 .container-tittle-fav {
     display: flex;
     justify-content: space-between;
+    height: 4rem;
 }
 .cont-tittle {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     text-align: center;
     width: 100%;
     color: #6a6c6d;
 }
 
 .cont-tittle p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
 }
 
@@ -71,12 +72,50 @@
     gap: 5px;
     row-gap: 30px;
     justify-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 10rem;
     padding: 0 2rem;
+  }
+/* Modal */
+.div-btn-modal-fav {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    width: 80%;
+    text-align: center;
+}
+.div-btn-modal-fav:hover {
+    color: #ffffff;
 }
 
-
+.div-btn-modal-fav button::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    border-radius: 25px;
+    background-color: #E7BB41;
+    bottom: 0px;
+    left: 2;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .div-btn-modal-fav button:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    color: #ffffff;
+  }
+  #btn-modal-fav {
+    background-color: transparent;
+    border: none;   
+    width: 80%;
+    color: #44BBA4;
+    font-size: 1rem;
+}
 
 /* --- media query  --- */
 @media (max-width : 1350px) { 

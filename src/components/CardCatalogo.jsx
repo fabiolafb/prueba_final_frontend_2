@@ -6,11 +6,12 @@ import { Card } from "react-bootstrap";
 import ContactoVendedorModal from "./ContactoVendedorModal";
 // import carrito from "../assets/img/carrito.png";
 
-export default function CardCatalogo() {
+export default function CardCatalogo({ prod }) {
+  /* Estado Modal */
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   const { productos, setProductos, buscando, filtradoCategoria } =
     useContext(Context);
 
@@ -20,8 +21,16 @@ export default function CardCatalogo() {
     const favoritoIndex = productos.findIndex((p) => p.id === id);
     productos[favoritoIndex].favorito = !productos[favoritoIndex].favorito;
     setProductos([...productos]);
-    console.log(productoFavorito);
+    
   };
+
+// const productoComprar = (id) => {
+//   const comprarIndex = productos.findIndex((c) => c.id === id);
+//   productos[comprarIndex].contacto = !productos[comprarIndex].contacto;
+//   setProductos([...productos]);
+//   console.log("hola");
+// };
+
 
   return (
     <>
@@ -117,7 +126,7 @@ export default function CardCatalogo() {
             ))}
         </div>
       </div>
-      <ContactoVendedorModal show={show} handleClose={handleClose} />
+      <ContactoVendedorModal show={show} escogido={prod} handleClose={handleClose}  />
     </>
   );
 }

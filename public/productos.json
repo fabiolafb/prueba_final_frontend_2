@@ -9,7 +9,7 @@
     "price": 10000,   
     "categ": "Hogar",
     "userId": 9,
-    "contacto": [
+    "contacto": 
       {
         "userId": 9,
         "nombre": "Ingrid",
@@ -18,7 +18,7 @@
         "nro": 912345678,
         "tienda": "Deco-casa"
       }
-    ],
+    ,
     "fav": false
   },
   {
@@ -51,7 +51,7 @@
     "img": "https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/210097370_fotofondoblanco.jpg",
     "nombre": "Vanesa",
     "apellido": "Segovia",
-    "prodName": "Reloj smartwach Mujer",
+    "prodName": "Reloj smartwach mujer",
     "price": 25990,   
     "categ": "Tecnología",
     "userId": 8,

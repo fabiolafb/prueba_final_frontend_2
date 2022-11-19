@@ -15,12 +15,17 @@ const CondominioProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false); 
 
+  // Estados para modal 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   // Estados para filtros y búsqueda -- Tienda
   const [buscando, setBuscando] = useState("");
   const [filtradoCategoria, setFiltradoCategoria] = useState("");
 
   // Estado para agregar productos a carrito
-  const [sumarCarrito, setSumarCarrito] = useState([]);
+  // const [sumarCarrito, setSumarCarrito] = useState([]);
 
   //Función que llama a productos
   const url_p = "/productos.json";
@@ -46,7 +51,6 @@ const CondominioProvider = ({ children }) => {
   }, []);
 
 
-
 //  --------------------------------------------
 
  /* Componente ruta privada */
@@ -55,28 +59,28 @@ const CondominioProvider = ({ children }) => {
 // };
 
   //Función llenar carrito
-  const agregarCarrito = ({ id, img, prodName, price }) => {
-    const productoEncontradoIndex = sumarCarrito.findIndex((c) => c.id === id);
-    const productoEncontrado = { id, img, prodName, price, count: 1 };
-    console.log(productoEncontradoIndex)
-    if (productoEncontradoIndex >= 0) {
-      sumarCarrito[productoEncontradoIndex].count++;
-      setSumarCarrito([...sumarCarrito]);
-    } else {
-      setSumarCarrito([...sumarCarrito, productoEncontrado]);
-    }
-  };
+  // const agregarCarrito = ({ id, img, prodName, price }) => {
+  //   const productoEncontradoIndex = sumarCarrito.findIndex((c) => c.id === id);
+  //   const productoEncontrado = { id, img, prodName, price, count: 1 };
+  //   console.log(productoEncontradoIndex)
+  //   if (productoEncontradoIndex >= 0) {
+  //     sumarCarrito[productoEncontradoIndex].count++;
+  //     setSumarCarrito([...sumarCarrito]);
+  //   } else {
+  //     setSumarCarrito([...sumarCarrito, productoEncontrado]);
+  //   }
+  // };
   
-  //Función eliminar un prducto de carrito  
-  const eliminarCarrito = (i) => {
-    const { count } = sumarCarrito[i];
-    if (count === 1) {
-      sumarCarrito.splice(i, 1);
-    } else {
-      sumarCarrito[i].count--;
-    }
-    setSumarCarrito([...sumarCarrito]);
-  };
+  // //Función eliminar un prducto de carrito  
+  // const eliminarCarrito = (i) => {
+  //   const { count } = sumarCarrito[i];
+  //   if (count === 1) {
+  //     sumarCarrito.splice(i, 1);
+  //   } else {
+  //     sumarCarrito[i].count--;
+  //   }
+  //   setSumarCarrito([...sumarCarrito]);
+  // };
 
   return (
     <Context.Provider
@@ -95,11 +99,8 @@ const CondominioProvider = ({ children }) => {
         setBuscando,
         filtradoCategoria,
         setFiltradoCategoria,
-        sumarCarrito,
-        setSumarCarrito,
-        agregarCarrito,
-        eliminarCarrito,
         autenticado, setAutenticado,
+
       }}
     >
       {children}
