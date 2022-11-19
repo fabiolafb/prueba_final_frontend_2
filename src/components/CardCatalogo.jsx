@@ -62,9 +62,9 @@ export default function CardCatalogo({ prod }) {
             })
             .map((prod, id) => (
               <Card
-                style={{ width: "17rem" }}
+                style={{ width: "16rem" }}
                 className="card-producto-container"
-                key={id}
+                key={id} prod={prod}
               >
                 <Card.Img
                   variant="top"
@@ -126,7 +126,9 @@ export default function CardCatalogo({ prod }) {
             ))}
         </div>
       </div>
-      <ContactoVendedorModal show={show} escogido={prod} handleClose={handleClose}  />
+      <ContactoVendedorModal show={show} 
+       contacto={prod} 
+      handleClose={handleClose}  />
     </>
   );
 }

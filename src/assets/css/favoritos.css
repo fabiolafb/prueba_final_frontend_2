@@ -93,7 +93,7 @@
 .div-btn-modal-fav button::before {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 2px;
     border-radius: 25px;
     background-color: #E7BB41;

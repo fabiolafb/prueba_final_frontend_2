@@ -3,7 +3,7 @@
     "desc": "Vendo juego de lámparas de velador. Controles táctiles con 4 ajustes (bajo, medio, alto, apagado). Material níquel cepillado",
     "id": "P001",
     "img": "https://http2.mlstatic.com/D_NQ_NP_988754-MLM42106120861_062020-W.jpg",
-    "nombre": "Deco-casa (Ingrid)",
+    "nombre": "Ingrid",
     "apellido": "Benítez",
     "prodName": "Lámparas de velador",
     "price": 10000,   
@@ -19,7 +19,7 @@
         "tienda": "Deco-casa"
       }
     ,
-    "fav": false
+    "favorito": false
   },
   {
     "desc": "Excelente cámara y calidad de imagen y videos. Graba video en Full HD. Se vende por renovación, muy bien cuidada.",
@@ -31,7 +31,17 @@
     "price": 100000,
     "categ": "Tecnología",
     "userId": 6,
-    "fav": false
+    "contacto": 
+      {
+        "userId": 6,
+        "nombre": "Andrés",
+        "apellido": "Hutchings",
+        "email": "andres_hut@gmail.com",
+        "nro": 996572185,
+        "tienda": " "
+      }
+    ,
+    "favorito": false
   },
   {
     "desc": "Vendo cómodas zapatillas urbanas. Nuevas, talla 42.",
@@ -43,7 +53,17 @@
     "price": 24990,
     "categ": "Vestuario",
     "userId": 7,
-    "fav": false
+    "contacto": 
+      {
+        "userId": 7,
+        "nombre": "Luis",
+        "apellido": "Salinas",
+        "email": "salinas.luis@gmail.com",
+        "nro": 995449195,
+        "tienda": " "
+      }
+    ,
+    "favorito": false
   },
   {
     "desc": "Excelente reloj smartwatch KEI A1 PRO Rosado. Mide ritmo cardíaco en todo momento, pantalla touch rápida, tiene podómetro, notifica llamadas, mensajes, clima y manejar la música desde su pantalla.  Correa de silicona.",
@@ -55,7 +75,17 @@
     "price": 25990,   
     "categ": "Tecnología",
     "userId": 8,
-    "fav": false
+    "contacto": 
+      {
+        "userId": 8,
+        "nombre": "Vanesa",
+        "apellido": "Segovia",
+        "email": "vanesa.segovia@gmail.com",
+        "nro": 998877665,
+        "tienda": " "
+      }
+    ,
+    "favorito": false
   },
   {
     "desc": "Excelente reloj smartwatch, compatible con cualquier celular Android o Iphone. Realiza y recibe llamadas, cámara de 1.0 Megapixeles, reproduce música, tiene podómetro, control de calorías, alarma, calendario. Correa de silicona.",
@@ -67,7 +97,17 @@
     "price": 28990,   
     "categ": "Tecnología",
     "userId": 8,
-    "fav": false
+    "contacto": 
+    {
+      "userId": 8,
+      "nombre": "Vanesa",
+      "apellido": "Segovia",
+      "email": "vanesa.segovia@gmail.com",
+      "nro": 998877665,
+      "tienda": " "
+    }
+  ,
+    "favorito": false
   },
   {
     "desc": "Lindo clóset de madera de raulí. Está en muy buen estado. Se vende por renovación.",
@@ -79,19 +119,38 @@
     "price": 80000,
     "categ": "Hogar",
     "userId": 5,
-    "fav": false
+    "contacto": 
+    {
+      "userId": 5,
+      "nombre": "Claudio",
+      "apellido": "Román",
+      "email": "claudio.r@gmail.com",
+      "nro": 993233823,
+      "tienda": " "
+    },
+    "favorito": false
   },
   {
     "desc": "Set de 12 piezas para que uses en tu cocina. Al ser de silicona es una excelente opción para cuidar tus ollas, además viene en un cómodo contenedor para que los guardes.",
     "id": "P007",
     "img": "https://cdn.shopify.com/s/files/1/0104/4391/5319/products/IORe2r1bL0_700x.jpg?v=1661284854",
-    "nombre": "Deco-casa (Ingrid)",
+    "nombre": "Ingrid",
     "apellido": "Benítez",
     "prodName": "Set utensilios de cocina",
     "price": 18000,   
     "categ": "Hogar",
     "userId": 9,
-    "fav": false
+    "contacto": 
+      {
+        "userId": 9,
+        "nombre": "Ingrid",
+        "apellido": "Benítez",
+        "email": "decocasa@gmail.com",
+        "nro": 912345678,
+        "tienda": "Deco-casa"
+      }
+    ,
+    "favorito": false
   },
   {
     "desc": "Miel de abeja artesanal. Contiene 1 kilo. Si quiere más se pueden encargar.",
@@ -103,7 +162,17 @@
     "price": 5500,   
     "categ": "Alimentación",
     "userId": 10,
-    "fav": false
+    "contacto": 
+    {
+      "userId": 10,
+      "nombre": "Catalina",
+        "apellido": "San Martin",
+        "email": "cata.sm@gmail.com",
+        "nro": 932165478,
+      "tienda": " "
+    }
+  ,
+    "favorito": false
   },
   {
     "desc": "Ajedrez nuevo con todas sus piezas. Sin uso. ",
@@ -115,7 +184,17 @@
     "price": 5000,   
     "categ": "Entretención",
     "userId": 8,
-    "fav": false 
+    "contacto": 
+    {
+      "userId": 8,
+      "nombre": "Vanesa",
+      "apellido": "Segovia",
+      "email": "vanesa.segovia@gmail.com",
+      "nro": 998877665,
+      "tienda": " "
+    }
+  ,
+    "favorito": false 
   }
 
 ]

@@ -44,7 +44,7 @@
     align-self: flex-end;
     border: 2px solid transparent;
     border-radius: 25px;
-    margin-left: 79%;
+    margin-left: 75%;
     margin-top: -4%;
     position: absolute;
     z-index: 5;
@@ -89,7 +89,7 @@
 .div-btn-modal button::before {
     content: "";
     position: absolute;
-    width: 70%;
+    width: 75%;
     height: 2px;
     border-radius: 25px;
     background-color: #E7BB41;
@@ -109,7 +109,7 @@
 #btn-modal {
     background-color: transparent;
     border: none;   
-    width: 70%;
+    width: 90%;
     color: #44BBA4;
     font-size: 1rem;
 }

@@ -56,7 +56,7 @@ export default function Favoritos() {
             .filter((elem) => elem.favorito)
             .map((elem, id) => (
               <Card
-                style={{ width: "16rem" }}
+                style={{ width: "15rem" }}
                 className="card-producto-container"
                 key={id}
               >

@@ -38,6 +38,7 @@ export default function InicioSesion() {
       }
     }
   };
+  
   let error = document.getElementById("error");
 
   
