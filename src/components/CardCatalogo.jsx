@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ContactoVendedorModal from "./ContactoVendedorModal";
 import { Card } from "react-bootstrap";
 // Estilos
-import "../assets/css/cardCatalogo.css";
+import "../assets/css/cardcatalogo.css";
 
 
 export default function CardCatalogo({ idProd }) {

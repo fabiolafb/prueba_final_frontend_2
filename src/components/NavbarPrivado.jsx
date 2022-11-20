@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 // Estilos
-import "../assets/css/navbarPrivado.css";
+import "../assets/css/navbarprivado.css";
 import logo from "../assets/img/logo_3.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";

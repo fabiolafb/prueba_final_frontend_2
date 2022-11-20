@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 // Estilos
-import "../assets/css/menuPerfil.css";
+import "../assets/css/menuperfil.css";
 
 
 export default function MenuPerfil() {

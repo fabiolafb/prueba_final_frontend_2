@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import NavbarPrivado from "../components/NavbarPrivado";
 import MenuPerfil from "../components/MenuPerfil";
 // Estilos
-import "../assets/css/misDatos.css";
+import "../assets/css/misdatos.css";
 import icon_edit_datos from "../assets/img/icon_edit_datos.png";
 
 

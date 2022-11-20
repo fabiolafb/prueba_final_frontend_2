@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import NavbarPrivado from "../components/NavbarPrivado";
 // Estilos
-import "../assets/css/detalleProd.css";
+import "../assets/css/detalleprod.css";
 import cerrar from "../assets/img/cerrar.png";
 
 

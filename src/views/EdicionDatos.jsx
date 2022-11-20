@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import MenuPerfil from "../components/MenuPerfil";
 import NavbarPrivado from "../components/NavbarPrivado";
 // Estilos
-import "../assets/css/editarDatos.css";
+import "../assets/css/editardatos.css";
 
 
 const EdicionDatos = () => {

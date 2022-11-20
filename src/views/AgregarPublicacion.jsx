@@ -3,7 +3,7 @@ import NavbarPrivado from "../components/NavbarPrivado";
 import MenuPerfil from "../components/MenuPerfil";
 import { Form } from "react-bootstrap";
 // Estilos
-import "../assets/css/agregarPublic.css";
+import "../assets/css/agregarpublic.css";
 
 
 const AgregarPublicacion = () => {

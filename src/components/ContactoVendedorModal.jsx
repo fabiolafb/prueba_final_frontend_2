@@ -2,7 +2,7 @@
 import Modal from "react-bootstrap/Modal";
 import logo from "../assets/img/logo_3.png";
 // Estilos
-import "../assets/css/contactoVendedorModal.css";
+import "../assets/css/contactovendedormodal.css";
 
 
 function ContactoVendedorModal({ show, handleClose, contacto }) {
