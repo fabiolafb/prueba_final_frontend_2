@@ -40,8 +40,11 @@
     margin-top: 1rem;
     text-decoration: none;
 }
-
-.badge-rounded-circle{
+.mt-3 h6 {
+    font-size: 1.05rem;
+    margin-top: 0.2rem;
+}
+/* .badge-rounded-circle{
     position: absolute;
     top: 0;
     font-size: 1rem;
@@ -57,7 +60,7 @@
     padding: 2px;
     margin-top: 1.4rem;
     margin-left: 2rem;   
-  }
+  } */
 
 
 

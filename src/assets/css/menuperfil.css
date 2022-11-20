@@ -70,6 +70,12 @@
         background-position: 100% 100%;
     }
 
+    .btn-success {
+        color: #fff;
+        background-color: #44BBA4;
+        border-color: #198754;
+    }
+
 /* --- media query  --- */
 @media (max-width : 1100px) {
     #id-nav-menu {

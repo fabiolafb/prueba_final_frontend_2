@@ -19,7 +19,7 @@ function ContactoVendedorModal({ show, handleClose, contacto }) {
         </Modal.Header>
 
         <Modal.Body>
-          <div>
+          <div className="modal-encabezado">
             <h5 className="text-center">
               ¡Gracias por interesarte en mi producto!
             </h5>
@@ -28,7 +28,7 @@ function ContactoVendedorModal({ show, handleClose, contacto }) {
             </p>
           </div>
 
-          <div className="d-flex flex-column card-block mx-auto">
+          <div className="d-flex flex-column card-block ">
             <ul>
               <li>
                 Nombre: <b>{contacto.contacto.nombre + " " + contacto.contacto.apellido} </b>

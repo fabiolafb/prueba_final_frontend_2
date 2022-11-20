@@ -27,7 +27,7 @@ export default function CardCatalogo({ idProd }) {
 
   return (
     <>
-      <div className="div-card-prod sm">
+      
         <Card
           style={{ width: "16rem" }}
           className="card-producto-container"
@@ -86,7 +86,7 @@ export default function CardCatalogo({ idProd }) {
             </div>
           </Card.Body>
         </Card>
-      </div>
+      
       <ContactoVendedorModal
         show={show}
         contacto={idProd}

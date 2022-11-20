@@ -40,7 +40,7 @@ export default function NavbarPrivate() {
 
         <div id="id-container-fluid" className="container-select">
           <div className="mt-3" style={{ color: "#707070" }}>
-            <h6>Hola {userLogin.nombre}</h6>
+            <h6>Hola <b>{userLogin.nombre}</b></h6>
           </div>
           <div className="nav-item">
             <Link to="/perfil-usuario" className="nav-link-priv">

@@ -1,7 +1,9 @@
 #title-modal {
     color: #44BBA4;
 }
-
+.modal-encabezado {
+    margin-bottom: 1.5rem;
+}
 #footer-modal {
     align-content: center;
     align-items:center;

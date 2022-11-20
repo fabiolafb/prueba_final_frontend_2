@@ -51,7 +51,7 @@ export default function Tienda() {
               <input
                 type="text"
                 className="buscador_input"
-                placeholder="Ingresa búsqueda         🔍"
+                placeholder="Búsqueda producto             🔍"
                 value={buscando}
                 onChange={(e) => {
                   setBuscando(e.target.value);
@@ -106,9 +106,9 @@ export default function Tienda() {
           </nav>
 
           {/* CardCatologo */}
-          <div className="contenedor-catalogo">
+          <main className="grid-main">
             <h4>Productos en venta</h4>
-
+            <div className="div-card-prod sm">
             {productos
               .filter((producto) => {
                 if (buscando === "" && filtradoCategoria === "") {
@@ -135,7 +135,8 @@ export default function Tienda() {
               .map((prod, id) => (
                 <CardCatalogo key={id} idProd={prod} />
               ))}
-          </div>
+              </div>
+          </main>
         </div>
 
         <br />
