@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 // Estilos
-import "../assets/css/inicioSesion.css";
+import "../assets/css/iniciosesion.css";
 
 
 export default function InicioSesion() {
