@@ -64,8 +64,7 @@ export default function DetalleProducto() {
                   <b>Vendido por:</b>
                 </p>
                 <p className="autor-card-detalle">
-                  {productoId.nombre} <span></span>
-                  {productoId.apellido}
+                  {productoId.contacto.nombre + " " + productoId.contacto.apellido}                
                 </p>
               </div>
               <h4 className="precio">
