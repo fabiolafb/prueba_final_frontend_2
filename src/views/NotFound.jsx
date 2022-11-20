@@ -1,8 +1,11 @@
-import { Container } from "react-bootstrap";
+// Componentes
 import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
+// Estilos
 import "../assets/css/notFound.css";
 import logo from "../assets/img/logo_3.png";
+
+
 export default function NotFound() {
   return (
     <>
@@ -12,9 +15,7 @@ export default function NotFound() {
         id="id-nav-public"
         style={{ height: 90 }}
         className="navbar navbar-expand-lg ps-5"
-      >
-
-      </Navbar>
+      ></Navbar>
 
       <Container className="notfound">
         <h3 className="mb-4"> Lo sentimos, esta ruta no existe </h3>
@@ -23,8 +24,8 @@ export default function NotFound() {
           <h4>Regresa a </h4>
         </div>
         <Link to="/">
-            <img alt="" src={logo} width="300" className="img ms-auto"  />
-          </Link>
+          <img alt="" src={logo} width="300" className="img ms-auto" />
+        </Link>
       </Container>
     </>
   );

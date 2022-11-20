@@ -1,11 +1,13 @@
+// Componentes
 import React from "react";
 import Context from "../Context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/misDatos.css";
 import NavbarPrivado from "../components/NavbarPrivado";
-import icon_edit_datos from "../assets/img/icon_edit_datos.png";
 import MenuPerfil from "../components/MenuPerfil";
+// Estilos
+import "../assets/css/misDatos.css";
+import icon_edit_datos from "../assets/img/icon_edit_datos.png";
 
 
 export default function MisDatos() {

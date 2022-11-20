@@ -1,20 +1,33 @@
-import "../assets/css/home.css";
-import img_home from "../assets/img/img_home.jpg";
+// Componentes
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+
+// Estilos
+import "../assets/css/home.css";
+import img_home from "../assets/img/img_home.jpg";
 
 
 export default function Home() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="contenedor-home">
         <div className="div-txt">
           <h1>¿Qué es Condominio Ventas?</h1>
           <p>
-            Es una plataforma online disponible para que cada uno de los integrantes de esta comunidad puedan comprar o vender productos de una manera confiable, fácil y segura.
+            Es una plataforma online disponible para que cada uno de los
+            integrantes de esta comunidad puedan comprar o vender productos de
+            una manera confiable, fácil y segura.
           </p>
-          <p><span ><b><Link to="/registro" id="id-registro">Regístrate</Link></b></span> si entras por primera vez y disfruta de este útil espacio.
+          <p>
+            <span>
+              <b>
+                <Link to="/registro" id="id-registro">
+                  Regístrate
+                </Link>
+              </b>
+            </span>{" "}
+            si entras por primera vez y disfruta de este útil espacio.
           </p>
           <h3>
             <b id="slogan">¡Juntos hacemos un condominio mejor!</b>
@@ -24,7 +37,6 @@ export default function Home() {
           <img alt="" src={img_home} className="img_home" />
         </div>
       </div>
-
     </>
   );
 }

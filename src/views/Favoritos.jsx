@@ -1,10 +1,13 @@
+// Componentes
 import Context from "../Context";
 import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Card, Button } from "react-bootstrap";
 import ContactoVendedorModal from "../components/ContactoVendedorModal";
 import NavbarPrivado from "../components/NavbarPrivado";
+// Estilos
 import "../assets/css/favoritos.css";
+import { Card, Button } from "react-bootstrap";
+
 
 
 export default function Favoritos() {
@@ -99,7 +102,7 @@ export default function Favoritos() {
                     >
                       Ver detalle
                     </button>
-                    <div className="div-btn-modal-fav">
+                    {/* <div className="div-btn-modal-fav">
                       <button
                         onClick={handleShow}
                         id="btn-modal-fav"
@@ -110,14 +113,14 @@ export default function Favoritos() {
                       >
                         <strong>¡Quiero comprar!</strong>
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </Card.Body>
               </Card>
             ))}
         </div>
       </div>
-      <ContactoVendedorModal show={show} handleClose={handleClose} />
+      {/* <ContactoVendedorModal show={show} contacto={elem} handleClose={handleClose} /> */}
     </>
   );
 }

@@ -1,10 +1,12 @@
-import "../assets/css/tienda.css";
+// Componentes
 import Context from "../Context";
-import { useContext } from "react";
+import { useContext, Container } from "react";import { Link } from "react-router-dom";
 import NavbarPrivado from "../components/NavbarPrivado";
 import CardCatalogo from "../components/CardCatalogo";
+// Estilos
+import "../assets/css/tienda.css";
 import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 
 export default function Tienda() {
   const {
@@ -22,7 +24,8 @@ export default function Tienda() {
     if (opcionOrdenar === "ordenarNombre") {
       productos.sort((a, b) => a.prodName.localeCompare(b.prodName));
       setProductos([...productos]);
-    } if (opcionOrdenar === "ordenarPrecio") {
+    }
+    if (opcionOrdenar === "ordenarPrecio") {
       productos.sort((a, b) => a.price - b.price);
       setProductos([...productos]);
     } else if (opcionOrdenar === "ordenarPrecioD") {
@@ -79,9 +82,7 @@ export default function Tienda() {
                 onChange={(e) => setFiltradoCategoria(e.target.value)}
                 value={filtradoCategoria}
               >
-                <option value="">
-                  Categorías
-                </option>
+                <option value="">Categorías</option>
                 <option value="Alimentación">Alimentación</option>
                 <option value="Entretención">Entretención</option>
                 <option value="Hogar">Hogar</option>
@@ -97,18 +98,46 @@ export default function Tienda() {
               >
                 <option value="">Seleccione</option>
                 <option value="ordenarNombre">Nombre</option>
-                <option value="ordenarPrecio">
-                  Precio (menor a mayor)
-                </option>
-                <option value="ordenarPrecioD">
-                  Precio (mayor a menor)
-                </option>
+                <option value="ordenarPrecio">Precio (menor a mayor)</option>
+                <option value="ordenarPrecioD">Precio (mayor a menor)</option>
               </Form.Select>
             </div>
             <hr />
           </nav>
-          <CardCatalogo />
+
+          {/* CardCatologo */}
+          <div className="contenedor-catalogo">
+            <h4>Productos en venta</h4>
+
+            {productos
+              .filter((producto) => {
+                if (buscando === "" && filtradoCategoria === "") {
+                  return producto;
+                } else if (
+                  filtradoCategoria === "" &&
+                  (producto.prodName
+                    .toLocaleLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .includes(buscando.toLocaleLowerCase()) ||
+                    producto.categ
+                      .toLocaleLowerCase()
+                      .includes(buscando.toLocaleLowerCase()))
+                ) {
+                  return producto;
+                } else if (
+                  buscando === "" &&
+                  producto.categ.includes(filtradoCategoria)
+                ) {
+                  return producto;
+                }
+              })
+              .map((prod, id) => (
+                <CardCatalogo key={id} idProd={prod} />
+              ))}
+          </div>
         </div>
+
         <br />
       </main>
     </>

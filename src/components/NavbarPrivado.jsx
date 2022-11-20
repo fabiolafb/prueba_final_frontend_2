@@ -1,27 +1,26 @@
-import { useContext } from "react";
+// Componentes
 import Context from "../Context";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
-
+// Estilos
 import "../assets/css/navbarPrivado.css";
-// import Carrito from "./Carrito";
 import logo from "../assets/img/logo_3.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser,faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function NavbarPrivate() {
-  const { userLogin, setAutenticado} = useContext(Context);
+  const { userLogin, setAutenticado } = useContext(Context);
 
   // Función para cerrar sesión Logout
   const navigate = useNavigate();
 
   const handleLogout = (usuarioEncontrado) => {
-    //console.log(found);
     if (usuarioEncontrado) {
-      setAutenticado(false) 
-      navigate("/")
-   };
+      setAutenticado(false);
+      navigate("/");
+    }
   };
 
   let sum = 0;
@@ -38,7 +37,6 @@ export default function NavbarPrivate() {
             <img alt="" src={logo} width="140" className="logo_privado" />
           </Link>
         </div>
-        
 
         <div id="id-container-fluid" className="container-select">
           <div className="mt-3" style={{ color: "#707070" }}>
@@ -56,32 +54,6 @@ export default function NavbarPrivate() {
             </Link>
           </div>
 
-          {/* <div className="nav-item">
-            <Link 
-              className="nav-link-priv" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"
-            >
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                id="img_nav"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Carro de compras"
-              />
-              {sumarCarrito.map((pe, i) => (
-                <span key={i}
-                  id="cart_menu_num"
-                  data-action="cart-can"
-                  className="badge-rounded-circle"
-                >
-                  {(sum = sum + pe.count)}
-                </span>
-              ))}
-            
-            </Link> 
-          </div> */}
-
           <div className="nav-item">
             <Link id="nav-link-signout" className="nav-link-priv" to="/">
               <FontAwesomeIcon
@@ -96,7 +68,6 @@ export default function NavbarPrivate() {
           </div>
         </div>
       </Navbar>
-      {/* <Carrito /> */}
     </>
   );
 }

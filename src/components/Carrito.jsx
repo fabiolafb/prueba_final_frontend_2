@@ -1,8 +1,11 @@
-import React from "react";
+// Componentes
 import Context from "../Context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+
+// Estilos
 import "../assets/css/carrito.css";
+
 
 const Carrito = () => {
   const { sumarCarrito, eliminarCarrito } =

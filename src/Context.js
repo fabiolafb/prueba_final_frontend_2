@@ -4,6 +4,7 @@ const Context = createContext();
 
 const CondominioProvider = ({ children }) => {
 
+    /*-----------------Estados-----------------*/
   // Estado que trae json productos
   const [productos, setProductos] = useState([]);
   // Estado que trae json usuarios iniciales
@@ -24,9 +25,7 @@ const CondominioProvider = ({ children }) => {
   const [buscando, setBuscando] = useState("");
   const [filtradoCategoria, setFiltradoCategoria] = useState("");
 
-  // Estado para agregar productos a carrito
-  // const [sumarCarrito, setSumarCarrito] = useState([]);
-
+  /*-----------------Funciones-----------------*/
   //Función que llama a productos
   const url_p = "/productos.json";
   const obtenerProductos = async () => {
@@ -49,38 +48,6 @@ const CondominioProvider = ({ children }) => {
     obtenerProductos();
     obtenerUsuarios();
   }, []);
-
-
-//  --------------------------------------------
-
- /* Componente ruta privada */
-//  const PrivateRoute = ({ auten: { autenticado }, children }) => {
-//   return autenticado ? children : <Navigate to="/notregister" />;
-// };
-
-  //Función llenar carrito
-  // const agregarCarrito = ({ id, img, prodName, price }) => {
-  //   const productoEncontradoIndex = sumarCarrito.findIndex((c) => c.id === id);
-  //   const productoEncontrado = { id, img, prodName, price, count: 1 };
-  //   console.log(productoEncontradoIndex)
-  //   if (productoEncontradoIndex >= 0) {
-  //     sumarCarrito[productoEncontradoIndex].count++;
-  //     setSumarCarrito([...sumarCarrito]);
-  //   } else {
-  //     setSumarCarrito([...sumarCarrito, productoEncontrado]);
-  //   }
-  // };
-  
-  // //Función eliminar un prducto de carrito  
-  // const eliminarCarrito = (i) => {
-  //   const { count } = sumarCarrito[i];
-  //   if (count === 1) {
-  //     sumarCarrito.splice(i, 1);
-  //   } else {
-  //     sumarCarrito[i].count--;
-  //   }
-  //   setSumarCarrito([...sumarCarrito]);
-  // };
 
   return (
     <Context.Provider

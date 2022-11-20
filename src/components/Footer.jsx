@@ -1,5 +1,7 @@
+// Componentes
 import React from "react";
 import { NavLink } from "react-router-dom";
+// Estilos
 import "../assets/css/footer.css";
 import logo from "../assets/img/logo_3.png";
 import instagram from "../assets/img/instagram.png";
@@ -34,7 +36,6 @@ const Footer = () => {
             data-placement="top"
             title="Facebook Condominio Ventas"
           />
-          
         </div>
       </footer>
     </>

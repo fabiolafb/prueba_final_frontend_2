@@ -1,10 +1,12 @@
-import React from "react";
+// Componentes
 import Context from "../Context";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import "../assets/css/editarDatos.css";
 import MenuPerfil from "../components/MenuPerfil";
 import NavbarPrivado from "../components/NavbarPrivado";
+// Estilos
+import "../assets/css/editarDatos.css";
+
 
 const EdicionDatos = () => {
   const { userLogin } = useContext(Context);

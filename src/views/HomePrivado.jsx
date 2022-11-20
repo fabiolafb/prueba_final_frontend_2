@@ -1,8 +1,10 @@
+// Componentes
 import Context from "../Context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/homePrivado.css";
 import NavbarPrivado from "../components/NavbarPrivado";
+// Estilos
+import "../assets/css/homePrivado.css";
 import in_tienda from "../assets/img/in_tienda.png";
 import in_perfil from "../assets/img/in_perfil.png";
 

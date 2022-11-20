@@ -1,18 +1,15 @@
+// Componentes
 import Context from "../Context";
-import { Form } from "react-bootstrap";
-// import AuthContexProvider from "../AuthContext";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../assets/css/inicioSesion.css";
+import { Form } from "react-bootstrap";
 import Navbar from "../components/Navbar";
-//import { useForm } from "react-hook-form";
+// Estilos
+import "../assets/css/inicioSesion.css";
+
 
 export default function InicioSesion() {
-  const {
-    usuarios,
-    setUserLogin,
-    setAutenticado,
-  } = useContext(Context);
+  const { usuarios, setUserLogin, setAutenticado } = useContext(Context);
 
   const navigate = useNavigate();
 
@@ -29,39 +26,23 @@ export default function InicioSesion() {
         if (usuarioEncontrado.password == password) {
           setAutenticado(true);
           setUserLogin(usuarioEncontrado);
-          navigate('/home-perfil')
+          navigate("/home-perfil");
         } else {
-          alert('Datos de acceso incorrectos'); 
+          alert("Datos de acceso incorrectos");
         }
       } else {
-        alert('Esa dirección de correo no está registrada');
+        alert("Esa dirección de correo no está registrada");
       }
     }
   };
-  
-  let error = document.getElementById("error");
 
-  
-  // const handleLogin = () => {
-  //   const usuarioEncontrado = usuarios.find((usuario) => usuario.email === email && usuario.password == password);
-  //   if (!email && !password) {
-  //     alert("Por favor complete ambos campos")
-  //   }
-  //   if (usuarioEncontrado) {
-  //     setAutenticado(true);
-  //     navigate("/home-perfil");
-  //  } else {
-  //     window.alert("Datos de acceso incorrectos")
-  //  }
-  // };
+  let error = document.getElementById("error");
 
   return (
     <>
       <Navbar />
       <div className="contenedor-inicio-sesion">
-        <Form id="form-inicio-sesion"
-        // onSubmit={handleLogin} 
-        >
+        <Form id="form-inicio-sesion">
           <h4>Iniciar Sesión</h4>
           <div>
             <label>Correo electrónico</label>
@@ -71,25 +52,25 @@ export default function InicioSesion() {
               className="form-control"
               placeholder="correo@example.com"
               required
-              // value={email}
-              // onChange={(ev) => setEmail(ev.target.value)}
             />
           </div>
           <br />
           <div>
             <label>Contraseña</label>
             <input
-              
               type="password"
               id="pass"
               className="form-control"
               placeholder="Ingresar contraseña"
               required
-              // value={password}
-              // onChange={(ev) => setPassword(ev.target.value)}
             />
           </div>
-          {error ? <p id="error" class="alerta" > <i>Debes llenar ambos campos</i></p> : null} 
+          {error ? (
+            <p id="error" class="alerta">
+              {" "}
+              <i>Debes llenar ambos campos</i>
+            </p>
+          ) : null}
           <br />
           <button
             type="submit"
@@ -118,19 +99,3 @@ export default function InicioSesion() {
     </>
   );
 }
-
-// const handleLogin = async (ev) => {
-//   ev.preventDefault();
-
-//   const usuarioEncontrado = usuarios.find(
-//     (usuario) => usuario.email === email && usuario.password == password
-//   );
-
-//   if (Object.entries(usuarioEncontrado).length > 0) {
-//     setUserLogin(usuarioEncontrado);
-//     setAutenticado(true);
-//     navigate("/home-perfil");
-//   } else  {
-//     window.alert("Datos de acceso incorrectos");
-//   }
-// };

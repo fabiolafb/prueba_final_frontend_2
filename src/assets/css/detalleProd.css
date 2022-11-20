@@ -82,7 +82,7 @@
 /* --- media query  --- */
 @media (max-width : 1300px) { 
     .hover-2 {
-        margin-left: -12%;
+        margin-left: -8%;
         margin-top: 0%;
 
     }
@@ -118,6 +118,11 @@
     }
     .card-detalle-der {
         padding: 0% 5% 2% 5%;
+    }
+    .hover-2 {
+        margin-left: -15%;
+        margin-top: 0%;
+
     }
     .cerrar {   
         margin-top: -75rem;

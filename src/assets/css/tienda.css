@@ -70,6 +70,29 @@
     box-shadow: 0px 15px 20px -15px;
 }
 
+/* CardCatalogo */
+.contenedor-catalogo {
+    width: 100%; 
+    max-height: 100vh;
+}
+.contenedor-catalogo h4 {
+    color: #393E41;
+    margin-top: 2%;
+    margin-right: 8rem;
+    text-align: center;
+}
+.div-card-prod {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    column-gap: 2px;
+    row-gap: 30px;
+    justify-content:space-between;
+    justify-items:center;
+    margin-top: 1.2rem;
+    margin-bottom: 4rem;
+}
+
 /* Sección inferior */
 .contenedor-inferior {
     width: 100%;

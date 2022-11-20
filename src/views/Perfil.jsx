@@ -1,13 +1,14 @@
-import React from "react";
+// Componentes
 import Context from "../Context";
 import { useContext } from "react";
+// Estilos
 import "../assets/css/perfil.css";
 import NavbarPrivado from "../components/NavbarPrivado";
 import icon_edit from "../assets/img/icon_edit.jpg";
 import icon_form from "../assets/img/icon_form.png";
 import icon_heart from "../assets/img/icon_heart.png";
 import MenuPerfil from "../components/MenuPerfil";
-//import FooterPrivado from "../components/FooterPrivado";
+
 
 export default function Perfil() {
   const { userLogin } = useContext(Context);

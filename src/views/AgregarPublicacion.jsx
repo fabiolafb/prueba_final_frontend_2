@@ -1,18 +1,22 @@
-import "../assets/css/agregarPublic.css";
+// Componentes
 import NavbarPrivado from "../components/NavbarPrivado";
 import MenuPerfil from "../components/MenuPerfil";
 import { Form } from "react-bootstrap";
+// Estilos
+import "../assets/css/agregarPublic.css";
+
 
 const AgregarPublicacion = () => {
   return (
     <>
       <NavbarPrivado />
       <MenuPerfil />
-      <div className="container-add-publicacion">       
-      <form className="div-main" >
+      <div className="container-add-publicacion">
+        <form className="div-main">
           <h4>Agregar publicación</h4>
           <h5>
-            Los campos marcados con (<span id="asterisco">*</span>) son obligatorios.
+            Los campos marcados con (<span id="asterisco">*</span>) son
+            obligatorios.
           </h5>
 
           <div className="columnas-form">
@@ -24,8 +28,6 @@ const AgregarPublicacion = () => {
                 className="form-control"
                 required
                 placeholder=""
-                // onChange={(e) => setEmailColaborador(e.target.value)}
-                // value={emailColaborador}
               />
             </div>
             <div className="label-input-prod">
@@ -46,7 +48,7 @@ const AgregarPublicacion = () => {
               <Form.Select
                 aria-label="Default select example"
                 className="select_input_cat"
-                     >
+              >
                 <option value="">Categorías</option>
                 <option value="1">Alimentación</option>
                 <option value="2">Entretención</option>
@@ -64,29 +66,25 @@ const AgregarPublicacion = () => {
                 accept=".jpg,.png"
                 required
                 placeholder="Seleccionar archivo9"
-                   />
+              />
             </div>
           </div>
 
-
           <div className="columnas-form" id="id-columnas-form">
             <div className="label-input-prod">
-              <label className="is-required">
-                Descripción del producto
-              </label>
+              <label className="is-required">Descripción del producto</label>
               <textarea
                 type="text"
                 name="desc"
                 className="form-control"
                 id="form-control-descr"
                 placeholder=""
-                required      
+                required
               />
             </div>
             <div className="label-input-prod">
               <button
                 className="btn-publicacion"
-                // onClick={() => alert("Se ha creado exitosamente su pubkicación")}
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Guardar publicación"

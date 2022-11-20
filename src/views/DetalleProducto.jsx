@@ -1,14 +1,16 @@
-import React from "react";
+// Componentes
 import Context from "../Context";
-import NavbarPrivado from "../components/NavbarPrivado";
-import { Card } from "react-bootstrap";
 import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Card } from "react-bootstrap";
+import NavbarPrivado from "../components/NavbarPrivado";
+// Estilos
 import "../assets/css/detalleProd.css";
 import cerrar from "../assets/img/cerrar.png";
 
+
 export default function DetalleProducto() {
-  const { productos, setProductos} = useContext(Context);
+  const { productos, setProductos } = useContext(Context);
   const { id } = useParams();
 
   const productoId = productos.find((prod) => prod.id === id);
@@ -51,28 +53,29 @@ export default function DetalleProducto() {
 
             <div className="card-detalle-der">
               <div className="div-descr d-flex">
-                <p><b>Descripción:</b></p>
+                <p>
+                  <b>Descripción:</b>
+                </p>
                 <p className="descr-card-detalle">{productoId.desc}</p>
               </div>
 
               <div className="div-autor d-flex">
-                <p><b>Vendido por:</b></p>
-                <p className="autor-card-detalle">{productoId.nombre} <span></span>{productoId.apellido}</p>
+                <p>
+                  <b>Vendido por:</b>
+                </p>
+                <p className="autor-card-detalle">
+                  {productoId.nombre} <span></span>
+                  {productoId.apellido}
+                </p>
               </div>
-              <h4 className="precio">Precio {productoId.price.toLocaleString("es-CL", {
-                      style: "currency",
-                      currency: "CLP",
-                    })}</h4>
-                    
-              {/* <button
-                onClick={() => agregarCarrito(productoId)}
-                className="btn-agregar-2"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Agregar para comprar"
-              >
-                Comprar
-              </button> */}
+              <h4 className="precio">
+                Precio{" "}
+                {productoId.price.toLocaleString("es-CL", {
+                  style: "currency",
+                  currency: "CLP",
+                })}
+              </h4>
+
             </div>
             <Link to="/tienda">
               <img
